@@ -2,7 +2,7 @@
 
 # Welcome!
 
-Hello everyone and welcome to the MEG QC tutorial.
+Hello everyone and welcome to this MEG QC tutorial.
 MEG QC is a python based pipeline for quality control of MEG data, it was developed within the Oldenburg university in the 
 Applied Neurocognitive Psychology Lab (ANCP Lab).
 

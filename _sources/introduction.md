@@ -24,7 +24,7 @@ MEGQc produces the following output from the analysis of a data file:
 - A csv file* with the results for some metrics.
 - json file** with the resulsts for all metrics.
 
-Once the csv files have been produced, another module within MEG Qc called ***plotting*** can create:
+Once the csv files have been produced, another module within MEG Qc called ***plotting*** can be used to create:
 - An html report for every metric (6 in total).
 
 Metrics are the diferent ***calculation modules*** within MEGQc used to evaluate specific types of artifacts or aspects of data quality. There are six metrics, which we'll explore in detail later, but we'll mention them now:
