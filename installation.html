@@ -135,7 +135,7 @@
     
   
 
-<a class="navbar-brand logo" href="start.html">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -157,7 +157,7 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="start.html">
+                <a class="reference internal" href="index.html">
                     Welcome!
                 </a>
             </li>
@@ -373,10 +373,17 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environment-creation">Python ENvironment Creation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environment">Python Environment</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-meg-qc-package">Install MEG QC Package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-meg-qc-github-repository">Clone the MEG QC GitHub Repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-packagges">Other packagges:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-packages">Other Packages:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"></a></li>
 </ul>
             </nav>
         </div>
@@ -390,35 +397,78 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h1>
-<p>Now we’ll start with the installation process of MEG QC.</p>
-<section id="python-environment-creation">
-<h2>Python ENvironment Creation<a class="headerlink" href="#python-environment-creation" title="Link to this heading">#</a></h2>
+<p>Now we’ll start with the installation process of MEG QC. Before that we want to explain you about virtual environments and containerization:
+<br></p>
+<section id="virtual-environments">
+<h2>Virtual environments<a class="headerlink" href="#virtual-environments" title="Link to this heading">#</a></h2>
+<p>Virtual environments create isolated and sel-contained workspaces, allowing us to manage project-specific dependencies separated from the system-wide installation. This isollation has several benefits:</p>
 <ul class="simple">
-<li><p>WHy environments</p></li>
+<li><p>Avoid interference among dependencies of other project-specific and system-wide dependencies avoiding common errors related to depencies, versions.</p></li>
+<li><p>Transparency and Open Science: Ensure that others can replicate your results or able to reproduce your analysis.
+<br></p></li>
 </ul>
-<p>MEG QC has compatiblity issues with older Python versions, therefore<br />
-Let’s start by creating a dedicated Python environment to keep dependencies isolated from the global system. This is also for openscience.
-Install, creation, activation
-Python 3.9</p>
+<section id="python-environment">
+<h3>Python Environment<a class="headerlink" href="#python-environment" title="Link to this heading">#</a></h3>
+<p>MEG QC has compatiblity issues with older Python versions (prior to 3.9), therefore it’s necessary to upgrade your Python version. Environments allows one to work with specific versions of Python itself without affecting other projects within the same network or the OS itself.
+<strong><a class="reference external" href="https://github.com/pyenv/pyenv">pyenv</a></strong> is a simple python version management. It let’s you easily swtich between multiple versions of Python. In their github you can find the instruction to install pyenv, create your own environment with your desired Python version and activate it.
+<br></p>
+</section>
 </section>
 <section id="install-meg-qc-package">
 <h2>Install MEG QC Package<a class="headerlink" href="#install-meg-qc-package" title="Link to this heading">#</a></h2>
-<p>Once within the Python Environment Use pip to install MEG QC with the following command in bash:
-pip install meg_qc</p>
+<p>Once within your project environment or Python environment, use pip to install MEG QC core functionality by running the following command in bash:</p>
 </section>
-<section id="clone-the-meg-qc-github-repository">
-<h2>Clone the MEG QC GitHub Repository<a class="headerlink" href="#clone-the-meg-qc-github-repository" title="Link to this heading">#</a></h2>
-<p>This will be necessary as the program runs from ….
-which is not in the package.</p>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install --upgrade meg-qc
+</pre></div>
+</div>
+<br>
+<p>Then you will need to down the <a class="reference external" href="https://github.com/ANCPLabOldenburg/MEGqc">github repository</a> and unzip it. This will be necessary to access the starting script <em>(run_megqc.py)</em>.
+<br></p>
 </section>
-<section id="other-packagges">
-<h2>Other packagges:<a class="headerlink" href="#other-packagges" title="Link to this heading">#</a></h2>
+<section id="other-packages">
+<h2>Other Packages:<a class="headerlink" href="#other-packages" title="Link to this heading">#</a></h2>
+<p>For MEG QC to function, you’ll need to pip install the following depencies:</p>
 <ul class="simple">
-<li><p>ancpbids</p></li>
-<li><p>mne</p></li>
-<li><p>pandas</p></li>
-<li><p>plotty</p></li>
+<li><p><strong><a class="reference external" href="https://ancpbids.readthedocs.io/en/latest/userDocCombined.html">ancpbids</a>:</strong> it helps handling and querying information in a BIDS format.</p></li>
 </ul>
+</section>
+<section id="id2">
+<h2><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install ancpbids
+</pre></div>
+</div>
+<br>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://mne.tools/stable/index.html">mne</a>:</strong> a popular open-source package for processing MEG and EEG data.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install --upgrade mne
+</pre></div>
+</div>
+<br>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://pandas.pydata.org/docs/">pandas</a>:</strong> This library is necessary for data manipulation and analysis in Python.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install pandas
+</pre></div>
+</div>
+<br>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://plotly.com/python-api-reference/">plotly</a></strong>: This library is necessary for creating plots and visualizing the results.</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install plotly
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -478,10 +528,17 @@ which is not in the package.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environment-creation">Python ENvironment Creation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environment">Python Environment</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-meg-qc-package">Install MEG QC Package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-meg-qc-github-repository">Clone the MEG QC GitHub Repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-packagges">Other packagges:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-packages">Other Packages:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"></a></li>
 </ul>
   </nav></div>
 
