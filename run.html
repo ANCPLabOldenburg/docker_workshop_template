@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Course prerequisites &#8212; Docker for neuroscience</title>
+    <title>How to make MEGqc run &#8212; Docker for neuroscience</title>
   
   
   
@@ -61,9 +61,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'prerequisites';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'run';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -115,8 +116,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -163,13 +162,13 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control and BIDS</a></li>
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="report.html">MEGQc report:</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="metrics.html">MEGQc report:</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to make MEGqc run</a></li>
 </ul>
 
     </div>
@@ -241,7 +240,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/prerequisites.md" target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/run.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -258,7 +257,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Fprerequisites.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Frun.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +287,7 @@
       
       
       
-      <li><a href="_sources/prerequisites.md" target="_blank"
+      <li><a href="_sources/run.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,7 +363,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Course prerequisites</h1>
+    <h1>How to make MEGqc run</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,6 +373,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-of-filepaths">Configuration of filepaths</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-calculation-module">To run calculation module</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ain-t-no-workshop-good-enough">Ain’t no workshop good enough</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-there-be-pre-workshop-training">Let there be pre-workshop training</a></li>
 </ul>
@@ -387,8 +390,24 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="course-prerequisites">
-<h1>Course prerequisites<a class="headerlink" href="#course-prerequisites" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-make-megqc-run">
+<h1>How to make MEGqc run<a class="headerlink" href="#how-to-make-megqc-run" title="Link to this heading">#</a></h1>
+<p>Once you’ve finished with the installation steps, now comes the last settings before making it run.</p>
+<section id="configuration-of-filepaths">
+<h2>Configuration of filepaths<a class="headerlink" href="#configuration-of-filepaths" title="Link to this heading">#</a></h2>
+<section id="to-run-calculation-module">
+<h3>To run calculation module<a class="headerlink" href="#to-run-calculation-module" title="Link to this heading">#</a></h3>
+<p>So within the folder <em>docker</em> of the cloned repository, you’ll find the script <em>run_megqc.py</em> and within it there are 2 filepaths to edit:</p>
+<ul class="simple">
+<li><p><strong>config_file_path=</strong> here you’ll need to write the path to the <em>settings.ini</em> file within the <em>settings</em> folder of your <em>meg_qc</em>, in the <em>site-packages</em> of your python environment.</p></li>
+<li><p><strong>internal_config_file_path=</strong> here you’ll need to write the path to the <em>settings_internal.ini</em> file within the <em>settings</em> folder of your <em>meg_qc</em>, in the <em>site-packages</em> of your python environment.</p></li>
+</ul>
+<p>Then you’ll have to open the file <em>setttings.ini</em> within the <em>settings</em> folder of your <em>meg_qc</em>, in the <em>site-packages</em> of your python environment and edit one last filepath:</p>
+<ul class="simple">
+<li><p><strong>data_directory=</strong> it’s in the line 54 of the script. “It’s not necessary to write the entire path to every data file; insteaad, only the path to the entire dataset is rquired. The pipeline can be executed for several subjects and datasets in one click” (Gapontseva, 2023)</p></li>
+</ul>
+</section>
+</section>
 <section id="ain-t-no-workshop-good-enough">
 <h2>Ain’t no workshop good enough<a class="headerlink" href="#ain-t-no-workshop-good-enough" title="Link to this heading">#</a></h2>
 <p>The reality of workshops like these is that they really don’t teach attending folks all they need to know to subsequently apply the respective content sufficiently, not to mention the training aspect. At best, workshops provide folks with the materials, overview and pointers necessary to continue and actually dive into the taught topics (the truth hurts sometimes, doesn’t it?). Another important aspect that is frequently overlooked is that attendees usually need a certain set of skills and experience to really benefit from a given workshop, especially considering the diverse backgrounds folks have. We want to be fair, open and welcoming to everyone and while we know that we unfortunately can’t achieve and assume a truly similar level of training and experience across all participants, we can at least do our best to work towards certain opportunities. That being said, workshops like the one you’re currently looking at, usually by default (should) require basic to advanced programming skills and knowledge about file handling/input/output, signal processing, statistics and linear algebra (vectors much?). Tough stuff, eh?</p>
@@ -434,6 +453,15 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="installation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installation</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -451,6 +479,10 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-of-filepaths">Configuration of filepaths</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-calculation-module">To run calculation module</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ain-t-no-workshop-good-enough">Ain’t no workshop good enough</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-there-be-pre-workshop-training">Let there be pre-workshop training</a></li>
 </ul>

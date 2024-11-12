@@ -1,4 +1,17 @@
-# Course prerequisites
+# How to make MEGqc run
+
+Once you've finished with the installation steps, now comes the last settings before making it run. 
+
+## Configuration of filepaths
+
+### To run calculation module
+So within the folder _docker_ of the cloned repository, you'll find the script *run_megqc.py* and within it there are 2 filepaths to edit:
+- **config_file_path=** here you'll need to write the path to the _settings.ini_ file within the _settings_ folder of your *meg_qc*, in the _site-packages_ of your python environment.
+
+- **internal_config_file_path=** here you'll need to write the path to the *settings_internal.ini* file within the _settings_ folder of your *meg_qc*, in the _site-packages_ of your python environment.
+
+Then you'll have to open the file _setttings.ini_ within the _settings_ folder of your *meg_qc*, in the _site-packages_ of your python environment and edit one last filepath:
+- **data_directory=** it's in the line 54 of the script. "It's not necessary to write the entire path to every data file; insteaad, only the path to the entire dataset is rquired. The pipeline can be executed for several subjects and datasets in one click" (Gapontseva, 2023)
 
 
 ## Ain't no workshop good enough

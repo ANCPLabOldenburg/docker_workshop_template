@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="MEGQc report:" href="report.html" />
+    <link rel="next" title="MEGQc report:" href="metrics.html" />
     <link rel="prev" title="Welcome!" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -165,11 +165,11 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to MEG quality control and BIDS</a></li>
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="report.html">MEGQc report:</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="metrics.html">MEGQc report:</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">How to make MEGqc run</a></li>
 </ul>
 
     </div>
@@ -374,13 +374,11 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to MEG quality control and BIDS</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meg-data-quality-control">MEG data quality control:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#megqc">MEGqc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meg-qc-results">MEG Qc Results</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#meg-qc-results">MEG Qc Results</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -393,31 +391,17 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-meg-quality-control-and-bids">
 <h1>Introduction to MEG quality control and BIDS<a class="headerlink" href="#introduction-to-meg-quality-control-and-bids" title="Link to this heading">#</a></h1>
-<p><strong>MEG data quality control:</strong><br />
-Magnetoencephalography (MEG) data are susceptible to  noise and artifacts, which can severely corrupt the data quality. They can originate from environmental noise sources (e.g. powerline noise), internal noise sources (e.g. eye movements of the subject), or systemic noise sources (e.g. malfunction of a sensor). For this reason, quality control of the data is an important step for valid and reproducible science (Niso et al., 2022).<br />
-However, the visual detection and annotation of artifacts in MEG data require expertise, is a tedious and time extensive task, is commonly done manually (vulnerbale to biases) and hardly resembles a standardized procedure. Despite the minimization of human biases, a standardized workflow for quality control will additionally make datasets better comparable thereby allowing for between-datasets comparisons as opposed to quality control within a single dataset. Hence, an automated and standardized approach to quality control is desirable for the quality assessment of in-house and shared datasets.<br />
-To address this issue the ANCP lab developed a software tool for automated and standardized quality control of MEG recordings, MEGqc, which is inspired by software for quality control in the domain of fMRI, called mriqc (Esteban et al., 2017). MEGqc is designed to detect specific noise patterns in the data and visualize them in easily interpretable human-readable reports.</p>
-<p><em>(disclaimer: fragment adapted from MEGQc github)</em></p>
-<section id="what-is-bids">
-<h2>What is BIDS:<a class="headerlink" href="#what-is-bids" title="Link to this heading">#</a></h2>
-<p>Neuroimaging experiments result in complex data that can be arranged in many different ways. For a long time, there was no consensus how to organize and share data obtained in neuroimaging experiments. Lack of consensus (or a standard) leads to misunderstandings and time wasted on rearranging data or rewriting scripts expecting certain structure. Brain Imaging Data Structure (BIDS), describes a simple and easy to adopt way of organizing neuroimaging and behavioral data.</p>
-<p>Since neuroimaging data can be very diverse (concerning their structural organization) MEGQc software is tailored to the BIDS standard (Gorgolewski et al., 2016; Niso et al., 2018). Thus MEGqc requires the data to be organized according to BIDS.</p>
-<p>[EXPAND WITH SPECIFICATIONS AND EXAMPLES]</p>
-<p><em>(discalimer: fragment adapted from BIDS official website)</em></p>
+<section id="meg-data-quality-control">
+<h2>MEG data quality control:<a class="headerlink" href="#meg-data-quality-control" title="Link to this heading">#</a></h2>
+<p>Magnetoencephalography (MEG) data are susceptible to  noise and artifacts, which can severely corrupt the data quality. They can originate from environmental noise sources (e.g. powerline noise), internal noise sources (e.g. eye movements of the subject), or systemic noise sources (e.g. malfunction of a sensor). For this reason, quality control of the data is an important step for valid and reproducible science (Niso et al., 2022).<br />
+However, the visual detection and annotation of artifacts in MEG data require expertise, is a tedious and time extensive task, is commonly done manually (vulnerable to biases) and hardly resembles a standardized procedure. Despite the minimization of human biases, a standardized workflow for quality control will additionally make datasets better comparable thereby allowing for between-datasets comparisons as opposed to quality control within a single dataset. Hence, an automated and standardized approach to quality control is desirable for the quality assessment of in-house and shared datasets.</p>
+<p>To address this issue the ANCP lab developed a software tool for automated and standardized quality control of MEG recordings.
+<em>(disclaimer: fragment adapted from MEGQc github)</em></p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="meg-qc-results">
-<h1>MEG Qc Results<a class="headerlink" href="#meg-qc-results" title="Link to this heading">#</a></h1>
-<p>MEGQc produces the following output from the analysis of a data file:</p>
-<ul class="simple">
-<li><p>A csv file* with the results for some metrics.</p></li>
-<li><p>json file** with the resulsts for all metrics.</p></li>
-</ul>
-<p>Once the csv files have been produced, another module within MEG Qc called <em><strong>plotting</strong></em> can be used to create:</p>
-<ul class="simple">
-<li><p>An html report for every metric (6 in total).</p></li>
-</ul>
-<p>Metrics are the diferent <em><strong>calculation modules</strong></em> within MEGQc used to evaluate specific types of artifacts or aspects of data quality. There are six metrics, which we’ll explore in detail later, but we’ll mention them now:</p>
+<section id="megqc">
+<h2>MEGqc<a class="headerlink" href="#megqc" title="Link to this heading">#</a></h2>
+<p>The MEGqc pipeline is designed to be user-friendly: Researches only need to provide data for evaluation, set analysis parameters if desired (default parameters are available), and run the analysis script. MEGqc is not an artifact removal tool but rather a tool that evaluates the quatlity of raw data to assist researches in making informed decision about further analysis (Gapontseva, 2023).</p>
+<p>The different  calculation modules within MEGqc are called <em><strong>metrics</strong></em> and they are used to evaluate specific types of artifacts or aspects of data quality. There are six independent metrics:</p>
 <ul class="simple">
 <li><p>Standard Deviation calculation</p></li>
 <li><p>Power Spectral Density calculation</p></li>
@@ -431,11 +415,32 @@ To address this issue the ANCP lab developed a software tool for automated and s
 <li><p>Peak-to-Peak automatic calculation: This module is not used in the final version of the pipeline; we’ll use the manual one.</p></li>
 <li><p>Head movement calculation: it’s actually functioning, but requires a huge amount of head positioning data.</p></li>
 </ul>
+<p>To ensure standardization of the pipeline, MEGqc software is tailored to the BIDS standards:</p>
+</section>
+<section id="what-is-bids">
+<h2>What is BIDS?:<a class="headerlink" href="#what-is-bids" title="Link to this heading">#</a></h2>
+<p>Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus how to organize and share data obtained in neuroimaging experiments. Brain Imaging Data Structure (BIDS), describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort. To be able to ensure this standardization, MEGqc requires the data to be organized according to BIDS.</p>
+<p><em>(discalimer: fragment adapted from BIDS official website)</em></p>
+</section>
+<section id="meg-qc-results">
+<h2>MEG Qc Results<a class="headerlink" href="#meg-qc-results" title="Link to this heading">#</a></h2>
+<p>MEGQc produces the following output from the analysis of a data file:</p>
+<ul class="simple">
+<li><p>json file* with the key information for each of the quality metrics.</p></li>
+<li><p>A csv file** with more detailed results for some of the metrics.</p></li>
+</ul>
+<p>Both of them are Machine-Readable reports that enables further analysis and computations. To ensure the clarity of the metrics, the pipeline has an extra module called <em>plotting</em> which generates html reports with visual representations generated out of the csv files:</p>
+<ul class="simple">
+<li><p>An html report for every metric (6 in total).</p></li>
+</ul>
 <br>   
 <p>In the next section, we’ll walk through the key sections of the MEGQc report.</p>
 <hr class="docutils" />
-<p>*<em>csv file: A CSV (Comma-Separated Values) file is a simple text file that stores tabular data, with each line representing a row and each value in the row separated by a comma.</em><br />
-**<em>json file: A JSON (JavaScript Object Notation) file is a lightweight data format that stores structured data in a readable, text-based format using key-value pairs, arrays, and nested objects.</em></p>
+<ul class="simple">
+<li><p><em>json file: A JSON (JavaScript Object Notation) file is a lightweight data format that stores structured data in a readable, text-based format using key-value pairs, arrays, and nested objects.</em></p></li>
+<li><p>*<em>csv file: A CSV (Comma-Separated Values) file is a simple text file that stores tabular data, with each line representing a row and each value in the row separated by a comma.</em></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -478,7 +483,7 @@ To address this issue the ANCP lab developed a software tool for automated and s
       </div>
     </a>
     <a class="right-next"
-       href="report.html"
+       href="metrics.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -503,13 +508,11 @@ To address this issue the ANCP lab developed a software tool for automated and s
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to MEG quality control and BIDS</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meg-data-quality-control">MEG data quality control:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#megqc">MEGqc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meg-qc-results">MEG Qc Results</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#meg-qc-results">MEG Qc Results</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

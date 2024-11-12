@@ -5,16 +5,16 @@ Unfortunately, this interactive feature is lost in this tutorial, as we'll work 
 
 ## Raw Information
 
-The following information is not directly visible in this report, but it's important to understand it. MEG QC extracts the data as an MNE Raw class object. The Raw object includes metadata such as the channels' details, distinguising among Gradiometers and Magnetometers (more on that later), EOG and ECG channel, sampling frequency, filters applied, and so on.
+The following information is not directly visible in this report, but it's important to understand it. MEG QC extracts the data as an MNE Raw class object. The Raw object includes metadata such as the channels' details, distinguising among Gradiometers and Magnetometers (more on that later), EOG and ECG channels, sampling frequency, filters applied, and so on.
 
 ![Raw Info](static/00)
 
 ## Sensors positions
 
-Almost every report starts with this visual representation of the spatial distribution of MEG sensors on the subject's head. The sensors are divided into eight color-coded groups representing different head regions. The same color-code will be used pretty often in the reports.
+Almost every report starts with this visual representation of the spatial distribution of MEG sensors on the subject's head. The sensors are divided into eight color-coded groups representing different head regions. The same color-code will be used pretty often through the reports.
 Every sensor dot has 3 different identifiers:
-- 1 Magnetometer: names end with '1' like 'MEG1011'. They measure the magnetic field directly, providing data on its strength and direction. They are more sensitive to distant source, so they are more vulnerable to external magnetic noise.
-- 2 Gradiometers: names end with '2' and '3' like 'MEG0112' and 'MEG0113'. These sensors measure the gradient of the magentic field, so the difference between 2 measuremenets. It filters out environemntal noise.
+- 1 Magnetometer: They measure the magnetic field directly, providing data on its strength and direction. They are more sensitive to distant source, so they are more vulnerable to external magnetic noise. Their lables end with '1' like 'MEG1011'.
+- 2 Gradiometers: These sensors measure the gradient of the magentic field, so the difference between 2 measuremenets. It filters out environemntal noise. Their labels end with '2' and '3' like 'MEG0112' and 'MEG0113'. 
 
 
 ![Sensor distribution](static/01)
@@ -27,9 +27,9 @@ Many of the reports include 2 sets of results: one for the Magnetometers and a s
 
 ### Standard deviation of the data
 
-The Standard Deviation provides an overview of the variability from the recorded signal and it allows us to identify outliers among the sensors. 
+The Standard Deviation (STD) metric measures the variability of each channels. If some channels show much higher or lower STD than others,  it suggest potential malfunctions of the channels (Gapontseva, 2023). 
 
-In this box plot every dot represents the standard deviation of each Magnetometer over the entire time series. The sensors are colored following the region distribution of the previous plot. If you hover over the dot you'll see the standard deviation value. You can also deactivate or activate sensors from specific brain regions. The position of the points on the Y axis are not meaningful, they are just for visualization purposes.     
+In the first box plot every dot represents the standard deviation of each Magnetometer over the entire time series. The sensors are colored following the region distribution of the previous plot. If you hover over the dot you'll see the standard deviation value. You can also deactivate or activate sensors from specific brain regions. The position of the points on the Y axis are not meaningful, they are just for visualization purposes.     
 If a dot falls outside of the whiskers, it means that that specific sensor might be a potentital outlier over the entire time series.     
 
 
@@ -59,7 +59,7 @@ As it was mentioned before, this set of figures gets repeated for Gradiometers.
 
 ### Power Spectrum Density
 
-The Power Spectrum Density describes how the power of a signal is distributed across different frequencies. PSD calculation helps us to distinguish between brain activity and non-brain-related noise.  
+The Power Spectrum Density describes how the power of a signal is distributed across different frequencies. It provides information on the strength or intensitzy of different frequency components. PSD calculation helps us to distinguish between brain activity and non-brain-related noise (Gapontseva, 2023).  
 
 ![pic1](static/02_PSD/01.png)  
 ![pic2](static/02_PSD/02.png)
@@ -83,7 +83,7 @@ In the .html one can zoom-in and to adjust the scale of the axes: one can toggle
 Each segment of this circle chart represents the proportion of the total signal power that falls within each frequency range. How much does every frequency band contribote to the overall signal. 
 
 ### Peak to Peak Amplitude
-Peak-to-Peak (PtP) amplitude refers to the difference between the maximun and the minimun values of a signal. High PtP values suggest a strong brain signal or large fluctuations of the signal. Meanwhile, a low PtP might indicate that the signal was weak, with low variations, or rather that the data has been corrupted by noise. 
+Peak-to-Peak (PtP) amplitude refers to the difference between the highest positive peak and the lowest negative peak. It provides a measue of the total range of variation of the data  averaged over a time interval (Gapontseva, 2023). 
 
 ![pic1](static/03_PtP/01)
 
@@ -93,7 +93,7 @@ The position in the Y Axis is not meaningful, but serves visualization purposes.
 
 ![pic2](static/03_PtP/02)
 
-In this plot, each box plot represents a specific sensor (colour coded by areas) and each point the PtP AMpltiude for that sensor during a specific epoch (time window).  
+In this plot, each box plot represents a specific sensor (colour coded by areas) and each point the PtP Ampltiude for that sensor during a specific epoch (time window).  
 
 ![pic3](static/03_PtP/03)
 
@@ -103,7 +103,7 @@ In this plot, each box plot represents an epoch and each point the PtP AMpltiude
 
 ### ECG: heart beat interference
 
-Heartbeat interference is a common source of noise in MEG recordings. This intereference shows up as a periodic artifact. That's why, analyzing the ECG channel helps in separating these artifacts from brain activity. 
+Heartbeat interference is a common source of noise in MEG recordings. This intereference shows up as a rhythmic and periodic fluctuation, and it is different among participants (Gapontseva, 2023). 
 
 ![pic1](static/04_ECG/01.png)
 
@@ -126,7 +126,7 @@ The following 3 plots highlights the MEG channels affected by heartbeat interfer
 
 ### EOG: eye movement interference
 
-Eye movements and blinks create strong artifacts. The EOG (Electrooculogram) sensor records this eye activity and can be used to detect and remove these artifacts from the MEG data. 
+The EOG (Electrooculogram) sensor records eye activity and can be used to detect eye movements disturbances, which are usually separated into saccades and blinks. The MNE algorithms only identify blinks (Gapontseva, 2023).
 
 ![pic2](static/05_EOG/02)
 This plot shows the EOG signal over time (blue line). Each blink produces a peak, which is labeled by the red dot. 
@@ -142,8 +142,13 @@ Similar to the ECG report, these three plots show those MEG channels affected by
 ![pic6](static/05_EOG/06)
 
 ### High frequency (Muscle) artifacts
-This metric highlights high-frequency artifacts in the 110-140 Hz range, which often correspond to muscle activity, as suggested by MNE. This report includes a single plot displaying the z-scores of high frequency (blue line) and events (red-dots) where the z-score exceed the threshold of 5 (default in settings)
+Muslce contractions generates electrical activity noticeable in the range of 110-140 Hz (as suggested by MNE). For example, clenching the jaw, swallowing or twitching a cranial muscle (Gapontseva, 2023).
+
+This report includes a single plot displaying the z-scores of high frequency (blue line) and events (red-dots) where the z-score exceed the threshold of 5 (default in settings)
 
 
 ![pic2](static/06_Muscle/02)
 
+### Estimation of subjet's head movement
+These movements may appear as sudden shifts or jumps in the MEG data and can cause distortions in the spatial distribution of the recorded magnetic fields. The effects of head movements can vary depending on the strength and direction Gapontseva, 2023).
+This module is implemented but requires a massive amount of information for it to be calculated.
