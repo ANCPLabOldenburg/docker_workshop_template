@@ -68,10 +68,14 @@ This circle chart represents the Signal-to-Noise Ratio (SNR), which is a measure
 
 ![pic3](static/02_PSD/03)
 
+
 The Welch periodrogram is commonly used to estimate the power of a signal at different frequency components.  
 The X-Axis represents the frequency range of the signal (from 0 to 140 Hz in this case).  
 The Y-Axis represents the amplitude of the signal. 
 Each colored line represents the PSD forthe different magnetometers. As it was previously reported, there's a visible peak at 11.5 Hz.
+
+![pic3-2](static/02_PSD/03-2.png)
+In the .html one can zoom-in and to adjust the scale of the axes: one can toggle between a **linear** view or a **logarithmic** view both for the X-axis and the Y-axis independly. Logarithmic view can be useful to show growth rate insteasd of absolute values.
 
 ![pic4](static/02_PSD/04.png)
 ![pic5](static/02_PSD/05.png)

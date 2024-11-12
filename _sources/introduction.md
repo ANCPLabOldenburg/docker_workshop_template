@@ -36,9 +36,9 @@ Metrics are the diferent ***calculation modules*** within MEGQc used to evaluate
 <br>  
 
 
-There are 2 other metrics within MEG Qc but they are not active right now:
-- ~~Head movement calculation~~
-- ~~Peak-to-Peak automatic calculation~~
+There are 2 other metrics within MEG QC:
+- Peak-to-Peak automatic calculation: This module is not used in the final version of the pipeline; we'll use the manual one.
+- Head movement calculation: it's actually functioning, but requires a huge amount of head positioning data.
 
 <br>   
   
