@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'installation';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="How to make MEGqc run" href="run.html" />
+    <link rel="next" title="How to make the calculation module run" href="run_calculation.html" />
     <link rel="prev" title="MEGQc report:" href="metrics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -165,11 +165,12 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control and BIDS</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="metrics.html">MEGQc report:</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="run.html">How to make MEGqc run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
 </ul>
 
     </div>
@@ -374,10 +375,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environment">Python Environment</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-clone-the-megqc-package">Install &amp; clone the MEGqc Package</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-depencies">Install depencies</a></li>
@@ -405,15 +403,18 @@
 <h2>Virtual environments<a class="headerlink" href="#virtual-environments" title="Link to this heading">#</a></h2>
 <p>Virtual environments create isolated and sel-contained workspaces, allowing us to manage project-specific dependencies separated from the system-wide installation. This isollation has several benefits:</p>
 <ul class="simple">
-<li><p>Avoid interference among dependencies of other project-specific and system-wide dependencies avoiding common errors related to depencies, versions.</p></li>
+<li><p>Avoid interference among dependencies of other project-specific and system-wide dependencies avoiding common errors related to depencies or versions.</p></li>
 <li><p>Transparency and Open Science: Ensure that others can replicate your results or able to reproduce your analysis.</p></li>
 </ul>
-<section id="python-environment">
-<h3>Python Environment<a class="headerlink" href="#python-environment" title="Link to this heading">#</a></h3>
-<p>MEG QC has compatiblity issues with older Python versions (prior to 3.9), therefore it’s necessary to upgrade your Python version. Environments allows one to work with specific versions of Python itself without affecting other projects within the same network or the OS itself.
-<strong><a class="reference external" href="https://github.com/pyenv/pyenv">pyenv</a></strong> is a simple python version management. It let’s you easily swtich between multiple versions of Python. In their github you can find the instruction to install pyenv, create your own environment with your desired Python version and activate it.</p>
 <p><img alt="environments" src="_images/python-virtual-envs1.webp" /></p>
-</section>
+<!--
+### Python Environment
+
+MEG QC has compatiblity issues with older Python versions (prior to 3.9), therefore it's necessary to upgrade your Python version. Environments allows one to work with specific versions of Python itself without affecting other projects within the same network or the OS itself.
+
+
+**[pyenv](https://github.com/pyenv/pyenv)** is a simple python version management. It let's you easily swtich between multiple versions of Python. In their github you can find the instruction to install pyenv, create your own environment with your desired Python version and activate it. 
+-->
 </section>
 <section id="install-clone-the-megqc-package">
 <h2>Install &amp; clone the MEGqc Package<a class="headerlink" href="#install-clone-the-megqc-package" title="Link to this heading">#</a></h2>
@@ -428,8 +429,8 @@
 <p>Then you will need to clone the <a class="reference external" href="https://github.com/ANCPLabOldenburg/MEGqc">github repository</a> and unzip it.</p>
 <p><img alt="repository" src="_images/github.png" /></p>
 <ul class="simple">
-<li><p>The folder docker contains the starting script <em>run_megqc.py</em>.</p></li>
-<li><p>The folder meg_qc is a copy of the previously pip installed MEGqc package.</p></li>
+<li><p>The folder <em>docker</em> contains the starting script <em>run_megqc.py</em>.</p></li>
+<li><p>The folder <em>meg_qc</em> is a copy of the previously pip installed MEGqc package.</p></li>
 </ul>
 </section>
 <section id="install-depencies">
@@ -523,11 +524,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="run.html"
+       href="run_calculation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How to make MEGqc run</p>
+        <p class="prev-next-title">How to make the calculation module run</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -548,10 +549,7 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environment">Python Environment</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-clone-the-megqc-package">Install &amp; clone the MEGqc Package</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-depencies">Install depencies</a></li>

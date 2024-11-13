@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome! &#8212; Docker for neuroscience</title>
+    <title>How to make the plotting module run &#8212; Docker for neuroscience</title>
   
   
   
@@ -61,10 +61,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'run_plotting';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction to MEG quality control and BIDS" href="introduction.html" />
+    <link rel="prev" title="How to make the calculation module run" href="run_calculation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -116,8 +116,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -137,7 +135,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -158,20 +156,20 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
                     Welcome!
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control and BIDS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to make the plotting module run</a></li>
 </ul>
 
     </div>
@@ -243,7 +241,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/index.md" target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/run_plotting.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Frun_plotting.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +288,7 @@
       
       
       
-      <li><a href="_sources/index.md" target="_blank"
+      <li><a href="_sources/run_plotting.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +364,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome!</h1>
+    <h1>How to make the plotting module run</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,13 +374,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Welcome!</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-ve-got-a-question">I’ve got a question!</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-plotting-module">Running the plotting module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -393,26 +388,36 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><a class="reference external" href="https://github.com/PeerHerholz/workshop_weizmann"><img alt="License" src="https://img.shields.io/github/license/peerherholz/workshop_weizmann" /></a></p>
-<section class="tex2jax_ignore mathjax_ignore" id="welcome">
-<h1>Welcome!<a class="headerlink" href="#welcome" title="Link to this heading">#</a></h1>
-<p>Hello everyone and welcome to this MEG QC tutorial.
-MEG QC is a python based pipeline for quality control of MEG data, it was developed as Evgeniia Gapontseva’s Master Thesis (2023) within the Oldenburg university in the Applied Neurocognitive Psychology Lab (ANCP Lab).</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/ANCPLabOldenburg/MEGqc">Link to GitHub</a></p></li>
-<li><p><a class="reference external" href="https://meg-qc.readthedocs.io/en/latest/">Link to authors’ Documentation</a></p></li>
-<li><p><a class="reference external" href="https://uol.de/en/applied-neurocognitive-psychology">Link to ANCP Lab website</a></p></li>
-</ul>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="i-ve-got-a-question">
-<h1>I’ve got a question!<a class="headerlink" href="#i-ve-got-a-question" title="Link to this heading">#</a></h1>
-<p>In case you have any questions or difficulties working with MEG QC, please don’t hesitate a single second to get in touch with us. A great way to do this is to via e-mail &#64; <a class="reference external" href="mailto:aaron&#46;reer&#37;&#52;&#48;uol&#46;de">aaron<span>&#46;</span>reer<span>&#64;</span>uol<span>&#46;</span>de</a>.</p>
-<section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
-<p>This tutorial is possible through the dedicated and second to none work of the <a class="reference external" href="https://jupyter.org/community">Jupyter community</a>, specifically, the <a class="reference external" href="https://executablebooks.org/en/latest/">Executable/Jupyter Book</a>.</p>
-</section>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-make-the-plotting-module-run">
+<h1>How to make the plotting module run<a class="headerlink" href="#how-to-make-the-plotting-module-run" title="Link to this heading">#</a></h1>
+<p>Once the calculation module has completed the analysis, JSON and TSV files are generated and saved in the folder <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> alongside the datasets.</p>
+<section id="setting-file-paths">
+<h2>Setting File Paths<a class="headerlink" href="#setting-file-paths" title="Link to this heading">#</a></h2>
+<p>First, locate the script <em>meg_qc_plots.py</em> within the <code class="docutils literal notranslate"><span class="pre">plotting</span></code>folder thin the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> package in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment.</p>
+<p>Open the <em>meg_qc_plots.py</em> and, at the very last line where <strong>tsvs_to_plot=</strong> is defined, add your path to your dataset. The line should look similar to this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    tsvs_to_plot = make_plots_meg_qc(ds_paths=[&#39;/home/&lt;user&gt;/&lt;folder/paths&gt;/&lt;dataset&gt;/&#39;])
+</pre></div>
 </div>
+</section>
+<section id="running-the-plotting-module">
+<h2>Running the plotting module<a class="headerlink" href="#running-the-plotting-module" title="Link to this heading">#</a></h2>
+<p>Ensure that you are working from your environment and then run the script from the command line. The command might look like:
+python3 /home/<user>/<environment>/lib/python3.<version>/site-packages/meg_qc/plotting/meg_qc_plots.py
+/home/abaxman/envs/pls/lib/python3.9/site-packages/meg_qc/plotting/</p>
+</section>
+<section id="gui">
+<h2>GUI<a class="headerlink" href="#gui" title="Link to this heading">#</a></h2>
+<p>After running the plotting command, a text-based GUI will appear in the terminal asking you several questions about specific parameters, the available options are based on the metadata MEGqc finds in your dataset.:</p>
+<ul class="simple">
+<li><p>Subjects: ALL or a specific one</p></li>
+<li><p>Sessions: ALL or a specific one</p></li>
+<li><p>Tasks: ALL or a specific one</p></li>
+<li><p>Runs: ALL or a specific one</p></li>
+<li><p>Metrics: ALL or a specific one</p></li>
+<li><p>Sensors: ALL or only magnetometers or gradiometers</p></li>
+</ul>
+<p><img alt="gui" src="_images/gui.png" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -445,14 +450,14 @@ MEG QC is a python based pipeline for quality control of MEG data, it was develo
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="introduction.html"
-       title="next page">
+    <a class="left-prev"
+       href="run_calculation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to MEG quality control and BIDS</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How to make the calculation module run</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -471,13 +476,10 @@ MEG QC is a python based pipeline for quality control of MEG data, it was develo
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Welcome!</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-ve-got-a-question">I’ve got a question!</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-plotting-module">Running the plotting module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

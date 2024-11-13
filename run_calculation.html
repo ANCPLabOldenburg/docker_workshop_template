@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How to make MEGqc run &#8212; Docker for neuroscience</title>
+    <title>How to make the calculation module run &#8212; Docker for neuroscience</title>
   
   
   
@@ -61,9 +61,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'run';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'run_calculation';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to make the plotting module run" href="run_plotting.html" />
     <link rel="prev" title="Installation" href="installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -164,11 +165,12 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control and BIDS</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="metrics.html">MEGQc report:</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">How to make the calculation module run</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to make MEGqc run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
 </ul>
 
     </div>
@@ -240,7 +242,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/run.md" target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/run_calculation.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -257,7 +259,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Frun.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Frun_calculation.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +289,7 @@
       
       
       
-      <li><a href="_sources/run.md" target="_blank"
+      <li><a href="_sources/run_calculation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -363,7 +365,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How to make MEGqc run</h1>
+    <h1>How to make the calculation module run</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -373,12 +375,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-of-filepaths">Configuration of filepaths</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-calculation-module">To run calculation module</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ain-t-no-workshop-good-enough">Ain’t no workshop good enough</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-there-be-pre-workshop-training">Let there be pre-workshop training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-dataset-path">Specifying Dataset Path</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a></li>
 </ul>
             </nav>
         </div>
@@ -390,37 +389,43 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-to-make-megqc-run">
-<h1>How to make MEGqc run<a class="headerlink" href="#how-to-make-megqc-run" title="Link to this heading">#</a></h1>
-<p>Once you’ve finished with the installation steps, now comes the last settings before making it run.</p>
-<section id="configuration-of-filepaths">
-<h2>Configuration of filepaths<a class="headerlink" href="#configuration-of-filepaths" title="Link to this heading">#</a></h2>
-<section id="to-run-calculation-module">
-<h3>To run calculation module<a class="headerlink" href="#to-run-calculation-module" title="Link to this heading">#</a></h3>
-<p>So within the folder <em>docker</em> of the cloned repository, you’ll find the script <em>run_megqc.py</em> and within it there are 2 filepaths to edit:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-make-the-calculation-module-run">
+<h1>How to make the calculation module run<a class="headerlink" href="#how-to-make-the-calculation-module-run" title="Link to this heading">#</a></h1>
+<p>After completed the installation steps, follow these final setting to get the software to run:</p>
+<p><img alt="gif" src="https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif" /></p>
+<section id="setting-file-paths">
+<h2>Setting File Paths<a class="headerlink" href="#setting-file-paths" title="Link to this heading">#</a></h2>
+<p>So within the folder <code class="docutils literal notranslate"><span class="pre">docker</span></code> of the cloned repository, you’ll find the script <strong>run_megqc.py</strong> and within it there are 2 filepaths to edit:</p>
 <ul class="simple">
-<li><p><strong>config_file_path=</strong> here you’ll need to write the path to the <em>settings.ini</em> file within the <em>settings</em> folder of your <em>meg_qc</em>, in the <em>site-packages</em> of your python environment.</p></li>
-<li><p><strong>internal_config_file_path=</strong> here you’ll need to write the path to the <em>settings_internal.ini</em> file within the <em>settings</em> folder of your <em>meg_qc</em>, in the <em>site-packages</em> of your python environment.</p></li>
+<li><p><strong>config_file_path=</strong> here you’ll need to write the path to the <strong>settings.ini_</strong>.</p></li>
+<li><p><strong>internal_config_file_path=</strong> here you’ll need to write the path to the <strong>settings_internal.ini</strong>.</p></li>
 </ul>
-<p>Then you’ll have to open the file <em>setttings.ini</em> within the <em>settings</em> folder of your <em>meg_qc</em>, in the <em>site-packages</em> of your python environment and edit one last filepath:</p>
+<p>Both files are located in  the <code class="docutils literal notranslate"><span class="pre">settings</span></code> folder within the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment. The path should look something like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /home/&lt;user&gt;/&lt;environment_name&gt;/lib/python3&lt;.version&gt;/site-packages/meg_qc/settings/settings.ini
+</pre></div>
+</div>
+<br>
+</section>
+<section id="specifying-dataset-path">
+<h2>Specifying Dataset Path<a class="headerlink" href="#specifying-dataset-path" title="Link to this heading">#</a></h2>
+<p>Next open the file <strong>setttings.ini</strong> to edit the path to your datasets:</p>
 <ul class="simple">
-<li><p><strong>data_directory=</strong> it’s in the line 54 of the script. “It’s not necessary to write the entire path to every data file; insteaad, only the path to the entire dataset is rquired. The pipeline can be executed for several subjects and datasets in one click” (Gapontseva, 2023)</p></li>
+<li><p><strong>data_directory=</strong> Here, you only need to specify the path to the dataset, the pipeline will automatically process multiple subjects and files thanks to the ancpBIDS library.</p></li>
 </ul>
 </section>
+<section id="running-the-calculation-module">
+<h2>Running the calculation module<a class="headerlink" href="#running-the-calculation-module" title="Link to this heading">#</a></h2>
+<p>Finally, we are ready to run <em>rung_megqc.py</em>! Ensure that you activate the environment first:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    source home/&lt;user&gt;/&lt;environment&gt;/bin/activate
+</pre></div>
+</div>
+<p>Then, the run command is given from the terminal and <strong>not</strong> from the command pannel. The command might be a similar line as:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /home/user/folder/MEGqc/docker/run_megqc.py
+</pre></div>
+</div>
 </section>
-<section id="ain-t-no-workshop-good-enough">
-<h2>Ain’t no workshop good enough<a class="headerlink" href="#ain-t-no-workshop-good-enough" title="Link to this heading">#</a></h2>
-<p>The reality of workshops like these is that they really don’t teach attending folks all they need to know to subsequently apply the respective content sufficiently, not to mention the training aspect. At best, workshops provide folks with the materials, overview and pointers necessary to continue and actually dive into the taught topics (the truth hurts sometimes, doesn’t it?). Another important aspect that is frequently overlooked is that attendees usually need a certain set of skills and experience to really benefit from a given workshop, especially considering the diverse backgrounds folks have. We want to be fair, open and welcoming to everyone and while we know that we unfortunately can’t achieve and assume a truly similar level of training and experience across all participants, we can at least do our best to work towards certain opportunities. That being said, workshops like the one you’re currently looking at, usually by default (should) require basic to advanced programming skills and knowledge about file handling/input/output, signal processing, statistics and linear algebra (vectors much?). Tough stuff, eh?</p>
-<p><img alt="logo" src="https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif" /><br />
-<sub><sup><sub><sup><a class="reference external" href="https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif">https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif</a>
-</sup></sub></sup></sub></p>
-</section>
-<section id="let-there-be-pre-workshop-training">
-<h2>Let there be pre-workshop training<a class="headerlink" href="#let-there-be-pre-workshop-training" title="Link to this heading">#</a></h2>
-<p>So what can we actually do to provide the entire attending gang with the chance to get up to speed for the workshop and ideally beyond? Unfortunately, we can’t hold pre-workshop-workshops and various consultations. Instead we decided to utilize the fantastic <a class="reference external" href="https://jupyter.org/">jupyter</a>-<a class="reference external" href="https://www.python.org/">python</a>-open science world and build upon the framework of <a class="reference external" href="https://jupyterbook.org/intro.html">jupyter books</a> employed to host this workshop and its materials.</p>
-<p><strong>Important</strong>: we know that everyone has a lot of stuff to do and that not everyone will be able to go through the stuff we collected here. We’ve tried to keep this part minimal, but not everything can be skipped if we want this workshop to work for you.</p>
-<p>We will try our best to bring the core points across, even if you don’t have a substantial amount of experience. Please just make sure that you ask <strong>all</strong> the questions that might pop up, the same holds true for any problems you might encounter.</p>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -462,6 +467,15 @@
         <p class="prev-next-title">Installation</p>
       </div>
     </a>
+    <a class="right-next"
+       href="run_plotting.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How to make the plotting module run</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -479,12 +493,9 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-of-filepaths">Configuration of filepaths</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-calculation-module">To run calculation module</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ain-t-no-workshop-good-enough">Ain’t no workshop good enough</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-there-be-pre-workshop-training">Let there be pre-workshop training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-dataset-path">Specifying Dataset Path</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a></li>
 </ul>
   </nav></div>
 
