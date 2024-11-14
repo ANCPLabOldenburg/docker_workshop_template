@@ -17,10 +17,14 @@ Both files are located in  the `settings` folder within the `meg_qc` in the `sit
 
 <br>
 
-## Specifying Dataset Path
+## Specifying Dataset Path and subjects
 
-Next open the file **setttings.ini** to edit the path to your datasets:
+Next open the file **setttings.ini** to edit the following variables:
+
+- **subjects=** is a string variable, you shall write the code of the participant you want to analye (f.e., 009), a list of subjects separated by a comma (001, 002, 003) or write "all".
+
 - **data_directory=** Here, you only need to specify the path to the dataset, the pipeline will automatically process multiple subjects and files thanks to the ancpBIDS library. 
+
 
 
 ## Running the calculation module

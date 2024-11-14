@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setup for the workshop &#8212; Docker for neuroscience</title>
+    <title>Settings description &#8212; Docker for neuroscience</title>
   
   
   
@@ -365,7 +365,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Setup for the workshop</h1>
+    <h1>Settings description</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,17 +375,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-software">Required software</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-things">General things</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-quick-general-notes-on-instructions">Some quick general notes on instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os-specific-installation-instructions">OS-specific installation instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-your-install">Checking your install</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-account">GitHub account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord">Discord</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-web-browser">Modern web browser</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-the-matrix">Enter the matrix</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epoching">Epoching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#std">STD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#psd">PSD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-manual">PTP_manual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-auto">PTP_auto</a></li>
 </ul>
             </nav>
         </div>
@@ -397,238 +392,307 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="setup-for-the-workshop">
-<h1>Setup for the workshop<a class="headerlink" href="#setup-for-the-workshop" title="Link to this heading">#</a></h1>
-<p>Most of the materials for this workshop can be found on this website, if you’d like to give input, leave comments or highlight relevant parts (publicly or privately) we encourage you to make use of the <a class="reference external" href="https://web.hypothes.is/"><code class="docutils literal notranslate"><span class="pre">hypothes.is</span></code></a> plugin via the annotation sidebar on the right side of the page. If you’d rather download these materials, you can do so via the {download} symbol! at the top of the respective page. You can open the respective content (.md files) via an IDE (e.g. VScode, Atom) or via Jupyter Notebooks/Lab.</p>
-<p>We’ll come to actual installation instructions shortly, but there are a few other requirements that will need to be satisfied. Please read the whole document and follow the instructions closely.</p>
-<section id="required-software">
-<h2>Required software<a class="headerlink" href="#required-software" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>A command-line shell: Bash</p></li>
-<li><p>An IDE or text editor: e.g. VSCode (recommended)</p></li>
-<li><p>A modern browser</p></li>
-</ul>
-<p>Mac and Linux distributions automatically provide a command line shell, simply search for <code class="docutils literal notranslate"><span class="pre">terminal</span></code> and you should be good to go. Windows users will have to complete a few additional steps, see the OS-specific installation instructions down below.</p>
-</section>
-<section id="general-things">
-<h2>General things<a class="headerlink" href="#general-things" title="Link to this heading">#</a></h2>
-<p>There are a few computing requirements for the course that are necessary:</p>
-<ol class="arabic simple">
-<li><p>You must have administrator access to your computer (i.e., you must be able to install things yourself without requesting IT approval).</p></li>
-<li><p>You should have at least <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">GB</span></code> of free disk space on your computer (but we would recommend more, to be safe).</p></li>
-<li><p>If you are using Windows you must be using Windows 10/11; Windows 7 and 8 will not be sufficient for this course.</p></li>
-<li><p>Some parts of this course will make use of GitHub, so creating a GitHub account is recommended</p></li>
-<li><p>For easier communication, we’ve created a Discord Server for this program. If you’re interested install Discord and follow this <a class="reference external" href="https://discord.gg/ehN5haXS">invite link</a>.</p></li>
-</ol>
-<p>If you foresee any of these being a problem please reach out to one of the instructors to see what steps you can take to ensure you are ready for the course start.</p>
-</section>
-<section id="some-quick-general-notes-on-instructions">
-<h2>Some quick general notes on instructions<a class="headerlink" href="#some-quick-general-notes-on-instructions" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>If you already have some of these things installed on your computer that should (theoretically) be okay.
-However, you need to make sure that you can complete the steps described in <code class="docutils literal notranslate"><span class="pre">checking</span> <span class="pre">your</span> <span class="pre">install</span></code> section below without issue.</p>
-<ul>
-<li><p>This is mainly to see if your Docker installation is working!</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="os-specific-installation-instructions">
-<h2>OS-specific installation instructions<a class="headerlink" href="#os-specific-installation-instructions" title="Link to this heading">#</a></h2>
-<p>Select the tab that corresponds to your operating system and follow the instructions therein.</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-Windows</label><div class="sd-tab-content docutils">
-<p><strong>Bash shell - Windows Subsystem for Linux (WSL)</strong></p>
-<p>Windows doesn’t come with a preinstalled bash shell. To remedy this we will rely on <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL (Windows subystems for Linux)</a>, which will provide a Unix command-line based on the latest Ubuntu distribution.</p>
-<ol class="arabic">
-<li><p>Search for <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Powershell</span></code> in your applications; right click and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">as</span> <span class="pre">administrator</span></code>.
-Select <code class="docutils literal notranslate"><span class="pre">Yes</span></code> on the prompt that appears asking if you want to allow the app to make changes to your device.</p></li>
-<li><p>Type the following into the Powershell and then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>wsl --install
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="settings-description">
+<h1>Settings description<a class="headerlink" href="#settings-description" title="Link to this heading">#</a></h1>
+<p>The <strong>settings.ini</strong> file not only specifies the data directory path and subjects to be analyzed, but also contains an extensive array of customizable parameters.</p>
+<p>The MEGqc pipeline parameters were selected and estimated to be suitable to the greatest amount of datasets, so the users don’t need to select them manually. However, all these parameters are gathered and nicely organized in this script, so researches can edit them to adjust eh pipeline to their specific goals and   research needs.</p>
+<p>In this section we’ll provide an overview of each parameter group, explaining their purpose and how they can be customized.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>ch_types</strong></p></td>
+<td><p>mag, grad</p></td>
+<td><p>string</p></td>
+<td><p>defines which channels to process.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>STD, PSD, PTP_manual, PTP_auto_mne, ECG, EOG, Head, Muscle</strong></p></td>
+<td><p>All true except Head</p></td>
+<td><p>boolean</p></td>
+<td><p>activates or deactivates one of the calculation modules. Head is deactivate by default because normally the user doesn’t posses the cHPI data to estimate subject’s head positions.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>data_crop_tmin</strong></p></td>
+<td><p>0</p></td>
+<td><p></p></td>
+<td><p>Crop the data, time in seconds</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>data_crop_tmax</strong></p></td>
+<td><p>120</p></td>
+<td><p></p></td>
+<td><p>Crop the data, time in seconds. If you want to use the entire recording, you can leave one or both parameters blank.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>plot_mne_butterfly</strong></p></td>
+<td><p>False</p></td>
+<td><p>boolean</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>plot_interactive_time_series</strong></p></td>
+<td><p>False</p></td>
+<td><p>boolean</p></td>
+<td><p>Plot interactive time series (each channel on top of others, separated by ch type: mags, grads). This plot may signifcantly increase the time it takes to run the script. If you want to run the script faster, set this to False. Plot will be done on the data resampled to 100Hz/sec.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>plot_interactive_time_series_average</strong></p></td>
+<td><p>False</p></td>
+<td><p>boolean</p></td>
+<td><p>Plot interactive time series average (average over all channels of each type: mags, grads). Plot will be done on the data resampled to 100Hz/sec.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>verbose_plots</strong></p></td>
+<td><p>Flase</p></td>
+<td><p>boolean</p></td>
+<td><p>Show plots when running the script.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-</li>
-<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> again when prompted to reboot your computer.</p></li>
-<li><p>You’ll find a new apllication named “Ubuntu”, this is your new command line tool. Right-click and run this app as administrator.</p>
-<ul class="simple">
-<li><p>the first launch of the new Linux distribution may take some time as files need to be decompressed and stored</p></li>
-</ul>
-</li>
-<li><p>Upon opening the apllication you will be prompted to set up your Linux username and password</p>
-<ul class="simple">
-<li><p>to make use of the command line you’ll have to bascially create an deafult user account, which gives you the ability to run sudo (Super User Do) administrative commands</p></li>
-<li><p>the account name should be simple and contain no extra characters or spaces, e.g. your initials or first name will usually do</p></li>
-<li><p>`Note: When entering your password nothing will appear on the screen (blind typing), but you’re input will still be registeres. Simply type a password and hit enter.</p></li>
-</ul>
-</li>
-<li><p>Make sure that Ubuntu is up-to-date by entering the following and hitting enter: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code></p>
-<ul class="simple">
-<li><p>here you’ll be asked for the password you set in the previous step</p></li>
-</ul>
-</li>
-</ol>
-<p>From this point on whenever the instructions specify to “open a terminal” please assume you are supposed to open the Ubuntu application.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Important!</span></code> This will create a virtual Ubuntu application on your system. The terminal will alwyays start in your Ubuntu home directory, to access your Windows file system you’ll have to use a path that should look something like this <code class="docutils literal notranslate"><span class="pre">/mnt/c/Users/yourusername</span></code>, where yourusername is your windows user name. If you’re unsure how to navigate through your Ubuntu file system via the terminal, check back with our chapter on [prerequisites/bash](link here).</p>
-<p><strong>VSCode</strong></p>
-<ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> and click the download button, then run the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file.</p></li>
-<li><p>Leave all the defaults during the installation with the following exception:</p>
-<ul class="simple">
-<li><p>Please make sure the box labelled “Register Code as an editor for supported file types” is selected</p></li>
-</ul>
-</li>
-<li><p>When working with Linux under Windows using WSL you will have two different filesystems/drives since WSL will create a distinct filestystem for every
-Linux distribution you have installed. VSCode automatically detects WSL distributions and you can connect to them via the remote connection button (Blue button at the bottom left corner of your VSCode window). This is what it should look like:</p></li>
-</ol>
-<p><img alt="remote connection wsl startup screen" src="static/VSCode_startup.png" /></p>
-<br>
-<p><img alt="remote connection wsl taskbar options" src="static/VSCode_WSL.png" /></p>
-<p><strong>Docker</strong></p>
-<p>Unfortunately, getting Docker to work on Windows is a tad more complicated.</p>
-<ol class="arabic simple">
-<li><p>Download the installer from this <a class="reference external" href="https://www.docker.com/products/docker-desktop/">website</a>.</p></li>
-<li><p>Double-click Docker Desktop Installer.exe to run the installer. By default, Docker Desktop is installed at C:\Program Files\Docker\Docker.</p></li>
-<li><p>When prompted, ensure that “Use WSL 2” instead of Hyper-V option on the Configuration page is selected.</p></li>
-<li><p>If your system only supports one of the two options, you will not be able to select which backend to use.</p></li>
-<li><p>Follow the instructions on the installation wizard to authorize the installer and proceed with the install.</p></li>
-<li><p>When the installation is successful, select Close to complete the installation process.</p></li>
-<li><p>Open Docker Dektop, agree to the the terms of service and login using your Dockerhub user credentials. Now, the Docker engine should start (if starting of the Docker engine takes more than 5 minutes, restart your computer.</p></li>
-</ol>
-<p><code class="docutils literal notranslate"><span class="pre">If</span> <span class="pre">your</span> <span class="pre">admin</span> <span class="pre">account</span> <span class="pre">is</span> <span class="pre">different</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">user</span> <span class="pre">account,</span> <span class="pre">you</span> <span class="pre">must</span> <span class="pre">add</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">docker-users</span> <span class="pre">group:</span></code></p>
-<ol class="arabic simple" start="8">
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Management</span></code> as <code class="docutils literal notranslate"><span class="pre">administrator</span></code>.</p></li>
-<li><p>Navigate to Local Users and Groups &gt; Groups &gt; docker-users.</p></li>
-<li><p>Right-click to add the user to the group. 4)Sign out and sign back in for the changes to take effect.</p></li>
-</ol>
+<section id="filtering">
+<h2>Filtering<a class="headerlink" href="#filtering" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>apply_filtering</p></td>
+<td><p>True</p></td>
+<td><p>boolean</p></td>
+<td><p>It decides if the bandpass filter is applied or not. Change to Flase to turn off completely this section, the rest of parameters don’t matter</p></td>
+</tr>
+<tr class="row-odd"><td><p>downsample_to_hz</p></td>
+<td><p>1000</p></td>
+<td><p>int or float</p></td>
+<td><p>Frequency to downsample to. Must be: 1) at least 5 times higher than h_freq to avoid misrepresentation. 2) small value may lead to misrepresentation of chpi coils signal. They send signals in frequencies in higher than 100 hz. When downsampled this information may disappear. Recommended optimal value: 1000. Recommended minimum value: 500 Unit: Hz. Can be also set to False to avoid downsampling.</p></td>
+</tr>
+<tr class="row-even"><td><p>l_freq</p></td>
+<td><p>0</p></td>
+<td><p>int or float</p></td>
+<td><p>lower frequency for bandpass filter.</p></td>
+</tr>
+<tr class="row-odd"><td><p>h_freq</p></td>
+<td><p>140</p></td>
+<td><p>int or float</p></td>
+<td><p>higher frequency for bandpass filter.</p></td>
+</tr>
+<tr class="row-even"><td><p>method</p></td>
+<td><p>iir</p></td>
+<td><p>string</p></td>
+<td><p>Method for filtering</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-Linux</label><div class="sd-tab-content docutils">
-<p><strong>Bash shell</strong></p>
-<p>You already have it!
-Depending on which version of Linux you’re running you may need to type <code class="docutils literal notranslate"><span class="pre">bash</span></code> inside the terminal to access it (and hit enter).
-To check whether this is necessary, follow these steps:</p>
-<p>Open a terminal and type <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$SHELL</span></code>.</p>
-<p>If it reads <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code> then you are all set, this should be the standard.
-If not go through these following steps:</p>
-<ol class="arabic simple">
-<li><p>To check which shell you’re using open a terminal and type <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$SHELL</span></code>.</p></li>
-</ol>
-<ul class="simple">
-<li><p>If it reads <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code> then you are all set!</p></li>
-<li><p>If it read `/bin/zsh we will need to make the following adjustments</p></li>
-</ul>
-<ol class="arabic simple" start="2">
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/etc/shells</span></code> and hit enter</p>
-<ul class="simple">
-<li><p>under the list of accaeptable shells you should find <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>, note down this path (in most cases it should just read /bin/bash)</p></li>
-</ul>
-</li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">chsh</span> <span class="pre">-s</span> <span class="pre">/bin/bash</span></code> and hit enter (Note. <code class="docutils literal notranslate"><span class="pre">chsh</span></code> stands simply for “change shell”, this process is harmless and reversible, no worries. For more info see the official <a class="reference external" href="https://linux.die.net/man/1/chsh">documentation</a>))</p></li>
-<li><p>Close and reopen your terminal</p></li>
-<li><p>Verify that you’re now using the bash shell via <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$SHELL</span></code></p></li>
-</ol>
-<p><strong>VSCode</strong></p>
-<ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> and click the download button for either the .deb (Ubuntu, Debian) or the .rpm (Fedora, CentOS) file.</p></li>
-<li><p>Double-click the downloaded file to install VSCode.</p></li>
-</ol>
-<p><strong>Docker</strong></p>
-<p>Installing Docker Desktop is the recommended approach for all systems. You’ll need administraror (sudo) rights to follow this process.</p>
-<ol class="arabic simple">
-<li><p>Install Docker Desktop by following the official <a class="reference external" href="https://docs.docker.com/desktop/install/linux-install/">installation guide</a> for your specific distro.</p>
-<ol class="arabic simple">
-<li><p>Set up Docker’s package repository. See <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">one</span></code> of <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">Install using the apt repository</a>.</p></li>
-<li><p>Download latest package</p></li>
-<li><p>Open a terminal and install the package with apt following the instructions on the website</p></li>
-</ol>
-</li>
-<li><p>To Launch Docker Desktop run:
-`systemctl –user start docker-desktop``</p>
-<ul class="simple">
-<li><p>alternatively to enable Docker Desktop to start at sign-in run:
-<code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">--user</span> <span class="pre">enable</span> <span class="pre">docker-desktop</span></code></p></li>
-</ul>
-</li>
-<li><p>Close and Re-open a new terminal and type
-<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">hello-world</span></code>.
-A brief introductory message should be printed to the screen.</p></li>
-</ol>
+</section>
+<section id="epoching">
+<h2>Epoching<a class="headerlink" href="#epoching" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>event_durr</p></td>
+<td><p>0.2</p></td>
+<td><p>float</p></td>
+<td><p>the duration of the event in seconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p>epoch_tmin</p></td>
+<td><p>-0.2</p></td>
+<td><p>float</p></td>
+<td><p>time before the event, in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p>epoch_tmax</p></td>
+<td><p>1</p></td>
+<td><p>float</p></td>
+<td><p>time after the event, in seconds</p></td>
+</tr>
+<tr class="row-odd"><td><p>stim_channel</p></td>
+<td><p></p></td>
+<td><p>string</p></td>
+<td><p>Leave empty if want it to be detected automaticall or write explicetly</p></td>
+</tr>
+<tr class="row-even"><td><p>even_repeated</p></td>
+<td><p>merge</p></td>
+<td><p>string</p></td>
+<td><p>How to handle duplicates in events. Can be ‘error’ to raise an error, ‘drop’ to only retain the row occurring first in the events, or ‘merge’ to combine the coinciding events (=duplicates) into a new event (see Notes for details).</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-MacOs</label><div class="sd-tab-content docutils">
-<p><strong>Bash shell</strong></p>
-<p>You already have it!
-Newer versions of Mac OS will rely on a differnt standard, i.e. <code class="docutils literal notranslate"><span class="pre">zsh</span></code>, so we might need a few extra steps to setup your system.</p>
-<ol class="arabic simple">
-<li><p>To check which shell you’re using open a terminal and type <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$SHELL</span></code>.</p>
-<ul class="simple">
-<li><p>If it reads <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code> then you are all set!</p></li>
-<li><p>If it read `/bin/zsh we will need to make the following adjustments</p></li>
-</ul>
-</li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/etc/shells</span></code> and hit enter</p>
-<ul class="simple">
-<li><p>under the list of accaeptable shells you should find <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>, note down this path (in most cases it should just read /bin/bash)</p></li>
-</ul>
-</li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">chsh</span> <span class="pre">-s</span> <span class="pre">/bin/bash</span></code> and hit enter (Note. <code class="docutils literal notranslate"><span class="pre">chsh</span></code> stands simply for “change shell”, this process is harmless and reversible, no worries. For more info see the official <a class="reference external" href="https://linux.die.net/man/1/chsh">documentation</a>))</p></li>
-<li><p>Close and reopen your terminal</p></li>
-<li><p>Verify that you’re now using the bash shell via <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$SHELL</span></code></p></li>
-</ol>
-<p><strong>VSCode</strong></p>
-<ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> and click the download button.</p></li>
-<li><p>Unzip the downloaded file (e.g., <code class="docutils literal notranslate"><span class="pre">VSCode-darwin-stable.zip</span></code>) and moving the resulting <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">Code</span></code> file to your Applications directory.</p></li>
-</ol>
-<p><strong>Docker</strong></p>
-<ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://hub.docker.com/editions/community/docker-ce-desktop-mac/">https://hub.docker.com/editions/community/docker-ce-desktop-mac/</a> and press “Get Docker”.</p></li>
-<li><p>Open the “Docker.dmg” file that is downloaded and drag and drop the icon to the Applications folder</p></li>
-<li><p>Open the Docker application and enter your password.
-An icon will appear in the status bar in the top-left of the screen.
-Wait until it reads “Docker Desktop is now up and running!”</p></li>
-<li><p>Open a new terminal and type <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">hello-world</span></code>.
-A brief introductory message should be printed to the screen.</p></li>
-</ol>
-<p>(The above step-by-step Docker instructions are distilled from <a class="reference external" href="https://docs.docker.com/docker-for-mac/install/">here</a>.
-If you have questions during the installation procedure please check that link for potential answers!)</p>
+</section>
+<section id="std">
+<h2>STD<a class="headerlink" href="#std" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>std_lvl</p></td>
+<td><p>1</p></td>
+<td><p>integral</p></td>
+<td><p>Defines how many std from the mean to use for the threshold</p></td>
+</tr>
+<tr class="row-odd"><td><p>allow_percent_noisy_flat_epochs</p></td>
+<td><p>70</p></td>
+<td><p>int</p></td>
+<td><p>Defines how many percept of epochs can be noisy or flat. Over this value, the epoch is marged as noisy/flat</p></td>
+</tr>
+<tr class="row-even"><td><p>noisy_channel_multiplied</p></td>
+<td><p>1.2</p></td>
+<td><p>float or int</p></td>
+<td><p>Multiplier to define noisy channel, if std of this channel for this epoch is over (the mean std of this channel for all epochs  together* multipliar), then this channel is noisy. The higher the value, the less channels are marked as noisy</p></td>
+</tr>
+<tr class="row-odd"><td><p>flat_multiplied</p></td>
+<td><p>0.5</p></td>
+<td><p>float or int</p></td>
+<td><p>Multiplier to define flat channel, if std of this channel for this epoch is under (the mean std of this channel for all epochs together*  multipliar), then this channel is flat</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+</section>
+<section id="psd">
+<h2>PSD<a class="headerlink" href="#psd" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>freq_min</p></td>
+<td><p>0.5</p></td>
+<td><p>int or float</p></td>
+<td><p>lower frequency for PSD calculation in HZ.</p></td>
+</tr>
+<tr class="row-odd"><td><p>freq_max</p></td>
+<td><p>140</p></td>
+<td><p>int or float</p></td>
+<td><p>higher frequency for PSD calculation in Hz</p></td>
+</tr>
+<tr class="row-even"><td><p>psd_step_size</p></td>
+<td><p>0.5</p></td>
+<td><p>float or int</p></td>
+<td><p>frequency resolution of the PSD in Hz</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p><strong>Note</strong>: If the instructions aren’t working and you have spent more than 15-20 minutes troubleshooting on your own, reach out on the #help-installation channel on the Discord server (info below) with the exact problems you’re having.
-One of the instructors will try and get back to you quickly to help resolve the situation.
-If they’re unable to help via Discord, you may be directed to attend one of the installation office hours.</p>
 </section>
-<section id="checking-your-install">
-<h2>Checking your install<a class="headerlink" href="#checking-your-install" title="Link to this heading">#</a></h2>
-<p>Simply open a new terminal and type <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">hello-world</span></code>.</p>
-<ul class="simple">
-<li><p>A brief introductory message should be printed to the screen.</p></li>
-</ul>
+<section id="ptp-manual">
+<h2>PTP_manual<a class="headerlink" href="#ptp-manual" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>max_pair_dist_sec</p></td>
+<td><p>20</p></td>
+<td><p>float</p></td>
+<td><p>define the maximum allowed time distance (in seconds) between the positive and negative peaks when calculating the peak-to-peak (PtP) amplitude.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ptp_thresh_lvl</p></td>
+<td><p>10</p></td>
+<td><p>int</p></td>
+<td><p>scaling factor for the threshold. The higher the value is, the more peaks will be detected.</p></td>
+</tr>
+<tr class="row-even"><td><p>allow_percent_noisy_flat_epochs</p></td>
+<td><p>70</p></td>
+<td><p>int</p></td>
+<td><p>Defines the percent of epochs that can be noisy or flat. Over this number - the epoch is marged as noisy/flat.</p></td>
+</tr>
+<tr class="row-odd"><td><p>std_lvl</p></td>
+<td><p>1</p></td>
+<td><p>int</p></td>
+<td><p>Defines how many std from the mean to use for the threshold.</p></td>
+</tr>
+<tr class="row-even"><td><p>noisy_channel_multiplied</p></td>
+<td><p>1.2</p></td>
+<td><p>float or int</p></td>
+<td><p>multiplier to define noisy channels, if the std of this channel for this epoch is under (the mean std of this channel for all epochs together*multipliar), then this channel is flat</p></td>
+</tr>
+<tr class="row-odd"><td><p>flat_multiplier</p></td>
+<td><p>0.5</p></td>
+<td><p>float or int</p></td>
+<td><p>Multiplier to define a flat channel, if the std of this channel for this epoch is under (the mean std of this channel for all epochs together*multipliar), then this channel is flat</p></td>
+</tr>
+<tr class="row-even"><td><p>ptp_top_limit</p></td>
+<td><p>1e-12</p></td>
+<td><p></p></td>
+<td><p>this variable and the following are not used. In case instead of by std levle, we want to use Tesla.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ptp_bottom_limit</p></td>
+<td><p>-1e-12</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
-<section id="github-account">
-<h2>GitHub account<a class="headerlink" href="#github-account" title="Link to this heading">#</a></h2>
-<p>Go to <a class="github reference external" href="https://github.com/join/">join/</a> and follow the on-screen instructions to create an account.
-It is a good idea to associate this with your university e-mail (if you have one) as this will entitle you to sign up for the <a class="reference external" href="https://education.github.com/pack">GitHub Student Developer Pack</a> or <a class="reference external" href="https://education.github.com/teachers">GitHub for teachers</a> which come with some nice free bonuses.</p>
-</section>
-<section id="discord">
-<h2>Discord<a class="headerlink" href="#discord" title="Link to this heading">#</a></h2>
-<p>Go to <a class="reference external" href="https://discord.com/">https://discord.com/</a> and download and install Discord. Please note, that you can also use Discord through your browser if you don’t want to download it.
-To join the workshop server follow this <a class="reference external" href="https://discord.gg/ehN5haXS">invite link</a>.</p>
-</section>
-<section id="modern-web-browser">
-<h2>Modern web browser<a class="headerlink" href="#modern-web-browser" title="Link to this heading">#</a></h2>
-<p>Install Firefox or Chrome (Safari will also work.)
-Microsoft Edge is not modern, despite what Microsoft might try and otherwise tell you.</p>
-<section id="enter-the-matrix">
-<h3>Enter the matrix<a class="headerlink" href="#enter-the-matrix" title="Link to this heading">#</a></h3>
-<p>Once you have reached this point, you should be ready the enter the matrix and follow the workshop in your preferred way. Congrats, fantastic work!</p>
-<p><img alt="logo" src="https://media1.tenor.com/images/e5c21d98f56c4af119b4e14b6a9df893/tenor.gif?itemid=4011236" /><br />
-<sub><sup><sub><sup><a class="reference external" href="https://media1.tenor.com/images/e5c21d98f56c4af119b4e14b6a9df893/tenor.gif?itemid=4011236">https://media1.tenor.com/images/e5c21d98f56c4af119b4e14b6a9df893/tenor.gif?itemid=4011236</a></sup></sub></sup></sub></p>
-</section>
+<section id="ptp-auto">
+<h2>PTP_auto<a class="headerlink" href="#ptp-auto" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>peak_m</p></td>
+<td><p>4e-14</p></td>
+<td><p>float or int</p></td>
+<td><p>minimal PTP amplitude to count as peak for magnetometers. Unit: Tesla or Tesla/meter depending on channel type</p></td>
+</tr>
+<tr class="row-odd"><td><p>peak_g</p></td>
+<td><p>4e-14</p></td>
+<td><p>float or int</p></td>
+<td><p>minimal PTP amplitude to count as peak for gradiometers. Unit: Tesla or Tesla/meter depending on channel type</p></td>
+</tr>
+<tr class="row-even"><td><p>flat_m</p></td>
+<td><p>3e-14</p></td>
+<td><p>float or int</p></td>
+<td><p>max PTP amplitude to count as flat for magnetometers. Unit: Tesla or Tesla/meter depending on channel type</p></td>
+</tr>
+<tr class="row-odd"><td><p>flat_g</p></td>
+<td><p>3e-14</p></td>
+<td><p>float or int</p></td>
+<td><p>max PTP amplitude to count as flat for gradiometers. Unit: Tesla or Tesla/meter depending on channel type</p></td>
+</tr>
+<tr class="row-even"><td><p>bad_percent</p></td>
+<td><p>5</p></td>
+<td><p>int</p></td>
+<td><p>The percentage of the time a channel can be above or below thresholds. Below this percentage, Annotations are created. Above this percentage, the channel involved is return in bads. Note the returned bads are not automatically added to info[‘bads’].</p></td>
+</tr>
+<tr class="row-odd"><td><p>min_duration</p></td>
+<td><p>0.002</p></td>
+<td><p>float</p></td>
+<td><p>The minimum duration (s) required by consecutives samples to be above peak or below flat thresholds to be considered. to consider as above or below threshold. For some systems, adjacent time samples with exactly the same value are not totally uncommon. Unit: seconds.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </section>
 
@@ -679,17 +743,12 @@ Microsoft Edge is not modern, despite what Microsoft might try and otherwise tel
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-software">Required software</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-things">General things</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-quick-general-notes-on-instructions">Some quick general notes on instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os-specific-installation-instructions">OS-specific installation instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-your-install">Checking your install</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-account">GitHub account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord">Discord</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-web-browser">Modern web browser</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-the-matrix">Enter the matrix</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epoching">Epoching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#std">STD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#psd">PSD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-manual">PTP_manual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-auto">PTP_auto</a></li>
 </ul>
   </nav></div>
 
