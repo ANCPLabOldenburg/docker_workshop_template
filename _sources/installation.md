@@ -10,6 +10,18 @@ Virtual environments create isolated and sel-contained workspaces, allowing us t
 
 ![environments](static/python-virtual-envs1.webp)
 
+To create and activate your virtual environment, you can follow these steps:
+1. Find the directory where you want to create the environment using the cd bash command.
+2. Create the virtual environment:
+
+        python3 -m venv <your_environment_name>
+
+3. To activate the virtual environment:
+
+        source <your_environment_name>/bin/activate
+
+4. Once activated, you should see `(<your_environment_name>)` in the bash terminal prompt. 
+
 <!--
 ### Python Environment
 
@@ -20,7 +32,7 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
 -->
 
 ## Install & clone the MEGqc Package
-Once within your project environment or Python environment, use pip to install MEGqc core functionality by running the following command in bash:
+Once activated your environment, you can install Python packages with pip, and they will only affect your virtual environment. To install MEGqc core functionality by running the following command in bash:
 ##
         pip install --upgrade meg-qc
 <br>

@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'run_calculation';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="How to make the plotting module run" href="run_plotting.html" />
+    <link rel="next" title="Settings description" href="run_calculation/settings_explanation.html" />
     <link rel="prev" title="Installation" href="installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -167,7 +167,8 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control and BIDS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">How to make the calculation module run</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">How to make the calculation module run</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="run_calculation/settings_explanation.html">Settings description</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
@@ -408,11 +409,12 @@
 </section>
 <section id="specifying-dataset-path-and-subjects">
 <h2>Specifying Dataset Path and subjects<a class="headerlink" href="#specifying-dataset-path-and-subjects" title="Link to this heading">#</a></h2>
-<p>Next open the file <strong>setttings.ini</strong> to edit the following variables:</p>
+<p>Next open the file <strong>setttings.ini</strong> to edit the data directory path and subjects to be analyzed:</p>
 <ul class="simple">
 <li><p><strong>subjects=</strong> is a string variable, you shall write the code of the participant you want to analye (f.e., 009), a list of subjects separated by a comma (001, 002, 003) or write “all”.</p></li>
 <li><p><strong>data_directory=</strong> Here, you only need to specify the path to the dataset, the pipeline will automatically process multiple subjects and files thanks to the ancpBIDS library.</p></li>
 </ul>
+<p>The file <strong>setttings.ini</strong> also contains an extensive amount of customizable parameters, but you can always use the default values (calculated to fit the majority of datasets). If you want to know more about this parameters, <a class="reference internal" href="#settings_explanations.md"><span class="xref myst">please click here</span></a>.</p>
 </section>
 <section id="running-the-calculation-module">
 <h2>Running the calculation module<a class="headerlink" href="#running-the-calculation-module" title="Link to this heading">#</a></h2>
@@ -424,6 +426,7 @@
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /home/user/folder/MEGqc/docker/run_megqc.py
 </pre></div>
 </div>
+<p>Now we are ready to analyze our data. In the next section we will see how the html reports are created.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -469,11 +472,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="run_plotting.html"
+       href="run_calculation/settings_explanation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How to make the plotting module run</p>
+        <p class="prev-next-title">Settings description</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

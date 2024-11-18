@@ -11,7 +11,7 @@ The following information is not directly visible in this report, but it's impor
 
 ## Sensors positions
 
-Almost every report starts with this visual representation of the spatial distribution of MEG sensors on the subject's head. The sensors are divided into eight color-coded groups representing different head regions. The same color-code will be used pretty often through the reports.
+Almost every report starts with this visual representation of the spatial distribution of MEG sensors on the subject's head. The sensors are divided into eight color-coded groups representing different lobes. The same color-code will be used pretty often through the reports.
 Every sensor dot has 3 different identifiers:
 - 1 Magnetometer: They measure the magnetic field directly, providing data on its strength and direction. They are more sensitive to distant source, so they are more vulnerable to external magnetic noise. Their lables end with '1' like 'MEG1011'.
 - 2 Gradiometers: These sensors measure the gradient of the magentic field, so the difference between 2 measuremenets. It filters out environemntal noise. Their labels end with '2' and '3' like 'MEG0112' and 'MEG0113'. 
@@ -29,14 +29,13 @@ Many of the reports include 2 sets of results: one for the Magnetometers and a s
 
 The Standard Deviation (STD) metric measures the variability of each channels. If some channels show much higher or lower STD than others,  it suggest potential malfunctions of the channels (Gapontseva, 2023). 
 
-In the first box plot every dot represents the standard deviation of each Magnetometer over the entire time series. The sensors are colored following the region distribution of the previous plot. If you hover over the dot you'll see the standard deviation value. You can also deactivate or activate sensors from specific brain regions. The position of the points on the Y axis are not meaningful, they are just for visualization purposes.     
-If a dot falls outside of the whiskers, it means that that specific sensor might be a potentital outlier over the entire time series.     
+In the first box plot every dot represents the standard deviation of each Magnetometer channel over the entire time series. The sensors are colored following the region distribution of the previous plot. If you hover over the dot you'll see the standard deviation value. You can also deactivate or activate sensors from specific brain regions. The position of the points on the Y axis are not meaningful, they are just for visualization purposes.     
+Channels with values that exceed (or is below) a certain amount of standard deviations from the average are labeled as noisy (or flat), it means that that specific sensor might be a potentital outlier over the entire time series.     
 
 
 ![STD over the entire time series](static/01_std/01)
 
-
-Each box plot in this figure corresponds to a channel or sensor, and each point represents the standard deviation for that sensor during an individual epoch. These epochs are created by segmenting the continuous MEG recording basend on triggers in the dataset. The time window for each epoch is defined within the settings. By hovering over any of the points, users can read the specific epoch represented. 
+In the second figure, the data is divided into epochs, each box plot in this figure corresponds to a channel or sensor, and each point represents the standard deviation for that sensor during an individual epoch. These epochs are created by segmenting the continuous MEG recording basend on triggers in the dataset. The time window for each epoch is defined within the settings. By hovering over any of the points, users can read the specific epoch represented. 
 This plot helps asses the variability of each sensor's signal across different time windows (epochs). Sensors with points outside the whiskers indicate higher variability, potential artifacts or irregularities in specific epochs. 
 
 ![STD per channel](static/01_std/02.png)  
@@ -129,7 +128,7 @@ The following 3 plots highlights the MEG channels affected by heartbeat interfer
 The EOG (Electrooculogram) sensor records eye activity and can be used to detect eye movements disturbances, which are usually separated into saccades and blinks. The MNE algorithms only identify blinks (Gapontseva, 2023).
 
 ![pic2](static/05_EOG/02)
-This plot shows the EOG signal over time (blue line). Each blink produces a peak, which is labeled by the red dot. 
+This plot shows the EOG signal over time (blue line). Each blink produces a peak, which is labeled by the red dot. An averaged eye-blink event is expected to be shaped as a wave with one main crest. If no such shape could be detected for most of the datafiles in a set, the EOG channel is marked as "bad". 
 
 ![pic3](static/05_EOG/03)
 

@@ -61,9 +61,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'prerequisites/settings_explanation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'run_calculation/settings_explanation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to make the plotting module run" href="../run_plotting.html" />
+    <link rel="prev" title="How to make the calculation module run" href="../run_calculation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -115,8 +117,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -163,11 +163,12 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction to MEG quality control and BIDS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../metrics.html">MEGQc report:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../run_calculation.html">How to make the calculation module run</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Settings description</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../run_plotting.html">How to make the plotting module run</a></li>
@@ -242,7 +243,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/prerequisites/settings_explanation.md" target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/run_calculation/settings_explanation.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -259,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Fprerequisites/settings_explanation.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Frun_calculation/settings_explanation.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +290,7 @@
       
       
       
-      <li><a href="../_sources/prerequisites/settings_explanation.md" target="_blank"
+      <li><a href="../_sources/run_calculation/settings_explanation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,12 +376,19 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">Filtering</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epoching">Epoching</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#std">STD</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#psd">PSD</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-manual">PTP_manual</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-auto">PTP_auto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-pipileine-parameters">Key pipileine parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-parameters">Filtering parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epoching-parameters">Epoching parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-metrics-parameters">Quality Metrics Parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#std">STD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psd">PSD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-manual">PTP_manual</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-auto">PTP_auto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg">ECG</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eog">EOG</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#muscle">Muscle</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -395,8 +403,10 @@
   <section class="tex2jax_ignore mathjax_ignore" id="settings-description">
 <h1>Settings description<a class="headerlink" href="#settings-description" title="Link to this heading">#</a></h1>
 <p>The <strong>settings.ini</strong> file not only specifies the data directory path and subjects to be analyzed, but also contains an extensive array of customizable parameters.</p>
-<p>The MEGqc pipeline parameters were selected and estimated to be suitable to the greatest amount of datasets, so the users don’t need to select them manually. However, all these parameters are gathered and nicely organized in this script, so researches can edit them to adjust eh pipeline to their specific goals and   research needs.</p>
-<p>In this section we’ll provide an overview of each parameter group, explaining their purpose and how they can be customized.</p>
+<p>The MEGqc pipeline parameters were selected and estimated to be suitable to the greatest amount of datasets, so the users don’t need to adjust them, but they can if needed.</p>
+<p>The settings file is organized into groups corresponding to each metric. In this section we’ll provide an overview of each parameter group, explaining their purpose and how they can be customized.</p>
+<section id="key-pipileine-parameters">
+<h2>Key pipileine parameters<a class="headerlink" href="#key-pipileine-parameters" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
@@ -424,7 +434,7 @@
 <tr class="row-odd"><td><p><strong>data_crop_tmax</strong></p></td>
 <td><p>120</p></td>
 <td><p></p></td>
-<td><p>Crop the data, time in seconds. If you want to use the entire recording, you can leave one or both parameters blank.</p></td>
+<td><p>Crop the data, time in seconds. If you want to use the entire recording, you can leave one or both parameters blank. This significly reduces the processing time.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>plot_mne_butterfly</strong></p></td>
 <td><p>False</p></td>
@@ -434,7 +444,7 @@
 <tr class="row-odd"><td><p><strong>plot_interactive_time_series</strong></p></td>
 <td><p>False</p></td>
 <td><p>boolean</p></td>
-<td><p>Plot interactive time series (each channel on top of others, separated by ch type: mags, grads). This plot may signifcantly increase the time it takes to run the script. If you want to run the script faster, set this to False. Plot will be done on the data resampled to 100Hz/sec.</p></td>
+<td><p>Plot interactive time series in the report ot not (each channel on top of others, separated by ch type: mags, grads). This plot may signifcantly increase the time it takes to run the script and the size of the HTML report. If you want to run the script faster, set this to False. Plot will be done on the data resampled to 100Hz/sec.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>plot_interactive_time_series_average</strong></p></td>
 <td><p>False</p></td>
@@ -444,13 +454,14 @@
 <tr class="row-odd"><td><p><strong>verbose_plots</strong></p></td>
 <td><p>Flase</p></td>
 <td><p>boolean</p></td>
-<td><p>Show plots when running the script.</p></td>
+<td><p>Intended for pipeline maintanance rather than users, it displays plots when running the script, not only on the in the final report.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<section id="filtering">
-<h2>Filtering<a class="headerlink" href="#filtering" title="Link to this heading">#</a></h2>
+</section>
+<section id="filtering-parameters">
+<h2>Filtering parameters<a class="headerlink" href="#filtering-parameters" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
@@ -489,8 +500,8 @@
 </table>
 </div>
 </section>
-<section id="epoching">
-<h2>Epoching<a class="headerlink" href="#epoching" title="Link to this heading">#</a></h2>
+<section id="epoching-parameters">
+<h2>Epoching parameters<a class="headerlink" href="#epoching-parameters" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
@@ -518,7 +529,7 @@
 <tr class="row-odd"><td><p>stim_channel</p></td>
 <td><p></p></td>
 <td><p>string</p></td>
-<td><p>Leave empty if want it to be detected automaticall or write explicetly</p></td>
+<td><p>The stimulus channels, leave empty if you want it to be detected automatically or write explicetly. If it’s not identifiable, the analysis will continue without epoch separation</p></td>
 </tr>
 <tr class="row-even"><td><p>even_repeated</p></td>
 <td><p>merge</p></td>
@@ -529,8 +540,11 @@
 </table>
 </div>
 </section>
+<section id="quality-metrics-parameters">
+<h2>Quality Metrics Parameters<a class="headerlink" href="#quality-metrics-parameters" title="Link to this heading">#</a></h2>
+<p>The settings file already includes default parameters, which can be adjusted as needed. For example, you can modify the frequency range for the PSD (default: 0 to 140 Hz) or tweak parameters that control the sensitivity of the peak detection algorithm, such as those used to analyze an ECG channel recording.</p>
 <section id="std">
-<h2>STD<a class="headerlink" href="#std" title="Link to this heading">#</a></h2>
+<h3>STD<a class="headerlink" href="#std" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
@@ -565,7 +579,7 @@
 </div>
 </section>
 <section id="psd">
-<h2>PSD<a class="headerlink" href="#psd" title="Link to this heading">#</a></h2>
+<h3>PSD<a class="headerlink" href="#psd" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
@@ -595,7 +609,7 @@
 </div>
 </section>
 <section id="ptp-manual">
-<h2>PTP_manual<a class="headerlink" href="#ptp-manual" title="Link to this heading">#</a></h2>
+<h3>PTP_manual<a class="headerlink" href="#ptp-manual" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
@@ -650,7 +664,7 @@
 </div>
 </section>
 <section id="ptp-auto">
-<h2>PTP_auto<a class="headerlink" href="#ptp-auto" title="Link to this heading">#</a></h2>
+<h3>PTP_auto<a class="headerlink" href="#ptp-auto" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
@@ -683,7 +697,7 @@
 <tr class="row-even"><td><p>bad_percent</p></td>
 <td><p>5</p></td>
 <td><p>int</p></td>
-<td><p>The percentage of the time a channel can be above or below thresholds. Below this percentage, Annotations are created. Above this percentage, the channel involved is return in bads. Note the returned bads are not automatically added to info[‘bads’].</p></td>
+<td><p>The percentage of the time a channel can be above or below thresholds. Below this percentage, Annotations are created. Above this percentage, the channel involved is return in bads. Note the returned bads are not automatically added to info[‘bads’]. Unit: percent.</p></td>
 </tr>
 <tr class="row-odd"><td><p>min_duration</p></td>
 <td><p>0.002</p></td>
@@ -693,6 +707,134 @@
 </tbody>
 </table>
 </div>
+</section>
+<section id="ecg">
+<h3>ECG<a class="headerlink" href="#ecg" title="Link to this heading">#</a></h3>
+<p><em>This channel data will be scaled from 0 to 1, so the setting is universal for all data sets. The peaks will be detected on the scaled data. The average std of all peaks has to be within the allowed range; if it is higher, the channel has too high deviation in peaks height and is counted as noisy.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>drop_bad_ch</p></td>
+<td><p>True</p></td>
+<td><p>bool</p></td>
+<td><p>if True - will drop the bad ECG channel from the data and attempt to reconstruct ECG data on base of magnetometers. If False - will not drop the bad ECG channel and will attempt to calculate ECG events on base of the bad ECG channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p>n_breaks_bursts_allowed_per_10min</p></td>
+<td><p>3</p></td>
+<td><p>int</p></td>
+<td><p>number of breaks in ECG channel allowed per 10 minutes of recording. (This setting is for ECG channel only, not for any other channels Used to detect a noisy ECG channel)</p></td>
+</tr>
+<tr class="row-even"><td><p>allowed_range_of_peaks_stds</p></td>
+<td><p>0.14</p></td>
+<td><p>float</p></td>
+<td><p>the allowed range of peaks in standard deviations. (This setting is for ECG channel only, not for any other channels Used to detect a noisy ECG channel). Unit: arbitrary (the data using this setting is always scaled between 0 and 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>height_multiplier</p></td>
+<td><p>0.6</p></td>
+<td><p>float</p></td>
+<td><p>defines how high the peaks on the ECG channel should be to be counted as peaks. Higher value - higher the peak need to be, hense less peaks will be found.</p></td>
+</tr>
+<tr class="row-even"><td><p>norm_lvl</p></td>
+<td><p>1</p></td>
+<td><p>int</p></td>
+<td><p>The norm level is the scaling factor for the threshold. The mean artifact amplitude over all channels is multiplied by the norm_lvl to get the threshold.</p></td>
+</tr>
+<tr class="row-odd"><td><p>gaussian_sigma</p></td>
+<td><p>4</p></td>
+<td><p>int</p></td>
+<td><p>he sigma of the gaussian kernel used to smooth the data. The higher the sigma, the more smoothing. Typically ECG data is less noisy than EOG nd requires smaller sigma.</p></td>
+</tr>
+<tr class="row-even"><td><p>thresh_lvl_peakfinder</p></td>
+<td><p>5</p></td>
+<td><p>int</p></td>
+<td><p>higher - more peaks will be found on the ecg artifact for both separate channels and average overall. As a result, average over all may change completely, since it is centered around the peaks of 5 most prominent channels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="eog">
+<h3>EOG<a class="headerlink" href="#eog" title="Link to this heading">#</a></h3>
+<p><em>This channel data will be scaled from 0 to 1, so the setting is universal for all data sets. The peaks will be detected on the scaled data. The average std of all peaks has to be within the allowed range; if it is higher, the channel has too high deviation in peaks height and is counted as noisy.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>n_breaks_bursts_allowed_per_10min</p></td>
+<td><p>3</p></td>
+<td><p>int</p></td>
+<td><p>number of breaks in EOG channel allowed per 10 minutes of recording. (This setting is for EOG channel only, not for any other channels Used to detect a noisy EOG channel).</p></td>
+</tr>
+<tr class="row-odd"><td><p>allowed_range_of_peaks_std</p></td>
+<td><p>0.15</p></td>
+<td><p></p></td>
+<td><p>the allowed range of peaks in standard deviations. (This setting is for EOG channel only, not for any other channels Used to detect a noisy EOG channel). Unit: arbitrary (the data using this setting is always scaled between 0 and 1.)</p></td>
+</tr>
+<tr class="row-even"><td><p>norm_lvl</p></td>
+<td><p>1</p></td>
+<td><p>int</p></td>
+<td><p>The norm level is the scaling factor for the threshold. The mean artifact amplitude over all channels is multiplied by the norm_lvl to get the threshold.</p></td>
+</tr>
+<tr class="row-odd"><td><p>gaussian_sigma</p></td>
+<td><p>6</p></td>
+<td><p>int</p></td>
+<td><p>The sigma of the gaussian kernel used to smooth the data. The higher the sigma, the more smoothing. Typically EOG data is more noisy than EG nd requires larger sigma.</p></td>
+</tr>
+<tr class="row-even"><td><p>thresh_lvl_peakfinder</p></td>
+<td><p>3</p></td>
+<td><p>int</p></td>
+<td><p>the higher the value, the more peaks will be found on the eog artifact for both separate channels and average overall. As a result, average over all may change completely, since it is centered around the peaks of 5 most prominent channels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="muscle">
+<h3>Muscle<a class="headerlink" href="#muscle" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Default Value</strong></p></th>
+<th class="head"><p><strong>type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>muscle_freqs</p></td>
+<td><p>110, 140</p></td>
+<td><p>2 ints or 2 float</p></td>
+<td><p>Defines the frequency band for detecting muscle activity. Unit: Hz. Default: by mne</p></td>
+</tr>
+<tr class="row-odd"><td><p>threshold_muscle</p></td>
+<td><p>5</p></td>
+<td><p>int or float</p></td>
+<td><p>threshold for muscle detection. Zscores detected above this threshold will be considered as muscle artifacts. Unit: z-scores. If lower than 5 it will just count random noise as muscle artifacts.</p></td>
+</tr>
+<tr class="row-even"><td><p>min_length_good</p></td>
+<td><p>0.2</p></td>
+<td><p>int or float</p></td>
+<td><p>The shortest allowed duration of “good data” between adjacent muscle annotations; shorter segments will be incorporated into the surrounding annotations. Unit: seconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p>min_distance_between_different_muscle_events</p></td>
+<td><p>1</p></td>
+<td><p>int or float</p></td>
+<td><p>minimum distance between different muscle events in seconds. If events happen closer to each other - they will all be counted as one event and the time will be assigned as the first peak. Unit: seconds.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 </section>
 </section>
 
@@ -709,7 +851,7 @@
         },
         kernelOptions: {
             name: "python3",
-            path: "./prerequisites"
+            path: "./run_calculation"
         },
         predefinedOutput: true
     }
@@ -726,6 +868,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../run_calculation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How to make the calculation module run</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../run_plotting.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How to make the plotting module run</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -743,12 +903,19 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">Filtering</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epoching">Epoching</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#std">STD</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#psd">PSD</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-manual">PTP_manual</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-auto">PTP_auto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-pipileine-parameters">Key pipileine parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-parameters">Filtering parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epoching-parameters">Epoching parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-metrics-parameters">Quality Metrics Parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#std">STD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psd">PSD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-manual">PTP_manual</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ptp-auto">PTP_auto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg">ECG</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eog">EOG</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#muscle">Muscle</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

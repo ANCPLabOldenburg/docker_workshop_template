@@ -167,7 +167,8 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control and BIDS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="run_calculation/settings_explanation.html">Settings description</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
@@ -407,6 +408,21 @@
 <li><p>Transparency and Open Science: Ensure that others can replicate your results or able to reproduce your analysis.</p></li>
 </ul>
 <p><img alt="environments" src="_images/python-virtual-envs1.webp" /></p>
+<p>To create and activate your virtual environment, you can follow these steps:</p>
+<ol class="arabic">
+<li><p>Find the directory where you want to create the environment using the cd bash command.</p></li>
+<li><p>Create the virtual environment:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> python3 -m venv &lt;your_environment_name&gt;
+</pre></div>
+</div>
+</li>
+<li><p>To activate the virtual environment:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> source &lt;your_environment_name&gt;/bin/activate
+</pre></div>
+</div>
+</li>
+<li><p>Once activated, you should see <code class="docutils literal notranslate"><span class="pre">(&lt;your_environment_name&gt;)</span></code> in the bash terminal prompt.</p></li>
+</ol>
 <!--
 ### Python Environment
 
@@ -418,7 +434,7 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
 </section>
 <section id="install-clone-the-megqc-package">
 <h2>Install &amp; clone the MEGqc Package<a class="headerlink" href="#install-clone-the-megqc-package" title="Link to this heading">#</a></h2>
-<p>Once within your project environment or Python environment, use pip to install MEGqc core functionality by running the following command in bash:</p>
+<p>Once activated your environment, you can install Python packages with pip, and they will only affect your virtual environment. To install MEGqc core functionality by running the following command in bash:</p>
 </section>
 <section id="id1">
 <h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
