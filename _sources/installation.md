@@ -44,8 +44,6 @@ Then you will need to clone the [github repository](https://github.com/ANCPLabOl
 - The folder _docker_ contains the starting script *run_megqc.py*.
 - The folder *meg_qc* is a copy of the previously pip installed MEGqc package. 
 
-
-
 ## Install depencies
 For MEG QC to function, you'll need to pip install the following depencies. All the hyperlinks take you to the documentation page:
 

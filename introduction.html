@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction to MEG quality control and BIDS &#8212; Docker for neuroscience</title>
+    <title>Introduction to MEG quality control &#8212; Docker for neuroscience</title>
   
   
   
@@ -164,9 +164,11 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to MEG quality control and BIDS</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to MEG quality control</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">How to download a dataset</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="run_calculation/settings_explanation.html">Settings description</a></li>
 </ul>
@@ -366,7 +368,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction to MEG quality control and BIDS</h1>
+    <h1>Introduction to MEG quality control</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,12 +378,18 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to MEG quality control</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meg-data-quality-control">MEG data quality control:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#megqc">MEGqc</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?:</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-pipeline-stucture">General Pipeline Stucture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#megqc-derivatives">MEGqc derivatives</a></li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -392,8 +400,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-meg-quality-control-and-bids">
-<h1>Introduction to MEG quality control and BIDS<a class="headerlink" href="#introduction-to-meg-quality-control-and-bids" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-meg-quality-control">
+<h1>Introduction to MEG quality control<a class="headerlink" href="#introduction-to-meg-quality-control" title="Link to this heading">#</a></h1>
 <section id="meg-data-quality-control">
 <h2>MEG data quality control:<a class="headerlink" href="#meg-data-quality-control" title="Link to this heading">#</a></h2>
 <p>Magnetoencephalography (MEG) data are susceptible to  noise and artifacts, which can severely corrupt the data quality. They can originate from environmental noise sources (e.g. powerline noise), internal noise sources (e.g. eye movements of the subject), or systemic noise sources (e.g. malfunction of a sensor). For this reason, quality control of the data is an important step for valid and reproducible science (Niso et al., 2022).<br />
@@ -418,13 +426,15 @@ However, the visual detection and annotation of artifacts in MEG data require ex
 <li><p>Peak-to-Peak automatic calculation: This module is not used in the final version of the pipeline; we’ll use the Peak-to-Peak manual. The name refers to the computation using the MNE library function.</p></li>
 <li><p>Head movement calculation: it’s actually functioning, but requires a huge amount of head positioning data.</p></li>
 </ul>
-<p>To ensure standardization of the pipeline, MEGqc software is tailored to the BIDS standards:</p>
+<p>To ensure standardization of the pipeline, MEGqc software is tailored to the BIDS standards.</p>
 </section>
-<section id="what-is-bids">
-<h2>What is BIDS?:<a class="headerlink" href="#what-is-bids" title="Link to this heading">#</a></h2>
-<p>Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus how to organize and share data obtained in neuroimaging experiments. Brain Imaging Data Structure (BIDS), describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort. To be able to ensure this standardization, MEGqc requires the data to be organized according to BIDS.</p>
-<p><em>(discalimer: fragment adapted from BIDS official website)</em></p>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="what-is-bids">
+<h1>What is BIDS?:<a class="headerlink" href="#what-is-bids" title="Link to this heading">#</a></h1>
+<p>Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus how to organize and share data obtained in neuroimaging experiments. Brain Imaging Data Structure (BIDS), describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort.  <em>(fragment adapted from BIDS official website).</em></p>
+<p><img alt="bids-logo" src="_images/bids.jpg" /></p>
+<p>BIDS describes the structure of the data, directories and sub-directories, name-structure, file-naming and file formats. To be able to ensure this standardization, MEGqc uses <strong>ancpBIDS</strong>, a Python library which facilitates working with BIDS, both for identifiying the files and also for writting the results according to BIDS.</p>
+<p>Gapontseva (2023) evaluated the MEGqc software thanks to 21  MEG datasets obtained from the OpenNeuro data library. <a class="reference external" href="https://openneuro.org/">OpenNeuro</a> is a free and open platform with more than 50 thousand participants and more than one thousand public BIDS compliant MRI, PET, MEG, EEG and iEEG datasets.</p>
 <section id="general-pipeline-stucture">
 <h2>General Pipeline Stucture<a class="headerlink" href="#general-pipeline-stucture" title="Link to this heading">#</a></h2>
 <p>The following figure (Gaponsetva, 2023) describes the general process of the pipeline. It might look  a bit overwhelming, but don’t worry, in this workshop will go step-by-step.</p>
@@ -525,12 +535,18 @@ However, the visual detection and annotation of artifacts in MEG data require ex
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to MEG quality control</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meg-data-quality-control">MEG data quality control:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#megqc">MEGqc</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?:</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-pipeline-stucture">General Pipeline Stucture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#megqc-derivatives">MEGqc derivatives</a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

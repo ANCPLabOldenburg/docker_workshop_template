@@ -37,6 +37,6 @@ Finally, we are ready to run *rung_megqc.py*! Ensure that you activate the envir
 
 Then, the run command is given from the terminal and **not** from the command pannel. The command might be a similar line as:
 
-        python3 /home/user/folder/MEGqc/docker/run_megqc.py
+        python3 /home/<user>/<folder>/MEGqc/docker/run_megqc.py
 
 Now we are ready to analyze our data. In the next section we will see how the html reports are created.    

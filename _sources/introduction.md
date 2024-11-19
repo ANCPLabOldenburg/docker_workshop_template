@@ -1,4 +1,4 @@
-# Introduction to MEG quality control and BIDS
+# Introduction to MEG quality control
 
 ## MEG data quality control:
 Magnetoencephalography (MEG) data are susceptible to  noise and artifacts, which can severely corrupt the data quality. They can originate from environmental noise sources (e.g. powerline noise), internal noise sources (e.g. eye movements of the subject), or systemic noise sources (e.g. malfunction of a sensor). For this reason, quality control of the data is an important step for valid and reproducible science (Niso et al., 2022).  
@@ -23,13 +23,19 @@ There are 2 other metrics within MEG QC:
 - Peak-to-Peak automatic calculation: This module is not used in the final version of the pipeline; we'll use the Peak-to-Peak manual. The name refers to the computation using the MNE library function.
 - Head movement calculation: it's actually functioning, but requires a huge amount of head positioning data.
 
-To ensure standardization of the pipeline, MEGqc software is tailored to the BIDS standards:
+To ensure standardization of the pipeline, MEGqc software is tailored to the BIDS standards.
 
-## What is BIDS?: 
+# What is BIDS?: 
 
-Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus how to organize and share data obtained in neuroimaging experiments. Brain Imaging Data Structure (BIDS), describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort. To be able to ensure this standardization, MEGqc requires the data to be organized according to BIDS.
+Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus how to organize and share data obtained in neuroimaging experiments. Brain Imaging Data Structure (BIDS), describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort.  _(fragment adapted from BIDS official website)._ 
 
-_(discalimer: fragment adapted from BIDS official website)_
+![bids-logo](static/bids.jpg)
+
+BIDS describes the structure of the data, directories and sub-directories, name-structure, file-naming and file formats. To be able to ensure this standardization, MEGqc uses **ancpBIDS**, a Python library which facilitates working with BIDS, both for identifiying the files and also for writting the results according to BIDS. 
+
+Gapontseva (2023) evaluated the MEGqc software thanks to 21  MEG datasets obtained from the OpenNeuro data library. [OpenNeuro](https://openneuro.org/) is a free and open platform with more than 50 thousand participants and more than one thousand public BIDS compliant MRI, PET, MEG, EEG and iEEG datasets. 
+
+
 
 ## General Pipeline Stucture
 

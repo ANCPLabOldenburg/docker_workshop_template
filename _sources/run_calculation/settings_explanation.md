@@ -2,7 +2,7 @@
 
 The **settings.ini** file not only specifies the data directory path and subjects to be analyzed, but also contains an extensive array of customizable parameters.
 
-The MEGqc pipeline parameters were selected and estimated to be suitable to the greatest amount of datasets, so the users don't need to adjust them, but they can if needed.
+The default value for the parameters of every metric were selected and estimated to be suitable to the greatest amount of datasets, thanks to 21 datasets from OpenNeuro and other researchers. So the users don't need to adjust them, but they can if needed.
 
 The settings file is organized into groups corresponding to each metric. In this section we'll provide an overview of each parameter group, explaining their purpose and how they can be customized.
 
