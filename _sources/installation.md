@@ -1,6 +1,6 @@
 # Installation
 
-Now we'll start with the installation process of MEG QC. Before that we want to explain you about virtual environments and containerization:
+Now we'll start with the installation process of MEGqc. Before that we want to explain you about virtual environments and containerization:
 <br>
 
 ## Virtual environments

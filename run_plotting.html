@@ -380,6 +380,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-plotting-module">Running the plotting module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congrats">Congrats!</a></li>
 </ul>
             </nav>
         </div>
@@ -393,20 +394,26 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-make-the-plotting-module-run">
 <h1>How to make the plotting module run<a class="headerlink" href="#how-to-make-the-plotting-module-run" title="Link to this heading">#</a></h1>
-<p>Once the calculation module has completed the analysis, JSON and TSV files are generated and saved in the folder <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> alongside the datasets.</p>
+<p>Once the calculation module has completed the analysis, JSON and TSV files are generated and saved within the folder <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> alongside the datasets. The <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> looks something like this:</p>
+<p><img alt="derivatives" src="_images/derivatives.png" /></p>
+<p>As you can see, the calculation module generates a lot of metadata files. But what if we want the data tidily ordered in a visual and interactive way? Luckily MEGqc also contains the plotting module that will produce the html reports we saw before. Let’s see how can we produce them:</p>
 <section id="setting-file-paths">
 <h2>Setting File Paths<a class="headerlink" href="#setting-file-paths" title="Link to this heading">#</a></h2>
-<p>First, locate the script <em>meg_qc_plots.py</em> within the <code class="docutils literal notranslate"><span class="pre">plotting</span></code>folder thin the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> package in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment.</p>
-<p>Open the <em>meg_qc_plots.py</em> and, at the very last line where <strong>tsvs_to_plot=</strong> is defined, add your path to your dataset. The line should look similar to this:</p>
+<p>First, locate the script <em>meg_qc_plots.py</em> within the <code class="docutils literal notranslate"><span class="pre">plotting</span></code>folder thin the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> package in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment. It might be in:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /home/&lt;user&gt;/&lt;environment&gt;/lib/python3.&lt;version&gt;/site-packages/meg_qc/plotting/
+</pre></div>
+</div>
+<p>Open the <em>meg_qc_plots.py</em> and, at the very last line where <strong>tsvs_to_plot=</strong> is defined, add your path to your <em>datasets</em> (ds003483 if you are following the tutorial). The line should look similar to this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    tsvs_to_plot = make_plots_meg_qc(ds_paths=[&#39;/home/&lt;user&gt;/&lt;folder/paths&gt;/&lt;dataset&gt;/&#39;])
 </pre></div>
 </div>
 </section>
 <section id="running-the-plotting-module">
 <h2>Running the plotting module<a class="headerlink" href="#running-the-plotting-module" title="Link to this heading">#</a></h2>
-<p>Ensure that you are working from your environment and then run the script from the command line. The command might look like:
-python3 /home/<user>/<environment>/lib/python3.<version>/site-packages/meg_qc/plotting/meg_qc_plots.py
-/home/abaxman/envs/pls/lib/python3.9/site-packages/meg_qc/plotting/</p>
+<p>Ensure that you are working from your environment and then run the script from the command line. The command might look like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /home/&lt;user&gt;/&lt;environment&gt;/lib/python3.&lt;version&gt;/site-packages/meg_qc/plotting/meg_qc_plots.py
+</pre></div>
+</div>
 </section>
 <section id="gui">
 <h2>GUI<a class="headerlink" href="#gui" title="Link to this heading">#</a></h2>
@@ -420,6 +427,10 @@ python3 /home/<user>/<environment>/lib/python3.<version>/site-packages/meg_qc/pl
 <li><p>Sensors: ALL or only magnetometers or gradiometers</p></li>
 </ul>
 <p><img alt="gui" src="_images/gui.png" /></p>
+</section>
+<section id="congrats">
+<h2>Congrats!<a class="headerlink" href="#congrats" title="Link to this heading">#</a></h2>
+<p>YOu got it! Now you have the html reports within the <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> folder of the dataset. You may open them with Chrome or Firefox and check the interactive plots of the quality control analysis of your dataset!</p>
 </section>
 </section>
 
@@ -482,6 +493,7 @@ python3 /home/<user>/<environment>/lib/python3.<version>/site-packages/meg_qc/pl
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-plotting-module">Running the plotting module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congrats">Congrats!</a></li>
 </ul>
   </nav></div>
 
