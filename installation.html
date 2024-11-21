@@ -380,13 +380,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-clone-the-megqc-package">Install &amp; clone the MEGqc Package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-depencies">Install depencies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"></a></li>
 </ul>
             </nav>
         </div>
@@ -437,9 +431,6 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
 <section id="install-clone-the-megqc-package">
 <h2>Install &amp; clone the MEGqc Package<a class="headerlink" href="#install-clone-the-megqc-package" title="Link to this heading">#</a></h2>
 <p>Once your environment is activated, you can install Python packages with <code class="docutils literal notranslate"><span class="pre">pip</span></code>, and these installations will only apply to your virtual environment. To install MEGqc core functionality, run the following command in the terminal:</p>
-</section>
-<section id="id1">
-<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install --upgrade meg-qc
 </pre></div>
 </div>
@@ -454,51 +445,41 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
 <section id="install-depencies">
 <h2>Install depencies<a class="headerlink" href="#install-depencies" title="Link to this heading">#</a></h2>
 <p>For MEG QC to function, you’ll need to pip install the following depencies. All the hyperlinks take you to the documentation page:</p>
-<ul class="simple">
-<li><p><strong><a class="reference external" href="https://mne.tools/stable/index.html">mne (Magnetic and Electric Neuroimaging)</a>:</strong> “MNE is an open-source package for exploring, visualizing and analyzing human neuropshysiological data (…). This package is also the basis for the MEGqc pipeline” (Gapontseva, 2023). It has been extensively documented and constantly updated by an active community support.</p></li>
-</ul>
-</section>
-<section id="id2">
-<h2><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install --upgrade mne
+<ul>
+<li><p><strong><a class="reference external" href="https://mne.tools/stable/index.html">mne (Magnetic and Electric Neuroimaging)</a>:</strong> “MNE is an open-source package for exploring, visualizing and analyzing human neuropshysiological data (…). This package is also the basis for the MEGqc pipeline” (Gapontseva, 2023). It has been extensively documented and constantly updated by an active community support.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  pip install --upgrade mne
 </pre></div>
 </div>
+</li>
+</ul>
 <br>
-<ul class="simple">
-<li><p><strong><a class="reference external" href="https://ancpbids.readthedocs.io/en/latest/userDocCombined.html">ancpBIDS</a>:</strong> This library, developed in the ANCP lab, is used to read and query BIDS datasets as well as write the derivatives back.</p></li>
-</ul>
-</section>
-<section id="id3">
-<h2><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install ancpbids
+<ul>
+<li><p><strong><a class="reference external" href="https://ancpbids.readthedocs.io/en/latest/userDocCombined.html">ancpBIDS</a>:</strong> This library, developed in the ANCP lab, is used to read and query BIDS datasets as well as write the derivatives back.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  pip install ancpbids
 </pre></div>
 </div>
+</li>
+</ul>
 <br>
-<ul class="simple">
-<li><p><strong><a class="reference external" href="https://numpy.org/doc/">Numpy (Numerical Python)</a></strong> and <strong><a class="reference external" href="https://pandas.pydata.org/docs/">pandas</a>:</strong> Both libraries are necessary for scientific computing and data manipulation in Python, particulary for working with multidimensional arrays and large matrices.</p></li>
-</ul>
-</section>
-<section id="id4">
-<h2><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install numpy
+<ul>
+<li><p><strong><a class="reference external" href="https://numpy.org/doc/">Numpy (Numerical Python)</a></strong> and <strong><a class="reference external" href="https://pandas.pydata.org/docs/">pandas</a>:</strong> Both libraries are necessary for scientific computing and data manipulation in Python, particulary for working with multidimensional arrays and large matrices.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  pip install numpy
 </pre></div>
 </div>
-</section>
-<section id="id5">
-<h2><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+</li>
+</ul>
+<br>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install pandas
 </pre></div>
 </div>
 <br>
-<ul class="simple">
-<li><p><strong><a class="reference external" href="https://plotly.com/python-api-reference/">plotly</a></strong>: This library is used to create the interactive plots and visualize results. Plotly also supports exporting the figures in HTML format.</p></li>
-</ul>
-</section>
-<section id="id6">
-<h2><a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install plotly
+<ul>
+<li><p><strong><a class="reference external" href="https://plotly.com/python-api-reference/">plotly</a></strong>: This library is used to create the interactive plots and visualize results. Plotly also supports exporting the figures in HTML format.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  pip install plotly
 </pre></div>
 </div>
+</li>
+</ul>
 </section>
 </section>
 
@@ -569,13 +550,7 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-clone-the-megqc-package">Install &amp; clone the MEGqc Package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-depencies">Install depencies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"></a></li>
 </ul>
   </nav></div>
 

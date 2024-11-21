@@ -33,7 +33,7 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
 
 ## Install & clone the MEGqc Package
 Once your environment is activated, you can install Python packages with `pip`, and these installations will only apply to your virtual environment. To install MEGqc core functionality, run the following command in the terminal:
-##
+ 
         pip install --upgrade meg-qc
 <br>
 
@@ -48,23 +48,24 @@ Next, you will need to clone the [Github Repository](https://github.com/ANCPLabO
 For MEG QC to function, you'll need to pip install the following depencies. All the hyperlinks take you to the documentation page:
 
 - **[mne (Magnetic and Electric Neuroimaging)](https://mne.tools/stable/index.html):** "MNE is an open-source package for exploring, visualizing and analyzing human neuropshysiological data (...). This package is also the basis for the MEGqc pipeline" (Gapontseva, 2023). It has been extensively documented and constantly updated by an active community support. 
-##
+
         pip install --upgrade mne
 <br>
 
 - **[ancpBIDS](https://ancpbids.readthedocs.io/en/latest/userDocCombined.html):** This library, developed in the ANCP lab, is used to read and query BIDS datasets as well as write the derivatives back. 
-##
+
         pip install ancpbids
 <br>
 
 - **[Numpy (Numerical Python)](https://numpy.org/doc/)** and **[pandas](https://pandas.pydata.org/docs/):** Both libraries are necessary for scientific computing and data manipulation in Python, particulary for working with multidimensional arrays and large matrices. 
-## 
+
         pip install numpy
-##
+<br>
+
         pip install pandas
 <br>
 
 - **[plotly](https://plotly.com/python-api-reference/)**: This library is used to create the interactive plots and visualize results. Plotly also supports exporting the figures in HTML format.
-##
+
         pip install plotly
 
