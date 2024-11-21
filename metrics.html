@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MEGQc report: &#8212; Docker for neuroscience</title>
+    <title>MEGqc report overview &#8212; Docker for neuroscience</title>
   
   
   
@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'metrics';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installation.html" />
-    <link rel="prev" title="Introduction to MEG quality control" href="introduction.html" />
+    <link rel="next" title="Installation of MEGqc" href="installation.html" />
+    <link rel="prev" title="Introduction to MEG qc" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -164,16 +164,16 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG qc</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">MEGQc report:</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset.html">How to download a dataset</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="run_calculation/settings_explanation.html">Settings description</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">MEGqc report overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of MEGqc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">How to download a dataset from OpenNeuro</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to run the calculation module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="settings_explanation.html">Settings description</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to run the plotting module</a></li>
 </ul>
 
     </div>
@@ -368,7 +368,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>MEGQc report:</h1>
+    <h1>MEGqc report overview</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,7 +379,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-information">Raw Information</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensors-positions">Sensors positions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-positions">Sensor Positions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics">Metrics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-deviation-of-the-data">Standard deviation of the data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-spectrum-density">Power Spectrum Density</a></li>
@@ -401,86 +401,83 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="megqc-report">
-<h1>MEGQc report:<a class="headerlink" href="#megqc-report" title="Link to this heading">#</a></h1>
-<p>Every metric generates an html report with interactive figures. In this section we’ll overview these same figures from one subject of the dataset ds003483, which Gaponsetva (2023) used to evaluate the MEGqc tool.</p>
-<p>All the figures in these reports are interactive: as you scroll through them, you can zoom in and out, reveal the legend on hover, hide/show specific epochs or channels within a specific region just by clicking…  Unfortunately, this interactive feature is lost in this tutorial, as we’ll work with screenshots.</p>
-<p>As in this tutorial we’ll work with this same dataset, you’ll be able to obtain these same reports and explore the interactive componentby yourself.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="megqc-report-overview">
+<h1>MEGqc report overview<a class="headerlink" href="#megqc-report-overview" title="Link to this heading">#</a></h1>
+<p>Every metric generates its own HTML report with interactive figures. In this section we’ll overview these reports using data from one subject in the dataset <em>ds003483</em>, which Gaponsetva (2023) used to evaluate the MEGqc tool.</p>
+<p>All the figures in these reports are interactive: you can zoom in and out, reveal legends on hover, hide/show specific epochs or channels within a specific region just by clicking. Unfortunately, this interactive feature is lost in this tutorial, as we’ll work with screenshots.</p>
+<p>Since in this tutorial we’ll work with the same dataset (subject-009 from the dataset <em>ds003483</em>), you’ll be able to obtain these same reports yourself and explore the interactive features.</p>
 <section id="raw-information">
 <h2>Raw Information<a class="headerlink" href="#raw-information" title="Link to this heading">#</a></h2>
-<p>The following information is not directly visible in this report, but it’s important to understand it. MEG QC extracts the data as an MNE Raw class object. The Raw object includes metadata such as the channels’ details, distinguising among Gradiometers and Magnetometers (more on that later), EOG and ECG channels, sampling frequency, filters applied, and so on.</p>
+<p>The following information is not directly visible in this report, but it’s important to understand. MEGqc extracts the data as an MNE Raw class object. The Raw object includes metadata such as  channels’ details, distinguising among Gradiometers and Magnetometers (more on that later), EOG and ECG channels, sampling frequency, applied filters, and more.</p>
 <p><img alt="Raw Info" src="_images/00" /></p>
 </section>
-<section id="sensors-positions">
-<h2>Sensors positions<a class="headerlink" href="#sensors-positions" title="Link to this heading">#</a></h2>
-<p>Almost every report starts with this visual representation of the spatial distribution of MEG sensors on the subject’s head. The sensors are divided into eight color-coded groups representing different lobes. The same color-code will be used pretty often through the reports.
-Every sensor dot has 3 different identifiers:</p>
+<section id="sensor-positions">
+<h2>Sensor Positions<a class="headerlink" href="#sensor-positions" title="Link to this heading">#</a></h2>
+<p>Almost every report starts with this visual representation of the spatial distribution of MEG sensors on the subject’s head. The sensors are divided into eight color-coded groups representing different lobes. This same color coding will be used frequently throughout the reports. Each sensor dot in the plot has 3 different identifiers:</p>
 <ul class="simple">
-<li><p>1 Magnetometer: They measure the magnetic field directly, providing data on its strength and direction. They are more sensitive to distant source, so they are more vulnerable to external magnetic noise. Their lables end with ‘1’ like ‘MEG1011’.</p></li>
-<li><p>2 Gradiometers: These sensors measure the gradient of the magentic field, so the difference between 2 measuremenets. It filters out environemntal noise. Their labels end with ‘2’ and ‘3’ like ‘MEG0112’ and ‘MEG0113’.</p></li>
+<li><p>1 Magnetometer: it measures the magnetic field directly, providing data on its strength and direction. It is more sensitive to distant source, making it more vulnerable to external magnetic noise. Its label ends with ‘1’, like ‘MEG1011’.</p></li>
+<li><p>2 Gradiometers: These sensors measure the gradient of the magentic field, so the difference between 2 measurements. This setup helps filter out environemntal noise. Their labels end with ‘2’ and ‘3’, such as ‘MEG0112’ and ‘MEG0113’.</p></li>
 </ul>
 <p><img alt="Sensor distribution" src="_images/01" /></p>
-<p>The identifiers pop-up on hovering with the mouse in the interactive .html.</p>
-<p>Many of the reports include 2 sets of results: one for the Magnetometers and a second one for Gradiometers. Here we’ll just overview the set for Magnetometers, but the one for Gradiometers follow the same logic.</p>
+<p>The identifiers pop up on hovering oveer the sensor dot in the interactive HTML.</p>
+<p>Also, many reports include 2 sets of results: one for the Magnetometers and another set for the Gradiometers. This tutorial focuses on Magnetometers, but the Gradiometers set of results follow the same logic.</p>
 </section>
 <section id="metrics">
 <h2>Metrics<a class="headerlink" href="#metrics" title="Link to this heading">#</a></h2>
 <section id="standard-deviation-of-the-data">
 <h3>Standard deviation of the data<a class="headerlink" href="#standard-deviation-of-the-data" title="Link to this heading">#</a></h3>
-<p>The Standard Deviation (STD) metric measures the variability of each channels. If some channels show much higher or lower STD than others,  it suggest potential malfunctions of the channels (Gapontseva, 2023).</p>
-<p>In the first box plot every dot represents the standard deviation of each Magnetometer channel over the entire time series. The sensors are colored following the region distribution of the previous plot. If you hover over the dot you’ll see the standard deviation value. You can also deactivate or activate sensors from specific brain regions. The position of the points on the Y axis are not meaningful, they are just for visualization purposes.<br />
-Channels with values that exceed (or is below) a certain amount of standard deviations from the average are labeled as noisy (or flat), it means that that specific sensor might be a potentital outlier over the entire time series.</p>
+<p>The Standard Deviation (STD) metric measures the variability of each channel. If some channels show much higher or lower STD than others, it suggest potential malfunctions (Gapontseva, 2023).
+Each dot represents the standard deviation of a Magnetometer channel over the entire time series. The sensors are colored according to the regions of the Sensor Distribution plot. Hovering over a dot reveals the standard deviation value. The position of the points on the Y axis are not meaningful, they are just for visualization purposes.<br />
+Channels with values exceeding (or below) a certain amount of standard deviations from the average are flagged as noisy (or flat), indicating potential outliers.</p>
 <p><img alt="STD over the entire time series" src="_images/011" /></p>
-<p>In the second figure, the data is divided into epochs, each box plot in this figure corresponds to a channel or sensor, and each point represents the standard deviation for that sensor during an individual epoch. These epochs are created by segmenting the continuous MEG recording basend on triggers in the dataset. The time window for each epoch is defined within the settings. By hovering over any of the points, users can read the specific epoch represented.
-This plot helps asses the variability of each sensor’s signal across different time windows (epochs). Sensors with points outside the whiskers indicate higher variability, potential artifacts or irregularities in specific epochs.</p>
+<p>In the second figure, the data is divided into epochs. Each box plot corresponds to a channel or sensor, and each point represents the standard deviation for that sensor during an individual epoch. Epochs are created by segmenting the continuous MEG recording basend on triggers in the dataset. By hovering over any of the points, users can read the specific epoch represented. Sensors with points outside the whiskers indicate higher variability, potential artifacts, or irregularities in specific epochs.</p>
 <p><img alt="STD per channel" src="_images/02.png" /></p>
-<p>The lower horizontal bar at the bottom allows users to zoom in on a subset of sensors. This feature enables a closer examination of how the standard deviation changes within 6 sensors of the Left Frontal area across all epochs.</p>
+<p>A horizontal bar at the bottom allows users to zoom in on a subset of sensors, enabling a closer examination of how the standard deviation changes within specific regions. In this case, 6 sensors of the Left Frontal area.</p>
 <p><img alt="STD per channel" src="_images/03" /></p>
-<p>Each box plot represents the standard deviation for all sensors within a single epoch. Each dot show the standard deviation value for every specific sensor during that epoch. The sensors are colour coded following the sensor location first figure.<br />
+<p>Each box plot represents a single epoch, and each dot the standard deviation value for every specific sensor during that epoch. The sensors are color coded.<br />
 This type of figure is most relevant for experiments with relevant time events.</p>
 <p><img alt="STD over the epochs4" src="_images/04" /></p>
-<p>Once again, we can use the horizontal bar at the bottomw to zoom in on a subset of sensors. This visualization helps to visually detect in 5 periods where multiple sensors had an increased variability.</p>
+<p>Once again, we can use the horizontal bar at the bottom to zoom in on a subset of sensors. This visualization helps to visually detect in 5 periods where multiple sensors had an increased variability.</p>
 <p><img alt="STD over the epochs5" src="_images/05" /></p>
-<p>We can make interpretations or especulate if outliers might be due to muscle activity, external noise or transient artifacts, but MEG Qc only reports these anomalies.<br />
-As it was mentioned before, this set of figures gets repeated for Gradiometers.</p>
+<p>We can make interpretations or especulate if outliers might be due to muscle activity, external noise or transient artifacts, but MEGqc only reports the anomalies.</p>
+<p>As it was mentioned before, all this set of figures gets repeated for Gradiometers.</p>
 </section>
 <section id="power-spectrum-density">
 <h3>Power Spectrum Density<a class="headerlink" href="#power-spectrum-density" title="Link to this heading">#</a></h3>
-<p>The Power Spectrum Density describes how the power of a signal is distributed across different frequencies. It provides information on the strength or intensitzy of different frequency components. PSD calculation helps us to distinguish between brain activity and non-brain-related noise (Gapontseva, 2023).</p>
+<p>The Power Spectrum Density describes how the power of a signal is distributed across different frequencies. It provides information on the strength or intensity of different frequency components. PSD calculation helps us to distinguish between brain activity and non-brain-related noise (Gapontseva, 2023).</p>
 <p><img alt="pic1" src="_images/01.png" /><br />
 <img alt="pic2" src="_images/021.png" /></p>
-<p>This circle chart represents the Signal-to-Noise Ratio (SNR), which is a measurement of the ratio of the signal power to the noise power. A high SNR indicates minimal corruption of the signal of interest by background noise. The prominent amplitude of the 11.5 Hz labels it as potential noise.</p>
+<p>This circle chart represents the Signal-to-Noise Ratio (SNR). A high SNR indicates minimal corruption of the signal of interest by background noise. The prominent amplitude of the 11.5 Hz frequency labels it as potential noise.</p>
 <p><img alt="pic3" src="_images/031" /></p>
 <p>The Welch periodrogram is commonly used to estimate the power of a signal at different frequency components.<br />
-The X-Axis represents the frequency range of the signal (from 0 to 140 Hz in this case).<br />
-The Y-Axis represents the amplitude of the signal.
-Each colored line represents the PSD forthe different magnetometers. As it was previously reported, there’s a visible peak at 11.5 Hz.</p>
-<p><img alt="pic3-2" src="_images/03-2.png" />
-In the .html one can zoom-in and to adjust the scale of the axes: one can toggle between a <strong>linear</strong> view or a <strong>logarithmic</strong> view both for the X-axis and the Y-axis independly. Logarithmic view can be useful to show growth rate insteasd of absolute values.</p>
+The X-axis represents the frequency range of the signal (from 0 to 140 Hz in this case) and the Y-axis represents the amplitude of the signal.
+Each colored line represents the PSD for the different magnetometers. As it was previously reported, there’s a visible peak at 11.5 Hz.</p>
+<p><img alt="pic3-2" src="_images/03-2.png" /></p>
+<p>Interactive features in the HTML report allow toggling between linear a <strong>linear</strong> view or a <strong>logarithmic</strong> view of both the X-axis and the Y-axis independently.</p>
 <p><img alt="pic4" src="_images/04.png" />
 <img alt="pic5" src="_images/05.png" /></p>
-<p>Each segment of this circle chart represents the proportion of the total signal power that falls within each frequency range. How much does every frequency band contribote to the overall signal.</p>
+<p>Each segment of this circle chart represents the proportion of the total signal power that falls within each frequency range. How much does every frequency band contribute to the overall signal.</p>
 </section>
 <section id="peak-to-peak-amplitude">
 <h3>Peak to Peak Amplitude<a class="headerlink" href="#peak-to-peak-amplitude" title="Link to this heading">#</a></h3>
-<p>Peak-to-Peak (PtP) amplitude refers to the difference between the highest positive peak and the lowest negative peak. It provides a measue of the total range of variation of the data  averaged over a time interval (Gapontseva, 2023).</p>
+<p>Peak-to-Peak (PtP) amplitude refers to the difference between the highest positive peak and the lowest negative peak. It provides a measue of the total range of variation of the data averaged over a time interval (Gapontseva, 2023).</p>
 <p><img alt="pic1" src="_images/012" /></p>
 <p>The PtP amplitude of the data over the entire time series represents how the PtP amplitude of every sensor varies over the entire time series. Every dot represent the PtP amplitude of a single sensor. If a sensor falls outside of the whiskers area, it might indicate that the sensor is malfunctioning or other issues.</p>
-<p>The position in the Y Axis is not meaningful, but serves visualization purposes.</p>
+<p>The position in the Y Axis is not meaningful but serves visualization purposes.</p>
 <p><img alt="pic2" src="_images/02" /></p>
-<p>In this plot, each box plot represents a specific sensor (colour coded by areas) and each point the PtP Ampltiude for that sensor during a specific epoch (time window).</p>
+<p>In this plot, each box plot represents a specific sensor (color-coded by areas) and each point the PtP Amplitude for that sensor during a specific epoch (time window).</p>
 <p><img alt="pic3" src="_images/032" /></p>
-<p>In this plot, each box plot represents an epoch and each point the PtP AMpltiude of the sensors during that specific time window.</p>
+<p>In this plot, each box plot represents an epoch and each point the PtP Ampltiude of the sensors during that specific time window.</p>
 </section>
 <section id="ecg-heart-beat-interference">
 <h3>ECG: heart beat interference<a class="headerlink" href="#ecg-heart-beat-interference" title="Link to this heading">#</a></h3>
-<p>Heartbeat interference is a common source of noise in MEG recordings. This intereference shows up as a rhythmic and periodic fluctuation, and it is different among participants (Gapontseva, 2023).</p>
+<p>Heartbeat interference is a common source of noise in MEG recordings. This intereference shows up as a rhythmic and periodic fluctuation, and it varies among participants (Gapontseva, 2023).</p>
 <p><img alt="pic1" src="_images/011.png" /></p>
-<p>First we have a short overview with key criteria about the ECG signal recorded. If the heartbeats were recordend in a consisten way (similar amplitude), without missing beats (no breaks) neither false detections (no bursts). This is relevant for the channel to be a suitable heartbeat artifact identification.</p>
+<p>First, we have a short overview with key criteria about the ECG signal recorded. MEGqc evaluates whther the heartbeats were recordnd in a consistently (similar amplitude), without missing beats (no breaks) and without false detections (no bursts). These aspects are relevant for determining if the channel issuitable heartbeat artifact identification.</p>
 <p><img alt="pic2" src="_images/022.png" /></p>
-<p>First, we see the ECG signal (blue line) captured by the ECG channel (ECG062), the red fots marks the R-peaks of each heartbeat. The R-peaks is one component of the electrical activity of the heartbeat which can be easily use as a reference to identify heartbeat intereference.</p>
+<p>Here, we see the ECG signal (blue line) captured by the ECG channel (ECG062), with the red marking the R-peaks of each heartbeat. The R-peaks are components of the electrical activity of the heartbeat, and they can be easily used as reference points to identify heartbeat intereference.</p>
 <p><img alt="pic3" src="_images/03.png" /></p>
-<p>The mean recorded R wave (from the ECG channel, proper heartbeats) was shifted to align the ECG signal found on MEG channel (similar to the ECG signal). This alignment helps us understand how much influence the heartbeat interfere with the MEG channels. Then a Pearson correlation its performed between the ECG signal found in each channel and the reference mean signal of the ECG.</p>
+<p>The mean recorded R wave (from the ECG channel, real heartbeats) was shifted to align the <em>ECG signal found on MEG channels</em>. This alignment helps us understand the extend to which the hearbeats influence he MEG channels. Then, a Pearson correlation is performed between the <em>ECG signal found in each MEG channel</em> and the reference mean signal of the ECG.</p>
 <p>The following 3 plots highlights the MEG channels affected by heartbeat interference. Each line representes one MEG sensor, colour-coded by region. The plots are ordered from the most affected to the least affected.</p>
 <p><img alt="pic4" src="_images/041.png" />
 <img alt="pic5" src="_images/051.png" />
@@ -488,26 +485,26 @@ In the .html one can zoom-in and to adjust the scale of the axes: one can toggle
 </section>
 <section id="eog-eye-movement-interference">
 <h3>EOG: eye movement interference<a class="headerlink" href="#eog-eye-movement-interference" title="Link to this heading">#</a></h3>
-<p>The EOG (Electrooculogram) sensor records eye activity and can be used to detect eye movements disturbances, which are usually separated into saccades and blinks. The MNE algorithms only identify blinks (Gapontseva, 2023).</p>
+<p>The EOG (Electrooculogram) sensor records eye activity and is used to detect eye movements, which are usually separated into saccades and blinks. The MNE algorithms, however, only identify blinks (Gapontseva, 2023).</p>
 <p><img alt="pic2" src="_images/021" />
-This plot shows the EOG signal over time (blue line). Each blink produces a peak, which is labeled by the red dot. An averaged eye-blink event is expected to be shaped as a wave with one main crest. If no such shape could be detected for most of the datafiles in a set, the EOG channel is marked as “bad”.</p>
+This plot shows the EOG signal over time (blue line). Each blink produces a peak, marked by a red dot. An averaged eye-blink event is expected to have a wave-like shape with one main crest. If no such shape is detected in most of the data files in a set, the EOG channel is marked as “bad”.</p>
 <p><img alt="pic3" src="_images/033" /></p>
-<p>This is the mean event shape, which indicate the typical shape of a blink as captured by the EOG channel and allow us to understand its influence on MEG sensors.</p>
-<p>Similar to the ECG report, these three plots show those MEG channels affected by the blink artifact, ranked from the most affected to the least. This help us to identif channels that may require artifact correction before analysis.</p>
+<p>This plot represents the mean event shape, which indicates the typical waveform of a blink as captured by the EOG channel. This allows us to understand how blinks influence MEG sensors.</p>
+<p>Similar to the ECG report, the following three plots show the MEG channels affected by blink artifacts, ranked from the most affected to the least affected. This help us to identify channels that may require artifact correction before analysis.</p>
 <p><img alt="pic4" src="_images/041" />
 <img alt="pic5" src="_images/051" />
 <img alt="pic6" src="_images/06" /></p>
 </section>
 <section id="high-frequency-muscle-artifacts">
 <h3>High frequency (Muscle) artifacts<a class="headerlink" href="#high-frequency-muscle-artifacts" title="Link to this heading">#</a></h3>
-<p>Muslce contractions generates electrical activity noticeable in the range of 110-140 Hz (as suggested by MNE). For example, clenching the jaw, swallowing or twitching a cranial muscle (Gapontseva, 2023).</p>
+<p>Muslce contractions generate electrical activity noticeable in the range of 110-140 Hz (as suggested by MNE). Examples include clenching the jaw, swallowing or twitching cranial muscles (Gapontseva, 2023).</p>
 <p>This report includes a single plot displaying the z-scores of high frequency (blue line) and events (red-dots) where the z-score exceed the threshold of 5 (default in settings)</p>
 <p><img alt="pic2" src="_images/022" /></p>
 </section>
 <section id="estimation-of-subjet-s-head-movement">
 <h3>Estimation of subjet’s head movement<a class="headerlink" href="#estimation-of-subjet-s-head-movement" title="Link to this heading">#</a></h3>
-<p>These movements may appear as sudden shifts or jumps in the MEG data and can cause distortions in the spatial distribution of the recorded magnetic fields. The effects of head movements can vary depending on the strength and direction Gapontseva, 2023).
-This module is implemented but requires a massive amount of information for it to be calculated.</p>
+<p>These movements may appear as sudden shifts or jumps in the MEG data, causing distortions in the spatial distribution of the recorded magnetic fields. The effects of head movements can vary depending on the strength and direction Gapontseva, 2023).
+This module is implemented but requires a substantial amount of information to perform the calculation.</p>
 </section>
 </section>
 </section>
@@ -548,7 +545,7 @@ This module is implemented but requires a massive amount of information for it t
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to MEG quality control</p>
+        <p class="prev-next-title">Introduction to MEG qc</p>
       </div>
     </a>
     <a class="right-next"
@@ -556,7 +553,7 @@ This module is implemented but requires a massive amount of information for it t
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installation</p>
+        <p class="prev-next-title">Installation of MEGqc</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -578,7 +575,7 @@ This module is implemented but requires a massive amount of information for it t
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-information">Raw Information</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensors-positions">Sensors positions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-positions">Sensor Positions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics">Metrics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-deviation-of-the-data">Standard deviation of the data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-spectrum-density">Power Spectrum Density</a></li>

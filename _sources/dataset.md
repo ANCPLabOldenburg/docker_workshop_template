@@ -1,17 +1,21 @@
-# How to download a dataset
+# How to download a dataset from OpenNeuro
 
-[OpenNeuro](https://openneuro.org/) is a free and open platform with more than 50 thousand participants and more than one thousand public BIDS compliant MRI, PET, MEG, EEG and iEEG datasets. 
-In this tutorial, we'll use the data of one subject of one dataset that Gaponsetva (2023) used to validate MEGq. In this section we'll explain how can we get a dataset from OpenNeuro:
+[OpenNeuro](https://openneuro.org/) is a free and open platform hosting over 1000 public, BIDS compliant datasets, including MRI, PET, MEG, EEG and iEEG datasets. 
+In this tutorial, we'll work with the data from one subject of one dataset that Gaponsetva (2023) used to validate MEGq. This section explains how to download a dataset from OpenNeuro:
 
-1. **Find the dataset:** The previous hyperlink takes you directly there, but if you didn't use it, you can go to the [OpenNeuro](https://openneuro.org/) main page, and introduce the Accession Number (ds003483).
-2. **Download options:** If you click in download we get several options, such as download with the browser, fro S3, Node.js, DataLad and shell script. 
-
-As the dataset includes 21 participants, it consist of 24.48 GB. Therefore, we'll just download one subject, for that, the easiest approach is to proceed with **DataLad**.
+1. **Find the dataset:** navigate to the [OpenNeuro homepage](https://openneuro.org/) (or follow the hyperlink) and search for the dataset using the Accession Number: `ds003483`.
+2. **Download options:** When you click `"Download"` you'll be presented with several options:
+    * Download with your browser
+    * Download from S3
+    * Download with Node.js
+    * Download with DataLad
+    * Download with a shell script. 
+Given the dataset's size (21 participants, 24.48 GB), dowloading the full dataset may be unnecessary. To save time and storage, we'll dowload only one subject's folder using **Datalad**.
 
 ## Getting started with DataLad
-[DataLad](github.com/datalad)is a free and open source data tool for management of large datasets. We can use it download a single subject folder from the the dataset.
+[DataLad](github.com/datalad)is a free and open source data tool for management of large datasets. It can be used to download a single subject folder from a dataset.
 
-0. **Ensure `git-annex` is properly installed on your system:** it might require an update if it's not equal or higher than 8.20200309.    
+0. **Ensure `git-annex` is properly installed on your environment:** DataLad requires `git-annex` version 8.20200309 (or higher). Verify your installation and, if needed, update `git-annex`.
 ##
     git annex version
 <br>
@@ -21,7 +25,7 @@ As the dataset includes 21 participants, it consist of 24.48 GB. Therefore, we'l
     pip install datalad
 <br>
 
-2. **Clone the dataset repository:** It copies the entire dataset's structure, but only lightweight metada (such as .json). The actual .fif files are not downloaded, even thought they will remain as _"broken links"_ placeholders. Be sure you are working in your desired directory (with **cd**).
+2. **Clone the dataset repository:** It copies the entire dataset's structure, but only lightweight metada (such as .json), the actual data files (.fif in this case) are not downloaded, even thought they _"broken links"_ placeholders will be created. Be sure you are working in your desired directory (with `cd`), then run:
 ##
     datalad install https://github.com/OpenNeuroDatasets/ds003483.git
 <br>
@@ -29,7 +33,7 @@ As the dataset includes 21 participants, it consist of 24.48 GB. Therefore, we'l
 ![placeholder](static/placeholder.png)
 
 
-3. **Download only the sub-009 folder:** use the get command to download only the data for subject 009.
+3. **Download only the sub-009 folder:** use the `get` command to download only the data for subject 009.
 ##
     datalad get ds003483/sub-009/
 <br>

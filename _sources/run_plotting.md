@@ -1,43 +1,44 @@
-# How to make the plotting module run
+# How to run the plotting module
 
-Once the calculation module has completed the analysis, JSON and TSV files are generated and saved within the folder `derivatives` alongside the datasets. The `derivatives` looks something like this:
+Once the calculation module has completed the analysis, it generates JSON and TSV files that are saved in the `derivatives` folder within the dataset folder. The path to your `derivatives` might look something like this:
 
-![derivatives](static/derivatives.png)
-
-As you can see, the calculation module generates a lot of metadata files. But what if we want the data tidily ordered in a visual and interactive way? Luckily MEGqc also contains the plotting module that will produce the html reports we saw before. Let's see how can we produce them:
+        /path/to/dataset/ds003483/derivatives/Meg_QC/calculation/sub-009/
+        
+As you can see, the calculation module generates numerous metadata files. But what if we want the data to be neatly organized and presented in a visual and interactive way?
+Luckily MEGqc also contains the plotting module, which generates the HTML reports we saw earlier. Let's see how can we produce them:
 
 
 ## Setting File Paths
 
-First, locate the script *meg_qc_plots.py* within the `plotting`folder thin the `meg_qc` package in the `site-packages` folder of your environment. It might be in:
+First, locate the script *meg_qc_plots.py* within the `plotting`folder in the `meg_qc` package, which is located in the `site-packages` folder of your environment. The path might look like this:
 
-        /path/to/environment/lib/python3.<version>/site-packages/meg_qc/plotting/
+        /path/to/environment/lib/python3.9/site-packages/meg_qc/plotting/
 
 
-Open the *meg_qc_plots.py* and, at the very last line where **tsvs_to_plot=** is defined, add your path to your _datasets_ (ds003483 if you are following the tutorial). The line should look similar to this:
+Open the *meg_qc_plots.py*, and at the very last line where **tsvs_to_plot=** is defined, add your path to your dataset (e.g., ds003483). The line should look similar to this:
 
         tsvs_to_plot = make_plots_meg_qc(ds_paths=['/path/to/dataset/'])
 
 ## Running the plotting module
 
-Ensure that you are working from your environment and then run the script from the command line. The command might look like:
+Ensure that you are working within your environment and then run the script from the command line. The command might look like:
 
-        python3 /path/to/environment/lib/python3.<version>/site-packages/meg_qc/plotting/meg_qc_plots.py
+        python3 /path/to/environment/lib/python3.9/site-packages/meg_qc/plotting/meg_qc_plots.py
 
 ## GUI
-After running the plotting command, a text-based GUI will appear in the terminal asking you several questions about specific parameters, the available options are based on the metadata MEGqc finds in your dataset.:
+After running the plotting command, a text-based GUI will appear in the terminal, asking you several questions about specific parameters. The available options are based on the metadata MEGqc finds in your dataset.:
 - Subjects: ALL or a specific one
 - Sessions: ALL or a specific one
 - Tasks: ALL or a specific one
 - Runs: ALL or a specific one
 - Metrics: ALL or a specific one
-- Sensors: ALL or only magnetometers or gradiometers
+- Sensors: ALL, or only magnetometers or gradiometers
 
 ![gui](static/gui.png)
 
 ## Congrats!
 
-YOu got it! Now you have the html reports within the `derivatives` folder of the dataset. You may open them with Chrome or Firefox and check the interactive plots of the quality control analysis of your dataset!
+You did it! Now you have the HTML reports within the `derivatives` folder of your dataset. You can open them with Chrome or Firefox to view the interactive plots of the quality control analysis of your dataset!
 
 
 

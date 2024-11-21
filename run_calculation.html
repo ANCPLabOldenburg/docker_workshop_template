@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How to make the calculation module run &#8212; Docker for neuroscience</title>
+    <title>How to run the calculation module &#8212; Docker for neuroscience</title>
   
   
   
@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'run_calculation';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Settings description" href="run_calculation/settings_explanation.html" />
-    <link rel="prev" title="How to download a dataset" href="dataset.html" />
+    <link rel="next" title="Settings description" href="settings_explanation.html" />
+    <link rel="prev" title="How to download a dataset from OpenNeuro" href="dataset.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -164,16 +164,16 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG qc</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset.html">How to download a dataset</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">How to make the calculation module run</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="run_calculation/settings_explanation.html">Settings description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGqc report overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of MEGqc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">How to download a dataset from OpenNeuro</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">How to run the calculation module</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="settings_explanation.html">Settings description</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to run the plotting module</a></li>
 </ul>
 
     </div>
@@ -368,7 +368,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How to make the calculation module run</h1>
+    <h1>How to run the calculation module</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,8 +379,11 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-dataset-path-and-subjects">Specifying Dataset Path and subjects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-dataset-path-and-subjects">Specifying Dataset Path and Subjects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next section</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -392,43 +395,46 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-to-make-the-calculation-module-run">
-<h1>How to make the calculation module run<a class="headerlink" href="#how-to-make-the-calculation-module-run" title="Link to this heading">#</a></h1>
-<p>After completed the installation steps, follow these final setting to get the software to run:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-run-the-calculation-module">
+<h1>How to run the calculation module<a class="headerlink" href="#how-to-run-the-calculation-module" title="Link to this heading">#</a></h1>
+<p>After completing the installation steps, follow these final settings to get the software running:</p>
 <p><img alt="gif" src="https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif" /></p>
 <section id="setting-file-paths">
 <h2>Setting File Paths<a class="headerlink" href="#setting-file-paths" title="Link to this heading">#</a></h2>
-<p>So within the folder <code class="docutils literal notranslate"><span class="pre">docker</span></code> of the cloned repository, you’ll find the script <strong>run_megqc.py</strong> and within it there are 2 filepaths to edit:</p>
+<p>Within the <code class="docutils literal notranslate"><span class="pre">docker</span></code> folder of the cloned repository, you’ll find the script <strong>run_megqc.py</strong>. To configure the software, you need to edit 2 filepathsin this script:</p>
 <ul class="simple">
 <li><p><strong>config_file_path=</strong> here you’ll need to write the path to the <strong>settings.ini_</strong>.</p></li>
 <li><p><strong>internal_config_file_path=</strong> here you’ll need to write the path to the <strong>settings_internal.ini</strong>.</p></li>
 </ul>
-<p>Both files are located in  the <code class="docutils literal notranslate"><span class="pre">settings</span></code> folder within the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment. The path should look something like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/environment/lib/python3&lt;.version&gt;/site-packages/meg_qc/settings/settings.ini
+<p>Both setting files are located in  the <code class="docutils literal notranslate"><span class="pre">settings</span></code> folder within the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> package, which reside in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> directory of yourPython  environment. The path should look something like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/environment/lib/python3./site-packages/meg_qc/settings/settings.ini
 </pre></div>
 </div>
 <br>
 </section>
 <section id="specifying-dataset-path-and-subjects">
-<h2>Specifying Dataset Path and subjects<a class="headerlink" href="#specifying-dataset-path-and-subjects" title="Link to this heading">#</a></h2>
-<p>Next open the file <strong>setttings.ini</strong> to edit the data directory path and subjects to be analyzed:</p>
+<h2>Specifying Dataset Path and Subjects<a class="headerlink" href="#specifying-dataset-path-and-subjects" title="Link to this heading">#</a></h2>
+<p>Next open the file <strong>setttings.ini</strong> to edit the data directory path and specify the subjects to be analyzed:</p>
 <ul class="simple">
-<li><p><strong>subjects=</strong> is a string variable, you shall write the code of the participant you want to analye (f.e., 009), a list of subjects separated by a comma (001, 002, 003) or write “all”.</p></li>
-<li><p><strong>data_directory=</strong> Here, you only need to specify the path to the dataset, the pipeline will automatically process multiple subjects and files thanks to the ancpBIDS library.</p></li>
+<li><p><strong>subjects=</strong> is a string variable, you shall write the code of the participant you want to analyze (f.e., 009). You can also provide a list of subjects separated by a comma (001, 002, 003) or write “all” to process all subjects.</p></li>
+<li><p><strong>data_directory=</strong> SEt this to the path to the dataset directory. In case that you want to analyze more subject, the pipeline will find them within the dataset thanks to the ancpBIDS library.</p></li>
 </ul>
-<p>The file <strong>setttings.ini</strong> also contains an extensive amount of customizable parameters, but you can always use the default values (calculated to fit the majority of datasets). If you want to know more about this parameters, <a class="reference internal" href="#settings_explanations.md"><span class="xref myst">please click here</span></a>.</p>
+<p>The file <strong>setttings.ini</strong> also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. For more details about these parameters, <a class="reference internal" href="#settings_explanations.md"><span class="xref myst">please click here</span></a>.</p>
 </section>
 <section id="running-the-calculation-module">
 <h2>Running the calculation module<a class="headerlink" href="#running-the-calculation-module" title="Link to this heading">#</a></h2>
-<p>Finally, we are ready to run <em>rung_megqc.py</em>! Ensure that you activate the environment first:</p>
+<p>Now, we’re ready to run <em>rung_megqc.py</em>! But first, ensure that you activate your virtual environment:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    source /path/to/environment/bin/activate
 </pre></div>
 </div>
-<p>Then, the run command is given from the terminal and <strong>not</strong> from the command pannel. The command might be a similar line as:</p>
+<p>Once the environment is active, execute the script from the <strong>terminal</strong> (<em>not</em>* from the command panel). The command might look somehting like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /path/to/MEGqc/docker/run_megqc.py
 </pre></div>
 </div>
-<p>Now we are ready to analyze our data. In the next section we will see how the html reports are created.</p>
+<section id="next-section">
+<h3>Next section<a class="headerlink" href="#next-section" title="Link to this heading">#</a></h3>
+<p>With this, you’re all set to analyze your data! In the next section you’ll learn how to produce the HTML reports.</p>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -470,11 +476,11 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">How to download a dataset</p>
+        <p class="prev-next-title">How to download a dataset from OpenNeuro</p>
       </div>
     </a>
     <a class="right-next"
-       href="run_calculation/settings_explanation.html"
+       href="settings_explanation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -500,8 +506,11 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-dataset-path-and-subjects">Specifying Dataset Path and subjects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-dataset-path-and-subjects">Specifying Dataset Path and Subjects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next section</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

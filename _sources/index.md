@@ -2,31 +2,32 @@
 
 # Welcome!
 
-Hello everyone and welcome to this MEG QC tutorial.
-MEG QC is a python based pipeline for quality control of MEG data, it was developed as Evgeniia Gapontseva's Master Thesis (2023) within the Oldenburg university in the Applied Neurocognitive Psychology Lab (ANCP Lab).
+Hello everyone, and welcome to this MEGqc tutorial.
+**MEGqc** is a Python -ased pipeline for quality control of MEG data. It was developed as **Evgeniia Gapontseva's Master Thesis (2023)** within the **Applied Neurocognitive Psychology Lab (ANCP Lab)**.
 
 
 * [Link to GitHub](https://github.com/ANCPLabOldenburg/MEGqc)
 * [Link to authors' Documentation](https://meg-qc.readthedocs.io/en/latest/)
 * [Link to ANCP Lab website](https://uol.de/en/applied-neurocognitive-psychology)
 
-## Learning objectives
-- learn to install MEGqc and analyze an MEG dataset
-- learn how to produce and understand an MEGqc html report
+## Learning Objectives
+- Learn to install MEGqc and analyze an MEG dataset
+- Learn how to produce and understand an MEGqc HTML report
 
 ## Requirements
-- some familiarity with MEG data
-- access to a Linux terminal/shell
-- a working version of Python3
-- minimal understanding of BASH (such as ls and cd). 
-- some familiarity with GitHub 
+To follow this tutorial, you will need:
+- Some familiarity with MEG data
+- Access to a Linux terminal/shell
+- A working version of Python3
+- Basic understanding of BASH commands (such as ls and cd). 
+- Some familiarity with GitHub 
 
 
 ## I've got a question!
 
-In case you have any questions or difficulties working with MEG QC, please don’t hesitate a single second to get in touch with us. A great way to do this is to via e-mail @ aaron.reer@uol.de.
+If you have any questions or encounter difficulties while working with MEGqc, please don’t hesitate a single second to get in touch with us. A great way to do this is to via e-mail @ aaron.reer@uol.de.
 
 ## Acknowledgements
 
- This tutorial is possible through the dedicated and second to none work of the [Jupyter community](https://jupyter.org/community), specifically, the [Executable/Jupyter Book](https://executablebooks.org/en/latest/).
+ This tutorial was made possible through the dedicated work of the [Jupyter community](https://jupyter.org/community), specifically, the [Executable/Jupyter Book](https://executablebooks.org/en/latest/).
 

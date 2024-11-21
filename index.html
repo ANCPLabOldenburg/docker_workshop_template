@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction to MEG quality control" href="introduction.html" />
+    <link rel="next" title="Introduction to MEG qc" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -165,16 +165,16 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG qc</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset.html">How to download a dataset</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="run_calculation/settings_explanation.html">Settings description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGqc report overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of MEGqc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">How to download a dataset from OpenNeuro</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to run the calculation module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="settings_explanation.html">Settings description</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to run the plotting module</a></li>
 </ul>
 
     </div>
@@ -379,7 +379,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-ve-got-a-question">I’ve got a question!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
@@ -397,37 +397,38 @@
   <p><a class="reference external" href="https://github.com/PeerHerholz/workshop_weizmann"><img alt="License" src="https://img.shields.io/github/license/peerherholz/workshop_weizmann" /></a></p>
 <section class="tex2jax_ignore mathjax_ignore" id="welcome">
 <h1>Welcome!<a class="headerlink" href="#welcome" title="Link to this heading">#</a></h1>
-<p>Hello everyone and welcome to this MEG QC tutorial.
-MEG QC is a python based pipeline for quality control of MEG data, it was developed as Evgeniia Gapontseva’s Master Thesis (2023) within the Oldenburg university in the Applied Neurocognitive Psychology Lab (ANCP Lab).</p>
+<p>Hello everyone, and welcome to this MEGqc tutorial.
+<strong>MEGqc</strong> is a Python -ased pipeline for quality control of MEG data. It was developed as <strong>Evgeniia Gapontseva’s Master Thesis (2023)</strong> within the <strong>Applied Neurocognitive Psychology Lab (ANCP Lab)</strong>.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/ANCPLabOldenburg/MEGqc">Link to GitHub</a></p></li>
 <li><p><a class="reference external" href="https://meg-qc.readthedocs.io/en/latest/">Link to authors’ Documentation</a></p></li>
 <li><p><a class="reference external" href="https://uol.de/en/applied-neurocognitive-psychology">Link to ANCP Lab website</a></p></li>
 </ul>
 <section id="learning-objectives">
-<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>learn to install MEGqc and analyze an MEG dataset</p></li>
-<li><p>learn how to produce and understand an MEGqc html report</p></li>
+<li><p>Learn to install MEGqc and analyze an MEG dataset</p></li>
+<li><p>Learn how to produce and understand an MEGqc HTML report</p></li>
 </ul>
 </section>
 <section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
+<p>To follow this tutorial, you will need:</p>
 <ul class="simple">
-<li><p>some familiarity with MEG data</p></li>
-<li><p>access to a Linux terminal/shell</p></li>
-<li><p>a working version of Python3</p></li>
-<li><p>minimal understanding of BASH (such as ls and cd).</p></li>
-<li><p>some familiarity with GitHub</p></li>
+<li><p>Some familiarity with MEG data</p></li>
+<li><p>Access to a Linux terminal/shell</p></li>
+<li><p>A working version of Python3</p></li>
+<li><p>Basic understanding of BASH commands (such as ls and cd).</p></li>
+<li><p>Some familiarity with GitHub</p></li>
 </ul>
 </section>
 <section id="i-ve-got-a-question">
 <h2>I’ve got a question!<a class="headerlink" href="#i-ve-got-a-question" title="Link to this heading">#</a></h2>
-<p>In case you have any questions or difficulties working with MEG QC, please don’t hesitate a single second to get in touch with us. A great way to do this is to via e-mail &#64; <a class="reference external" href="mailto:aaron&#46;reer&#37;&#52;&#48;uol&#46;de">aaron<span>&#46;</span>reer<span>&#64;</span>uol<span>&#46;</span>de</a>.</p>
+<p>If you have any questions or encounter difficulties while working with MEGqc, please don’t hesitate a single second to get in touch with us. A great way to do this is to via e-mail &#64; <a class="reference external" href="mailto:aaron&#46;reer&#37;&#52;&#48;uol&#46;de">aaron<span>&#46;</span>reer<span>&#64;</span>uol<span>&#46;</span>de</a>.</p>
 </section>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
-<p>This tutorial is possible through the dedicated and second to none work of the <a class="reference external" href="https://jupyter.org/community">Jupyter community</a>, specifically, the <a class="reference external" href="https://executablebooks.org/en/latest/">Executable/Jupyter Book</a>.</p>
+<p>This tutorial was made possible through the dedicated work of the <a class="reference external" href="https://jupyter.org/community">Jupyter community</a>, specifically, the <a class="reference external" href="https://executablebooks.org/en/latest/">Executable/Jupyter Book</a>.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -468,7 +469,7 @@ MEG QC is a python based pipeline for quality control of MEG data, it was develo
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to MEG quality control</p>
+        <p class="prev-next-title">Introduction to MEG qc</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -489,7 +490,7 @@ MEG QC is a python based pipeline for quality control of MEG data, it was develo
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-ve-got-a-question">I’ve got a question!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>

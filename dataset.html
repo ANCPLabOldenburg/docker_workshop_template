@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How to download a dataset &#8212; Docker for neuroscience</title>
+    <title>How to download a dataset from OpenNeuro &#8212; Docker for neuroscience</title>
   
   
   
@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'dataset';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="How to make the calculation module run" href="run_calculation.html" />
-    <link rel="prev" title="Installation" href="installation.html" />
+    <link rel="next" title="How to run the calculation module" href="run_calculation.html" />
+    <link rel="prev" title="Installation of MEGqc" href="installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -164,16 +164,16 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG quality control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG qc</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGQc report:</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to download a dataset</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to make the calculation module run</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="run_calculation/settings_explanation.html">Settings description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGqc report overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of MEGqc</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to download a dataset from OpenNeuro</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to run the calculation module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="settings_explanation.html">Settings description</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to make the plotting module run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_plotting.html">How to run the plotting module</a></li>
 </ul>
 
     </div>
@@ -368,7 +368,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How to download a dataset</h1>
+    <h1>How to download a dataset from OpenNeuro</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,20 +394,28 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-to-download-a-dataset">
-<h1>How to download a dataset<a class="headerlink" href="#how-to-download-a-dataset" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://openneuro.org/">OpenNeuro</a> is a free and open platform with more than 50 thousand participants and more than one thousand public BIDS compliant MRI, PET, MEG, EEG and iEEG datasets.
-In this tutorial, we’ll use the data of one subject of one dataset that Gaponsetva (2023) used to validate MEGq. In this section we’ll explain how can we get a dataset from OpenNeuro:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-download-a-dataset-from-openneuro">
+<h1>How to download a dataset from OpenNeuro<a class="headerlink" href="#how-to-download-a-dataset-from-openneuro" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://openneuro.org/">OpenNeuro</a> is a free and open platform hosting over 1000 public, BIDS compliant datasets, including MRI, PET, MEG, EEG and iEEG datasets.
+In this tutorial, we’ll work with the data from one subject of one dataset that Gaponsetva (2023) used to validate MEGq. This section explains how to download a dataset from OpenNeuro:</p>
 <ol class="arabic simple">
-<li><p><strong>Find the dataset:</strong> The previous hyperlink takes you directly there, but if you didn’t use it, you can go to the <a class="reference external" href="https://openneuro.org/">OpenNeuro</a> main page, and introduce the Accession Number (ds003483).</p></li>
-<li><p><strong>Download options:</strong> If you click in download we get several options, such as download with the browser, fro S3, Node.js, DataLad and shell script.</p></li>
+<li><p><strong>Find the dataset:</strong> navigate to the <a class="reference external" href="https://openneuro.org/">OpenNeuro homepage</a> (or follow the hyperlink) and search for the dataset using the Accession Number: <code class="docutils literal notranslate"><span class="pre">ds003483</span></code>.</p></li>
+<li><p><strong>Download options:</strong> When you click <code class="docutils literal notranslate"><span class="pre">&quot;Download&quot;</span></code> you’ll be presented with several options:</p>
+<ul class="simple">
+<li><p>Download with your browser</p></li>
+<li><p>Download from S3</p></li>
+<li><p>Download with Node.js</p></li>
+<li><p>Download with DataLad</p></li>
+<li><p>Download with a shell script.
+Given the dataset’s size (21 participants, 24.48 GB), dowloading the full dataset may be unnecessary. To save time and storage, we’ll dowload only one subject’s folder using <strong>Datalad</strong>.</p></li>
+</ul>
+</li>
 </ol>
-<p>As the dataset includes 21 participants, it consist of 24.48 GB. Therefore, we’ll just download one subject, for that, the easiest approach is to proceed with <strong>DataLad</strong>.</p>
 <section id="getting-started-with-datalad">
 <h2>Getting started with DataLad<a class="headerlink" href="#getting-started-with-datalad" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="#github.com/datalad"><span class="xref myst">DataLad</span></a>is a free and open source data tool for management of large datasets. We can use it download a single subject folder from the the dataset.</p>
+<p><a class="reference internal" href="#github.com/datalad"><span class="xref myst">DataLad</span></a>is a free and open source data tool for management of large datasets. It can be used to download a single subject folder from a dataset.</p>
 <ol class="arabic simple" start="0">
-<li><p><strong>Ensure <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is properly installed on your system:</strong> it might require an update if it’s not equal or higher than 8.20200309.</p></li>
+<li><p><strong>Ensure <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is properly installed on your environment:</strong> DataLad requires <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8.20200309 (or higher). Verify your installation and, if needed, update <code class="docutils literal notranslate"><span class="pre">git-annex</span></code>.</p></li>
 </ol>
 </section>
 <section id="id1">
@@ -427,7 +435,7 @@ In this tutorial, we’ll use the data of one subject of one dataset that Gapons
 </div>
 <br>
 <ol class="arabic simple" start="2">
-<li><p><strong>Clone the dataset repository:</strong> It copies the entire dataset’s structure, but only lightweight metada (such as .json). The actual .fif files are not downloaded, even thought they will remain as <em>“broken links”</em> placeholders. Be sure you are working in your desired directory (with <strong>cd</strong>).</p></li>
+<li><p><strong>Clone the dataset repository:</strong> It copies the entire dataset’s structure, but only lightweight metada (such as .json), the actual data files (.fif in this case) are not downloaded, even thought they <em>“broken links”</em> placeholders will be created. Be sure you are working in your desired directory (with <code class="docutils literal notranslate"><span class="pre">cd</span></code>), then run:</p></li>
 </ol>
 </section>
 <section id="id3">
@@ -438,7 +446,7 @@ In this tutorial, we’ll use the data of one subject of one dataset that Gapons
 <br>
 <p><img alt="placeholder" src="_images/placeholder.png" /></p>
 <ol class="arabic simple" start="3">
-<li><p><strong>Download only the sub-009 folder:</strong> use the get command to download only the data for subject 009.</p></li>
+<li><p><strong>Download only the sub-009 folder:</strong> use the <code class="docutils literal notranslate"><span class="pre">get</span></code> command to download only the data for subject 009.</p></li>
 </ol>
 </section>
 <section id="id4">
@@ -486,7 +494,7 @@ In this tutorial, we’ll use the data of one subject of one dataset that Gapons
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installation</p>
+        <p class="prev-next-title">Installation of MEGqc</p>
       </div>
     </a>
     <a class="right-next"
@@ -494,7 +502,7 @@ In this tutorial, we’ll use the data of one subject of one dataset that Gapons
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How to make the calculation module run</p>
+        <p class="prev-next-title">How to run the calculation module</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

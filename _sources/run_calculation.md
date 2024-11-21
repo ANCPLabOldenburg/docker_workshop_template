@@ -1,42 +1,43 @@
-# How to make the calculation module run
+# How to run the calculation module
 
-After completed the installation steps, follow these final setting to get the software to run:
+After completing the installation steps, follow these final settings to get the software running:
 
 ![gif](https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif)
 
 ## Setting File Paths
 
-So within the folder `docker` of the cloned repository, you'll find the script **run_megqc.py** and within it there are 2 filepaths to edit:
+Within the `docker` folder of the cloned repository, you'll find the script **run_megqc.py**. To configure the software, you need to edit 2 filepathsin this script:
 - **config_file_path=** here you'll need to write the path to the **settings.ini_**.
 
 - **internal_config_file_path=** here you'll need to write the path to the **settings_internal.ini**.
 
-Both files are located in  the `settings` folder within the `meg_qc` in the `site-packages` folder of your environment. The path should look something like this:
+Both setting files are located in  the `settings` folder within the `meg_qc` package, which reside in the `site-packages` directory of yourPython  environment. The path should look something like this:
 
-        /path/to/environment/lib/python3<.version>/site-packages/meg_qc/settings/settings.ini
+        /path/to/environment/lib/python3./site-packages/meg_qc/settings/settings.ini
 
 <br>
 
-## Specifying Dataset Path and subjects
+## Specifying Dataset Path and Subjects
 
-Next open the file **setttings.ini** to edit the data directory path and subjects to be analyzed:
+Next open the file **setttings.ini** to edit the data directory path and specify the subjects to be analyzed:
 
-- **subjects=** is a string variable, you shall write the code of the participant you want to analye (f.e., 009), a list of subjects separated by a comma (001, 002, 003) or write "all".
+- **subjects=** is a string variable, you shall write the code of the participant you want to analyze (f.e., 009). You can also provide a list of subjects separated by a comma (001, 002, 003) or write "all" to process all subjects.
 
-- **data_directory=** Here, you only need to specify the path to the dataset, the pipeline will automatically process multiple subjects and files thanks to the ancpBIDS library. 
+- **data_directory=** SEt this to the path to the dataset directory. In case that you want to analyze more subject, the pipeline will find them within the dataset thanks to the ancpBIDS library. 
 
-The file **setttings.ini** also contains an extensive amount of customizable parameters, but you can always use the default values (calculated to fit the majority of datasets). If you want to know more about this parameters, [please click here](settings_explanations.md).
+The file **setttings.ini** also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. For more details about these parameters, [please click here](settings_explanations.md).
 
 
 ## Running the calculation module
 
-Finally, we are ready to run *rung_megqc.py*! Ensure that you activate the environment first:
+Now, we're ready to run *rung_megqc.py*! But first, ensure that you activate your virtual environment:
 
         source /path/to/environment/bin/activate
 
 
-Then, the run command is given from the terminal and **not** from the command pannel. The command might be a similar line as:
+Once the environment is active, execute the script from the **terminal** (*not** from the command panel). The command might look somehting like this:
 
         python3 /path/to/MEGqc/docker/run_megqc.py
 
-Now we are ready to analyze our data. In the next section we will see how the html reports are created.    
+### Next section
+With this, you're all set to analyze your data! In the next section you'll learn how to produce the HTML reports.   
