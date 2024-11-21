@@ -13,7 +13,7 @@ So within the folder `docker` of the cloned repository, you'll find the script *
 
 Both files are located in  the `settings` folder within the `meg_qc` in the `site-packages` folder of your environment. The path should look something like this:
 
-        /home/<user>/<environment_name>/lib/python3<.version>/site-packages/meg_qc/settings/settings.ini
+        /path/to/environment/lib/python3<.version>/site-packages/meg_qc/settings/settings.ini
 
 <br>
 
@@ -32,11 +32,11 @@ The file **setttings.ini** also contains an extensive amount of customizable par
 
 Finally, we are ready to run *rung_megqc.py*! Ensure that you activate the environment first:
 
-        source home/<user>/<environment>/bin/activate
+        source /path/to/environment/bin/activate
 
 
 Then, the run command is given from the terminal and **not** from the command pannel. The command might be a similar line as:
 
-        python3 /home/<user>/<folder>/MEGqc/docker/run_megqc.py
+        python3 /path/to/MEGqc/docker/run_megqc.py
 
 Now we are ready to analyze our data. In the next section we will see how the html reports are created.    

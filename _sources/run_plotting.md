@@ -11,18 +11,18 @@ As you can see, the calculation module generates a lot of metadata files. But wh
 
 First, locate the script *meg_qc_plots.py* within the `plotting`folder thin the `meg_qc` package in the `site-packages` folder of your environment. It might be in:
 
-        /home/<user>/<environment>/lib/python3.<version>/site-packages/meg_qc/plotting/
+        /path/to/environment/lib/python3.<version>/site-packages/meg_qc/plotting/
 
 
 Open the *meg_qc_plots.py* and, at the very last line where **tsvs_to_plot=** is defined, add your path to your _datasets_ (ds003483 if you are following the tutorial). The line should look similar to this:
 
-        tsvs_to_plot = make_plots_meg_qc(ds_paths=['/home/<user>/<folder/paths>/<dataset>/'])
+        tsvs_to_plot = make_plots_meg_qc(ds_paths=['/path/to/dataset/'])
 
 ## Running the plotting module
 
 Ensure that you are working from your environment and then run the script from the command line. The command might look like:
 
-        python3 /home/<user>/<environment>/lib/python3.<version>/site-packages/meg_qc/plotting/meg_qc_plots.py
+        python3 /path/to/environment/lib/python3.<version>/site-packages/meg_qc/plotting/meg_qc_plots.py
 
 ## GUI
 After running the plotting command, a text-based GUI will appear in the terminal asking you several questions about specific parameters, the available options are based on the metadata MEGqc finds in your dataset.:

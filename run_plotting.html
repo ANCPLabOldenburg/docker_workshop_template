@@ -400,18 +400,18 @@
 <section id="setting-file-paths">
 <h2>Setting File Paths<a class="headerlink" href="#setting-file-paths" title="Link to this heading">#</a></h2>
 <p>First, locate the script <em>meg_qc_plots.py</em> within the <code class="docutils literal notranslate"><span class="pre">plotting</span></code>folder thin the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> package in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment. It might be in:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /home/&lt;user&gt;/&lt;environment&gt;/lib/python3.&lt;version&gt;/site-packages/meg_qc/plotting/
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/environment/lib/python3.&lt;version&gt;/site-packages/meg_qc/plotting/
 </pre></div>
 </div>
 <p>Open the <em>meg_qc_plots.py</em> and, at the very last line where <strong>tsvs_to_plot=</strong> is defined, add your path to your <em>datasets</em> (ds003483 if you are following the tutorial). The line should look similar to this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    tsvs_to_plot = make_plots_meg_qc(ds_paths=[&#39;/home/&lt;user&gt;/&lt;folder/paths&gt;/&lt;dataset&gt;/&#39;])
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    tsvs_to_plot = make_plots_meg_qc(ds_paths=[&#39;/path/to/dataset/&#39;])
 </pre></div>
 </div>
 </section>
 <section id="running-the-plotting-module">
 <h2>Running the plotting module<a class="headerlink" href="#running-the-plotting-module" title="Link to this heading">#</a></h2>
 <p>Ensure that you are working from your environment and then run the script from the command line. The command might look like:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /home/&lt;user&gt;/&lt;environment&gt;/lib/python3.&lt;version&gt;/site-packages/meg_qc/plotting/meg_qc_plots.py
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /path/to/environment/lib/python3.&lt;version&gt;/site-packages/meg_qc/plotting/meg_qc_plots.py
 </pre></div>
 </div>
 </section>

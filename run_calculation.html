@@ -404,7 +404,7 @@
 <li><p><strong>internal_config_file_path=</strong> here you’ll need to write the path to the <strong>settings_internal.ini</strong>.</p></li>
 </ul>
 <p>Both files are located in  the <code class="docutils literal notranslate"><span class="pre">settings</span></code> folder within the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment. The path should look something like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /home/&lt;user&gt;/&lt;environment_name&gt;/lib/python3&lt;.version&gt;/site-packages/meg_qc/settings/settings.ini
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/environment/lib/python3&lt;.version&gt;/site-packages/meg_qc/settings/settings.ini
 </pre></div>
 </div>
 <br>
@@ -421,11 +421,11 @@
 <section id="running-the-calculation-module">
 <h2>Running the calculation module<a class="headerlink" href="#running-the-calculation-module" title="Link to this heading">#</a></h2>
 <p>Finally, we are ready to run <em>rung_megqc.py</em>! Ensure that you activate the environment first:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    source home/&lt;user&gt;/&lt;environment&gt;/bin/activate
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    source /path/to/environment/bin/activate
 </pre></div>
 </div>
 <p>Then, the run command is given from the terminal and <strong>not</strong> from the command pannel. The command might be a similar line as:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /home/&lt;user&gt;/&lt;folder&gt;/MEGqc/docker/run_megqc.py
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /path/to/MEGqc/docker/run_megqc.py
 </pre></div>
 </div>
 <p>Now we are ready to analyze our data. In the next section we will see how the html reports are created.</p>

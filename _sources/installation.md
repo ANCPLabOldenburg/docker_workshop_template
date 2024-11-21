@@ -18,7 +18,7 @@ To create and activate your virtual environment, you can follow these steps:
 
 3. To activate the virtual environment:
 
-        source <your_environment_name>/bin/activate
+        source /path/to/environment/bin/activate
 
 4. Once activated, you should see `(<your_environment_name>)` in the bash terminal prompt. 
 
