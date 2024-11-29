@@ -1,10 +1,11 @@
-# Introduction to MEG qc
+# Introduction to MEGqc
 
 ## MEG data quality control
-Magnetoencephalography (MEG) data are susceptible to  noise and artifacts, which can severely corrupt the data quality. These artifacts may arise from:
+Magnetoencephalography (MEG) data is susceptible to  noise and artifacts, which can severely corrupt the data quality. These artifacts may arise from:
 - Environmental noise sources (e.g. powerline noise)
 - Internal noise sources (e.g. eye movements of the subject)
 - Systemic noise sources (e.g. malfunction of a sensor).
+
 For this reason, quality control of MEG data is an essential step for ensuring valid and reproducible science (Niso et al., 2022).  
 However, the visual detection and annotation of artifacts in MEG data requires expertise, and still can be:
 - A tedious and time-consuming task
@@ -12,12 +13,12 @@ However, the visual detection and annotation of artifacts in MEG data requires e
 - Vulnerable to biases
 - Not standardized 
 
-A standardized workflow for quality control will minimize human bias and facilitate between-dataset comparisons 
-To address this issue, the ANCP lab developed the MEG QC, a software tool for automated and standardized quality control of MEG recordings.
+To address this issue, the ANCP lab developed the MEGqc, a software tool for automated and standardized quality control of MEG recordings. By providing a standardized workflow, it helps minimize human bias and facilitates comparisosn between datasets.
+
 *(disclaimer: fragment adapted from MEGQc github)* 
 
 ## MEGqc
-Evaluates the quatlity of raw data to assist researches in making informed decision about further analysis (Gapontseva, 2023).  It is **not** an artifact removal tool. The MEGqc pipeline is designed to be user-friendly. Researches only need to:
+Evaluates the quality of raw data, but is **not** an artifact removal tool. The MEGqc pipeline is designed to be user-friendly, so researches only need to:
 - Provide data for evaluation
 - Set analysis parameters if desired (default parameters are available), and 
 - Run the analysis script.
@@ -38,9 +39,18 @@ There are 2 other metrics within MEG QC:
 
 To ensure standardization of the pipeline, MEGqc software is tailored to the **BIDS standards**.
 
+
+## MEGqc derivatives  
+MEGqc produces two types of machine-readable outputs:
+- **JSON files*** with the key information for each of the quality metrics.
+- **TSV files**** with more detailed results for some of the metrics.
+
+To ensure the clarity of the results, the pipeline includes a **plotting module** that generates visual HTML reports based on the TSV files. For each metric, an html report is created (6 in total). The next section will delve in the kind of information included within each report. The output also maintains the **BIDS standards.**
+
+
 # What is BIDS?
 
-Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus how to organize and share data obtained in neuroimaging experiments. **Brain Imaging Data Structure (BIDS)**, describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort.  _(fragment adapted from BIDS official website)._ 
+Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus on how to organize and share data obtained in neuroimaging experiments. **Brain Imaging Data Structure (BIDS)**, describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort.  _(fragment adapted from BIDS official website)._ 
 
 ![bids-logo](static/bids.jpg)
 
@@ -51,7 +61,7 @@ Gapontseva (2023) evaluated the MEGqc software thanks to 21  MEG datasets obtain
 
 ## General Pipeline Stucture
 
-The following figure (Gaponsetva, 2023) describes the general process of the pipeline. It might look  a bit overwhelming, but don't worry, we will go step by step. 
+The following figure (Gaponsetva, 2023) describes the general process of the pipeline. It might look  a bit overwhelming, but we won't go too much into detail:
 
 ![Pipeline](static/pipeline.png)
 
@@ -59,17 +69,9 @@ The time is on the Y axis, from top to bottom:
 
 - The **configuration** file contains the data directory path and the parameters for the selected metrics. Default values for all metrics are preset, but they can be modified as needed.
 - Data files are identified thanks to ancpBIDS.
-- Datasets are loaded and **pre-processed:** epoching, resampling and filtering (taking into account users' parameters).
-- Selected metrics are executed (taking into account users' parameters) 
-- Results are compiled into two different data structures, the **derivatives**.
+- Datasets are loaded and **early processed:** epoching, resampling and filtering (taking into account users' parameters).
+- Selected **metrics** are executed (taking into account users' parameters) and results compiled into the **derivatives**.
 - ancpBIDS writes the **derivatives** to the dataset directory, maintaining BIDS naming convention.
-
-## MEGqc derivatives  
-MEGQc produces two types of amchine-readable outputs:
-- **JSON files*** with the key information for each of the quality metrics in a Python dictionary format.
-- **TSV files**** with more detailed results for some of the metrics presented as Pandas Data Frames.
-
-To ensure the clarity of the results, the pipeline includes a **plotting module** that generates visual HTML reports based on the TSV files. For each metric, an html report is created (6 in total).
 
 <br>   
 

@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How to run the plotting module &#8212; Docker for neuroscience</title>
+    <title>How to run the calculation module &#8212; Docker for neuroscience</title>
   
   
   
@@ -27,44 +27,45 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'run_plotting';</script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Settings description" href="settings_explanation.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'guide/run_calculation';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Settings description" href="settings_explanation.html" />
+    <link rel="prev" title="How to download a dataset from OpenNeuro" href="dataset.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -86,7 +87,7 @@
   <dialog id="pst-search-dialog">
     
 <form class="bd-search d-flex align-items-center"
-      action="search.html"
+      action="../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -135,7 +136,7 @@
     
   
 
-<a class="navbar-brand logo" href="index.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -157,22 +158,23 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
+                <a class="reference internal" href="../index.html">
                     Welcome!
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEG qc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction to MEGqc</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGqc report overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of MEGqc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset.html">How to download a dataset from OpenNeuro</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="run_calculation.html">How to run the calculation module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="../metrics.html">MEGqc report overview</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../guide.html">Practical Guide to MEGqc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation of MEGqc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html">How to download a dataset from OpenNeuro</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to run the calculation module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="settings_explanation.html">Settings description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_plotting.html">How to run the plotting module</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to run the plotting module</a></li>
 </ul>
 
     </div>
@@ -244,7 +246,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/run_plotting.md" target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/guide/run_calculation.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -261,7 +263,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Frun_plotting.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Fguide/run_calculation.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +293,7 @@
       
       
       
-      <li><a href="_sources/run_plotting.md" target="_blank"
+      <li><a href="../_sources/guide/run_calculation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,7 +369,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How to run the plotting module</h1>
+    <h1>How to run the calculation module</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,9 +380,8 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-plotting-module">Running the plotting module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congrats">Congrats!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-dataset-path-and-subjects">Specifying Dataset Path and Subjects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a></li>
 </ul>
             </nav>
         </div>
@@ -392,48 +393,42 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-to-run-the-plotting-module">
-<h1>How to run the plotting module<a class="headerlink" href="#how-to-run-the-plotting-module" title="Link to this heading">#</a></h1>
-<p>Once the calculation module has completed the analysis, it generates JSON and TSV files that are saved in the <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> folder within the dataset folder. The path to your <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> might look something like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/dataset/ds003483/derivatives/Meg_QC/calculation/sub-009/
-</pre></div>
-</div>
-<p>As you can see, the calculation module generates numerous metadata files. But what if we want the data to be neatly organized and presented in a visual and interactive way?
-Luckily MEGqc also contains the plotting module, which generates the HTML reports we saw earlier. Let’s see how can we produce them:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-run-the-calculation-module">
+<h1>How to run the calculation module<a class="headerlink" href="#how-to-run-the-calculation-module" title="Link to this heading">#</a></h1>
+<p>After completing the installation steps, follow these final settings to get the software running:</p>
+<p><img alt="gif" src="https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif" /></p>
 <section id="setting-file-paths">
 <h2>Setting File Paths<a class="headerlink" href="#setting-file-paths" title="Link to this heading">#</a></h2>
-<p>First, locate the script <em>meg_qc_plots.py</em> within the <code class="docutils literal notranslate"><span class="pre">plotting</span></code>folder in the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> package, which is located in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment. The path might look like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/environment/lib/python3.9/site-packages/meg_qc/plotting/
+<p>Within the <code class="docutils literal notranslate"><span class="pre">docker</span></code> folder of the cloned repository, you’ll find the script <strong>run_megqc.py</strong>. To configure the software, you need to edit 2 filepaths of this script:</p>
+<ol class="arabic simple">
+<li><p><strong>config_file_path=</strong> here you’ll need to write the path to the <strong>settings.ini_</strong>.</p></li>
+<li><p><strong>internal_config_file_path=</strong> here you’ll need to write the path to the <strong>settings_internal.ini</strong>.</p></li>
+</ol>
+<p>Both setting files are located in  the <code class="docutils literal notranslate"><span class="pre">settings</span></code> folder within the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> package, which reside in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> directory of yourPython  environment. The path should look something like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/environment/lib/python3./site-packages/meg_qc/settings/settings.ini
 </pre></div>
 </div>
-<p>Open the <em>meg_qc_plots.py</em>, and at the very last line where <strong>tsvs_to_plot=</strong> is defined, add your path to your dataset (e.g., ds003483). The line should look similar to this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    tsvs_to_plot = make_plots_meg_qc(ds_paths=[&#39;/path/to/dataset/&#39;])
-</pre></div>
-</div>
+<br>
 </section>
-<section id="running-the-plotting-module">
-<h2>Running the plotting module<a class="headerlink" href="#running-the-plotting-module" title="Link to this heading">#</a></h2>
-<p>Ensure that you are working within your environment and then run the script from the command line. The command might look like:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /path/to/environment/lib/python3.9/site-packages/meg_qc/plotting/meg_qc_plots.py
-</pre></div>
-</div>
-</section>
-<section id="gui">
-<h2>GUI<a class="headerlink" href="#gui" title="Link to this heading">#</a></h2>
-<p>After running the plotting command, a text-based GUI will appear in the terminal, asking you several questions about specific parameters. The available options are based on the metadata MEGqc finds in your dataset.:</p>
+<section id="specifying-dataset-path-and-subjects">
+<h2>Specifying Dataset Path and Subjects<a class="headerlink" href="#specifying-dataset-path-and-subjects" title="Link to this heading">#</a></h2>
+<p>Next open the file <strong>setttings.ini</strong> to edit the data directory path and specify the subjects to be analyzed:</p>
 <ul class="simple">
-<li><p>Subjects: ALL or a specific one</p></li>
-<li><p>Sessions: ALL or a specific one</p></li>
-<li><p>Tasks: ALL or a specific one</p></li>
-<li><p>Runs: ALL or a specific one</p></li>
-<li><p>Metrics: ALL or a specific one</p></li>
-<li><p>Sensors: ALL, or only magnetometers or gradiometers</p></li>
+<li><p><strong>subjects=</strong> is a string variable, you shall write the code of the participant you want to analyze (f.e., 009). You can also provide a list of subjects separated by a comma (001, 002, 003) or write “all” to process all subjects.</p></li>
+<li><p><strong>data_directory=</strong> SEt this to the path to the dataset directory. In case that you want to analyze more subject, the pipeline will find them within the dataset thanks to the ancpBIDS library.</p></li>
 </ul>
-<p><img alt="gui" src="_images/gui.png" /></p>
+<p>The file <strong>setttings.ini</strong> also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. <a class="reference internal" href="#guide/settings_explanations.md"><span class="xref myst">In the next section you can find  more details about these parameters</span></a>.</p>
 </section>
-<section id="congrats">
-<h2>Congrats!<a class="headerlink" href="#congrats" title="Link to this heading">#</a></h2>
-<p>You did it! Now you have the HTML reports within the <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> folder of your dataset. You can open them with Chrome or Firefox to view the interactive plots of the quality control analysis of your dataset!</p>
+<section id="running-the-calculation-module">
+<h2>Running the calculation module<a class="headerlink" href="#running-the-calculation-module" title="Link to this heading">#</a></h2>
+<p>Now, we’re ready to run <em>rung_megqc.py</em>! But first, ensure that you activate your virtual environment:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    source /path/to/environment/bin/activate
+</pre></div>
+</div>
+<p>Once the environment is active, execute the script from the <strong>terminal</strong> (<em>not</em>* from the command panel). The command might look somehting like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /path/to/MEGqc/docker/run_megqc.py
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -450,7 +445,7 @@ Luckily MEGqc also contains the plotting module, which generates the HTML report
         },
         kernelOptions: {
             name: "python3",
-            path: "./."
+            path: "./guide"
         },
         predefinedOutput: true
     }
@@ -468,13 +463,22 @@ Luckily MEGqc also contains the plotting module, which generates the HTML report
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="settings_explanation.html"
+       href="dataset.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How to download a dataset from OpenNeuro</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="settings_explanation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Settings description</p>
       </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -494,9 +498,8 @@ Luckily MEGqc also contains the plotting module, which generates the HTML report
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-plotting-module">Running the plotting module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congrats">Congrats!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-dataset-path-and-subjects">Specifying Dataset Path and Subjects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a></li>
 </ul>
   </nav></div>
 
@@ -545,8 +548,8 @@ By Michael Ernst, Aaron Reer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

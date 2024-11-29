@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome! &#8212; Docker for neuroscience</title>
+    <title>Practical Guide to MEGqc &#8212; Docker for neuroscience</title>
   
   
   
@@ -61,10 +61,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'guide';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction to MEGqc" href="introduction.html" />
+    <link rel="next" title="Installation of MEGqc" href="guide/installation.html" />
+    <link rel="prev" title="MEGqc report overview" href="metrics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -116,8 +117,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -137,7 +136,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -158,17 +157,17 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
                     Welcome!
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEGqc</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGqc report overview</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="guide.html">Practical Guide to MEGqc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Practical Guide to MEGqc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="guide/installation.html">Installation of MEGqc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide/dataset.html">How to download a dataset from OpenNeuro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide/run_calculation.html">How to run the calculation module</a></li>
@@ -247,7 +246,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/index.md" target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/guide.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -264,7 +263,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Fguide.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +293,7 @@
       
       
       
-      <li><a href="_sources/index.md" target="_blank"
+      <li><a href="_sources/guide.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,9 +356,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -370,22 +367,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome!</h1>
+    <h1>Practical Guide to MEGqc</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-for-this-tutorial">Requirements for this tutorial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-ve-got-a-question">I’ve got a question!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -395,42 +381,22 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><a class="reference external" href="https://github.com/PeerHerholz/workshop_weizmann"><img alt="License" src="https://img.shields.io/github/license/peerherholz/workshop_weizmann" /></a></p>
-<section class="tex2jax_ignore mathjax_ignore" id="welcome">
-<h1>Welcome!<a class="headerlink" href="#welcome" title="Link to this heading">#</a></h1>
-<p>Hello everyone, and welcome to this MEGqc tutorial.
-<strong>MEGqc</strong> is a Python-based pipeline for quality control of MEG data. It was developed as <strong>Evgeniia Gapontseva’s Master Thesis (2023)</strong> within the <strong>Applied Neurocognitive Psychology Lab (ANCP Lab)</strong>.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/ANCPLabOldenburg/MEGqc">Link to MEGqc GitHub</a></p></li>
-<li><p><a class="reference external" href="https://meg-qc.readthedocs.io/en/latest/">Link to authors’ documentation</a></p></li>
-<li><p><a class="reference external" href="https://uol.de/en/applied-neurocognitive-psychology">Link to ANCP Lab website</a></p></li>
-</ul>
-<section id="learning-objectives">
-<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Learn more about MEGqc and its reports</p></li>
-<li><p>Get to install MEGqc and analyze an MEG dataset</p></li>
-<li><p>Get to produce an MEGqc HTML report</p></li>
-</ul>
-</section>
-<section id="requirements-for-this-tutorial">
-<h2>Requirements for this tutorial<a class="headerlink" href="#requirements-for-this-tutorial" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Some familiarity with MEG data</p></li>
-<li><p>Access to a Linux terminal/shell</p></li>
-<li><p>A working version of Python3</p></li>
-<li><p>Basic understanding of BASH commands (such as ls and cd).</p></li>
-<li><p>Some familiarity with GitHub</p></li>
-</ul>
-</section>
-<section id="i-ve-got-a-question">
-<h2>I’ve got a question!<a class="headerlink" href="#i-ve-got-a-question" title="Link to this heading">#</a></h2>
-<p>If you have any questions or encounter difficulties while working with MEGqc, please don’t hesitate a single second to get in touch with us. A great way to do this is to via e-mail &#64; <a class="reference external" href="mailto:aaron&#46;reer&#37;&#52;&#48;uol&#46;de">aaron<span>&#46;</span>reer<span>&#64;</span>uol<span>&#46;</span>de</a>.</p>
-</section>
-<section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
-<p>This tutorial was made possible through the dedicated work of the <a class="reference external" href="https://jupyter.org/community">Jupyter community</a>, specifically, the <a class="reference external" href="https://executablebooks.org/en/latest/">Executable/Jupyter Book</a>.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="practical-guide-to-megqc">
+<h1>Practical Guide to MEGqc<a class="headerlink" href="#practical-guide-to-megqc" title="Link to this heading">#</a></h1>
+<p>Now that we have a general understanding of MEGqc, what it does and why it might be useful, we’ll walk you through the steps to install it and make it work for your datasets.
+Here’s an index of the topics covered in this guide:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="guide/installation.html"><span class="std std-doc">Installation</span></a>:
+Learn how to set up MEGqc, including creating a virtual environment and dependencies.</p></li>
+<li><p><a class="reference internal" href="guide/dataset.html"><span class="std std-doc">How to download a dataset from OpenNeuro</span></a>
+In case you don’t have a BIDS compliant MEG dataset, we will show how to retrieve one from OpenNeuro.</p></li>
+<li><p><a class="reference internal" href="guide/run_calculation.html"><span class="std std-doc">How to run the calculation module</span></a>
+Explanation of how to configure the file paths, specifcy datasets and execute the metrics.</p></li>
+<li><p><a class="reference internal" href="guide/settings_explanation.html"><span class="std std-doc">Settings description</span></a>
+An explanation of all customizable parameters and suggested values.</p></li>
+<li><p><a class="reference internal" href="guide/run_plotting.html"><span class="std std-doc">How to run the plotting module</span></a>
+Learn how to generate the HTML reports.</p></li>
+</ol>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -465,12 +431,21 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="metrics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">MEGqc report overview</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="introduction.html"
+       href="guide/installation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to MEGqc</p>
+        <p class="prev-next-title">Installation of MEGqc</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -480,25 +455,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-for-this-tutorial">Requirements for this tutorial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-ve-got-a-question">I’ve got a question!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

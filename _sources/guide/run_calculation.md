@@ -6,10 +6,10 @@ After completing the installation steps, follow these final settings to get the 
 
 ## Setting File Paths
 
-Within the `docker` folder of the cloned repository, you'll find the script **run_megqc.py**. To configure the software, you need to edit 2 filepathsin this script:
-- **config_file_path=** here you'll need to write the path to the **settings.ini_**.
+Within the `docker` folder of the cloned repository, you'll find the script **run_megqc.py**. To configure the software, you need to edit 2 filepaths of this script:
+1. **config_file_path=** here you'll need to write the path to the **settings.ini_**.
 
-- **internal_config_file_path=** here you'll need to write the path to the **settings_internal.ini**.
+2. **internal_config_file_path=** here you'll need to write the path to the **settings_internal.ini**.
 
 Both setting files are located in  the `settings` folder within the `meg_qc` package, which reside in the `site-packages` directory of yourPython  environment. The path should look something like this:
 
@@ -25,7 +25,7 @@ Next open the file **setttings.ini** to edit the data directory path and specify
 
 - **data_directory=** SEt this to the path to the dataset directory. In case that you want to analyze more subject, the pipeline will find them within the dataset thanks to the ancpBIDS library. 
 
-The file **setttings.ini** also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. For more details about these parameters, [please click here](settings_explanations.md).
+The file **setttings.ini** also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. [In the next section you can find  more details about these parameters](guide/settings_explanations.md).
 
 
 ## Running the calculation module
@@ -39,5 +39,3 @@ Once the environment is active, execute the script from the **terminal** (*not**
 
         python3 /path/to/MEGqc/docker/run_megqc.py
 
-### Next section
-With this, you're all set to analyze your data! In the next section you'll learn how to produce the HTML reports.   
