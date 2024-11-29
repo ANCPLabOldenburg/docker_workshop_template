@@ -1,8 +1,6 @@
-# How to run the calculation module
+# Running the calculation module
 
-After completing the installation steps, follow these final settings to get the software running:
-
-![gif](https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif)
+<!--
 
 ## Setting File Paths
 
@@ -17,6 +15,7 @@ Both setting files are located in  the `settings` folder within the `meg_qc` pac
 
 <br>
 
+
 ## Specifying Dataset Path and Subjects
 
 Next open the file **setttings.ini** to edit the data directory path and specify the subjects to be analyzed:
@@ -25,8 +24,9 @@ Next open the file **setttings.ini** to edit the data directory path and specify
 
 - **data_directory=** SEt this to the path to the dataset directory. In case that you want to analyze more subject, the pipeline will find them within the dataset thanks to the ancpBIDS library. 
 
-The file **setttings.ini** also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. [In the next section you can find  more details about these parameters](guide/settings_explanations.md).
+The file **setttings.ini** also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. [In the next section you can find  more details about these parameters](settings_explanations.md).
 
+-->
 
 ## Running the calculation module
 

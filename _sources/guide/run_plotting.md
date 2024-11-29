@@ -1,4 +1,4 @@
-# How to run the plotting module
+# Running the plotting module
 
 Once the calculation module has completed the analysis, it generates JSON and TSV files that are saved in the `derivatives` folder within the dataset folder. The path to your `derivatives` might look something like this:
 

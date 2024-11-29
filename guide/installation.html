@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installation of MEGqc &#8212; Docker for neuroscience</title>
+    <title>Installation of MEGqc &#8212; MEGqc tutorial</title>
   
   
   
@@ -142,8 +142,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/MEGqc.png" class="logo__image only-light" alt="MEGqc tutorial - Home"/>
+    <img src="../_static/MEGqc.png" class="logo__image only-dark pst-js-only" alt="MEGqc tutorial - Home"/>
   
-    <p class="title logo__title">Docker for neuroscience</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -164,15 +170,16 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction to MEGqc</a></li>
-
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction.html">Introduction to MEGqc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../metrics.html">MEGqc report overview</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../guide.html">Practical Guide to MEGqc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Installation of MEGqc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dataset.html">How to download a dataset from OpenNeuro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="run_calculation.html">How to run the calculation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="settings_explanation.html">Settings description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="run_plotting.html">How to run the plotting module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_calculation.html">Running the calculation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../settings_explanation.html">Settings description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_plotting.html">Running the plotting module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -380,8 +387,8 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-clone-the-megqc-package">Install &amp; clone the MEGqc Package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-depencies">Install depencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-megqc-package">Install the MEGqc Package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-depencies">Install depencies?</a></li>
 </ul>
             </nav>
         </div>
@@ -429,57 +436,31 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
 **[pyenv](https://github.com/pyenv/pyenv)** is a simple python version management. It let's you easily swtich between multiple versions of Python. In their github you can find the instruction to install pyenv, create your own environment with your desired Python version and activate it. 
 -->
 </section>
-<section id="install-clone-the-megqc-package">
-<h2>Install &amp; clone the MEGqc Package<a class="headerlink" href="#install-clone-the-megqc-package" title="Link to this heading">#</a></h2>
+<section id="install-the-megqc-package">
+<h2>Install the MEGqc Package<a class="headerlink" href="#install-the-megqc-package" title="Link to this heading">#</a></h2>
 <p>Once your environment is activated, you can install Python packages with <code class="docutils literal notranslate"><span class="pre">pip</span></code>, and these installations will only apply to your virtual environment. To install MEGqc core functionality, run the following command in the terminal:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install --upgrade meg-qc
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install  meg_qc
 </pre></div>
 </div>
 <br>
-<p>Next, you will need to clone the <a class="reference external" href="https://github.com/ANCPLabOldenburg/MEGqc">Github Repository</a>.</p>
-<p><img alt="repository" src="guide/static/github.png" /></p>
-<ul class="simple">
-<li><p>The folder <em>docker</em> contains the starting script <em>run_megqc.py</em>.</p></li>
-<li><p>The folder <em>meg_qc</em> is a copy of the previously installed MEGqc package via <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p></li>
-</ul>
+<!--
+Next, you will need to clone the [Github Repository](https://github.com/ANCPLabOldenburg/MEGqc). 
+
+![repository](static/github.png)
+
+- The folder _docker_ contains the starting script *run_megqc.py*.
+- The folder *meg_qc* is a copy of the previously installed MEGqc package via `pip`.
+-->
 </section>
 <section id="install-depencies">
-<h2>Install depencies<a class="headerlink" href="#install-depencies" title="Link to this heading">#</a></h2>
-<p>For MEG QC to function, you’ll need to pip install the following depencies. All the hyperlinks take you to the documentation page:</p>
-<ul>
-<li><p><strong><a class="reference external" href="https://mne.tools/stable/index.html">mne (Magnetic and Electric Neuroimaging)</a>:</strong> “MNE is an open-source package for exploring, visualizing and analyzing human neuropshysiological data (…). This package is also the basis for the MEGqc pipeline” (Gapontseva, 2023). It has been extensively documented and constantly updated by an active community support.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  pip install --upgrade mne
-</pre></div>
-</div>
-</li>
-</ul>
-<br>
-<ul>
-<li><p><strong><a class="reference external" href="https://ancpbids.readthedocs.io/en/latest/userDocCombined.html">ancpBIDS</a>:</strong> This library, developed in the ANCP lab, is used to read and query BIDS datasets as well as write the derivatives back.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  pip install ancpbids
-</pre></div>
-</div>
-</li>
-</ul>
-<br>
-<ul>
-<li><p><strong><a class="reference external" href="https://numpy.org/doc/">Numpy (Numerical Python)</a></strong> and <strong><a class="reference external" href="https://pandas.pydata.org/docs/">pandas</a>:</strong> Both libraries are necessary for scientific computing and data manipulation in Python, particulary for working with multidimensional arrays and large matrices.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  pip install numpy
-</pre></div>
-</div>
-</li>
-</ul>
-<br>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    pip install pandas
-</pre></div>
-</div>
-<br>
-<ul>
-<li><p><strong><a class="reference external" href="https://plotly.com/python-api-reference/">plotly</a></strong>: This library is used to create the interactive plots and visualize results. Plotly also supports exporting the figures in HTML format.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  pip install plotly
-</pre></div>
-</div>
-</li>
+<h2>Install depencies?<a class="headerlink" href="#install-depencies" title="Link to this heading">#</a></h2>
+<p>Thanks to the last update, it’s not necessary to manually pip install the different dependencies anymore. All of them are installed automatically along with the MEGqc package.
+We’ll briefly introduce them here the main ones and their functiionality:</p>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://mne.tools/stable/index.html">mne (Magnetic and Electric Neuroimaging)</a>:</strong> “MNE is an open-source package for exploring, visualizing and analyzing human neuropshysiological data (…). This package is also the basis for the MEGqc pipeline” (Gapontseva, 2023). It has been extensively documented and constantly updated by an active community support.</p></li>
+<li><p><strong><a class="reference external" href="https://ancpbids.readthedocs.io/en/latest/userDocCombined.html">ancpBIDS</a>:</strong> This library, developed in the ANCP lab, is used to read and query BIDS datasets as well as write the derivatives back.</p></li>
+<li><p><strong><a class="reference external" href="https://numpy.org/doc/">Numpy (Numerical Python)</a></strong> and <strong><a class="reference external" href="https://pandas.pydata.org/docs/">pandas</a>:</strong> Both libraries are necessary for scientific computing and data manipulation in Python, particulary for working with multidimensional arrays and large matrices.</p></li>
+<li><p><strong><a class="reference external" href="https://plotly.com/python-api-reference/">plotly</a></strong>: This library is used to create the interactive plots and visualize results. Plotly also supports exporting the figures in HTML format.</p></li>
 </ul>
 </section>
 </section>
@@ -550,8 +531,8 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-clone-the-megqc-package">Install &amp; clone the MEGqc Package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-depencies">Install depencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-megqc-package">Install the MEGqc Package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-depencies">Install depencies?</a></li>
 </ul>
   </nav></div>
 
@@ -566,7 +547,7 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
   <div class="footer-item">
     
 <p class="component-author">
-By Michael Ernst, Aaron Reer
+By Alexis Olguin Baxman, Aaron Reer
 </p>
 
   </div>

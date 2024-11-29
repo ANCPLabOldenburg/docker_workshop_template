@@ -22,10 +22,11 @@ Hello everyone, and welcome to this MEGqc tutorial.
 - Basic understanding of BASH commands (such as ls and cd). 
 - Some familiarity with GitHub 
 
-
 ## I've got a question!
 
 If you have any questions or encounter difficulties while working with MEGqc, please don’t hesitate a single second to get in touch with us. A great way to do this is to via e-mail @ aaron.reer@uol.de.
+
+![gif](https://c.tenor.com/MsuBYU4-fI0AAAAM/confused-math.gif)
 
 ## Acknowledgements
 

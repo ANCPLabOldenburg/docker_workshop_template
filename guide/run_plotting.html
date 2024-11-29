@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How to run the plotting module &#8212; Docker for neuroscience</title>
+    <title>Running the plotting module &#8212; MEGqc tutorial</title>
   
   
   
@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'guide/run_plotting';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Settings description" href="settings_explanation.html" />
+    <link rel="prev" title="Settings description" href="../settings_explanation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -141,8 +141,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/MEGqc.png" class="logo__image only-light" alt="MEGqc tutorial - Home"/>
+    <img src="../_static/MEGqc.png" class="logo__image only-dark pst-js-only" alt="MEGqc tutorial - Home"/>
   
-    <p class="title logo__title">Docker for neuroscience</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -163,15 +169,16 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction to MEGqc</a></li>
-
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction.html">Introduction to MEGqc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../metrics.html">MEGqc report overview</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../guide.html">Practical Guide to MEGqc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="installation.html">Installation of MEGqc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dataset.html">How to download a dataset from OpenNeuro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="run_calculation.html">How to run the calculation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="settings_explanation.html">Settings description</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to run the plotting module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_calculation.html">Running the calculation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../settings_explanation.html">Settings description</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Running the plotting module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -368,7 +375,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How to run the plotting module</h1>
+    <h1>Running the plotting module</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,7 +386,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-plotting-module">Running the plotting module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Running the plotting module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congrats">Congrats!</a></li>
 </ul>
@@ -393,8 +400,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-to-run-the-plotting-module">
-<h1>How to run the plotting module<a class="headerlink" href="#how-to-run-the-plotting-module" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="running-the-plotting-module">
+<h1>Running the plotting module<a class="headerlink" href="#running-the-plotting-module" title="Link to this heading">#</a></h1>
 <p>Once the calculation module has completed the analysis, it generates JSON and TSV files that are saved in the <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> folder within the dataset folder. The path to your <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> might look something like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/dataset/ds003483/derivatives/Meg_QC/calculation/sub-009/
 </pre></div>
@@ -412,8 +419,8 @@ Luckily MEGqc also contains the plotting module, which generates the HTML report
 </pre></div>
 </div>
 </section>
-<section id="running-the-plotting-module">
-<h2>Running the plotting module<a class="headerlink" href="#running-the-plotting-module" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h2>Running the plotting module<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Ensure that you are working within your environment and then run the script from the command line. The command might look like:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /path/to/environment/lib/python3.9/site-packages/meg_qc/plotting/meg_qc_plots.py
 </pre></div>
@@ -469,7 +476,7 @@ Luckily MEGqc also contains the plotting module, which generates the HTML report
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="settings_explanation.html"
+       href="../settings_explanation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -495,7 +502,7 @@ Luckily MEGqc also contains the plotting module, which generates the HTML report
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-plotting-module">Running the plotting module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Running the plotting module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congrats">Congrats!</a></li>
 </ul>
@@ -512,7 +519,7 @@ Luckily MEGqc also contains the plotting module, which generates the HTML report
   <div class="footer-item">
     
 <p class="component-author">
-By Michael Ernst, Aaron Reer
+By Alexis Olguin Baxman, Aaron Reer
 </p>
 
   </div>

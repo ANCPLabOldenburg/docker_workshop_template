@@ -7,11 +7,8 @@ Learn how to set up MEGqc, including creating a virtual environment and dependen
 2. [How to download a dataset from OpenNeuro](guide/dataset.md)
 In case you don't have a BIDS compliant MEG dataset, we will show how to retrieve one from OpenNeuro. 
 
-3. [How to run the calculation module](guide/run_calculation.md)
+3. [Running the calculation module](guide/run_calculation.md)
 Explanation of how to configure the file paths, specifcy datasets and execute the metrics. 
 
-4. [Settings description](guide/settings_explanation.md)
-An explanation of all customizable parameters and suggested values. 
-
-5. [How to run the plotting module](guide/run_plotting.md)
+4. [Running the plotting module](guide/run_plotting.md)
 Learn how to generate the HTML reports.
