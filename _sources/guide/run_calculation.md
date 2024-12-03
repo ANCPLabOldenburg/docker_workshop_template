@@ -1,6 +1,32 @@
-# Running the calculation module
+# Running MEGqc
+
+## Running the calculation module
+Now, we're ready to run MEGqc! First, ensure that your environment is activated by checking the terminal prompt. It should look like this:
+
+        (<your_environment_name>) **user_name:** ~$
+
+
+
+Once the environment is actived, execute the script from the **terminal** and not from the command panel. The command might look somehting like this:
+
+        run-megqc --inputdata /path/to/your/dataset/
+
+
+## Settings
+When you enter the command, a terminal-based GUI will prompt you with the question: `Do you want to proceed with the default settings? (y/n)`.
+If you enter `y`, the program will use the default values for the parameters of each **metric**. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad amount of datasets. A hyperlink in the terminal will direct you to the [setting explanation page](settings_explanation.md), where each parameter is described with more detail.
+
+If you enter `n`, you will be instructed to use the following command to specify a path (to your `target directory`) where a copy of the config file (`setting.ini`) will be created: 
+        
+        get-megqc-config --target_directory <path/to/your/target/directory>
+
+For example, if you want to analyze only a specific subject's dataset instead of the entire dataset, create a copy of `settings.ini`, and modify the **subjects** variable by replacing `'all'` with a string containing the subject ID(s), for example, `009`.
+
+
+
 
 <!--
+OLD VERSION
 
 ## Setting File Paths
 
@@ -27,15 +53,3 @@ Next open the file **setttings.ini** to edit the data directory path and specify
 The file **setttings.ini** also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. [In the next section you can find  more details about these parameters](settings_explanations.md).
 
 -->
-
-## Running the calculation module
-
-Now, we're ready to run *rung_megqc.py*! But first, ensure that you activate your virtual environment:
-
-        source /path/to/environment/bin/activate
-
-
-Once the environment is active, execute the script from the **terminal** (*not** from the command panel). The command might look somehting like this:
-
-        python3 /path/to/MEGqc/docker/run_megqc.py
-

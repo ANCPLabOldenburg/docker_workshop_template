@@ -13,6 +13,8 @@ However, the visual detection and annotation of artifacts in MEG data requires e
 - Vulnerable to biases
 - Not standardized 
 
+![maths](https://media1.tenor.com/m/DCycRQnBpOYAAAAd/math-hmm.gif)
+
 To address this issue, the ANCP lab developed the MEGqc, a software tool for automated and standardized quality control of MEG recordings. By providing a standardized workflow, it helps minimize human bias and facilitates comparisosn between datasets.
 
 *(disclaimer: fragment adapted from MEGQc github)* 
@@ -24,7 +26,7 @@ Evaluates the quality of raw data, but is **not** an artifact removal tool. The 
 - Run the analysis script.
 
 ### Metrics in MEG QC
-The different  calculation modules within MEGqc are called ***metrics*** and they are used to evaluate specific types of artifacts or aspects of data quality. There are six independent metrics:
+The different  calculation modules within MEGqc are called `metrics` and they are used to evaluate specific types of artifacts or aspects of data quality. There are six independent metrics:
 - **Standard Deviation calculation**
 - **Power Spectral Density calculation**
 - **Peak-to-Peak manual calculation**
@@ -37,11 +39,11 @@ There are 2 other metrics within MEG QC:
 - **Peak-to-Peak automatic calculation:** This module, which relies on MNE library functions, is not used in the final version of the pipeline. Instead, the manual "Peak-to-Peak manual" is recommended.
 - **Head movement calculation:** This module functions, but requires extensive head position data.
 
-To ensure standardization of the pipeline, MEGqc software is tailored to the **BIDS standards**.
+To ensure standardization of the pipeline, MEGqc software is tailored to the [**BIDS standards**](introduction/details.md).
 
 
 ## MEGqc derivatives  
-MEGqc produces two types of machine-readable outputs:
+MEGqc produces two types of [machine-readable outputs]((introduction/details.md)):
 - **JSON files*** with the key information for each of the quality metrics.
 - **TSV files**** with more detailed results for some of the metrics.
 
@@ -51,5 +53,7 @@ To ensure the clarity of the results, the pipeline includes a **plotting module*
 ### Next section
 In the next section, we'll walk through the content of the HTML reports.      
 
-If you want to learn more about BIDS, the derivatives or MEGqc core functionaility, [check the details page](introduction/details.md).
+
+
+Also, if you want to learn more about BIDS, the derivatives or MEGqc core functionaility, [check the details page](introduction/details.md).
         

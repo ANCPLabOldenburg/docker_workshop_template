@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Running the calculation module &#8212; MEGqc tutorial</title>
+    <title>Running MEGqc &#8212; MEGqc tutorial</title>
   
   
   
@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'guide/run_calculation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Settings description" href="../settings_explanation.html" />
+    <link rel="next" title="Running the plotting module" href="run_plotting.html" />
     <link rel="prev" title="How to download a dataset from OpenNeuro" href="dataset.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -170,15 +170,16 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction.html">Introduction to MEGqc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction.html">Introduction to MEGqc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/details.html">Some more details</a></li>
+
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../metrics.html">MEGqc report overview</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../guide.html">Practical Guide to MEGqc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="installation.html">Installation of MEGqc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dataset.html">How to download a dataset from OpenNeuro</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Running the calculation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../settings_explanation.html">Settings description</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Running MEGqc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="run_plotting.html">Running the plotting module</a></li>
 </ul>
 </details></li>
@@ -376,7 +377,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Running the calculation module</h1>
+    <h1>Running MEGqc</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,7 +387,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Running the calculation module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a></li>
 </ul>
             </nav>
         </div>
@@ -398,9 +400,30 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="running-the-calculation-module">
-<h1>Running the calculation module<a class="headerlink" href="#running-the-calculation-module" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="running-megqc">
+<h1>Running MEGqc<a class="headerlink" href="#running-megqc" title="Link to this heading">#</a></h1>
+<section id="running-the-calculation-module">
+<h2>Running the calculation module<a class="headerlink" href="#running-the-calculation-module" title="Link to this heading">#</a></h2>
+<p>Now, we’re ready to run MEGqc! First, ensure that your environment is activated by checking the terminal prompt. It should look like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    (&lt;your_environment_name&gt;) **user_name:** ~$
+</pre></div>
+</div>
+<p>Once the environment is actived, execute the script from the <strong>terminal</strong> and not from the command panel. The command might look somehting like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    run-megqc --inputdata /path/to/your/dataset/
+</pre></div>
+</div>
+</section>
+<section id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Link to this heading">#</a></h2>
+<p>When you enter the command, a terminal-based GUI will prompt you with the question: <code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">proceed</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">default</span> <span class="pre">settings?</span> <span class="pre">(y/n)</span></code>.
+If you enter <code class="docutils literal notranslate"><span class="pre">y</span></code>, the program will use the default values for the parameters of each <strong>metric</strong>. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad amount of datasets. A hyperlink in the terminal will direct you to the <a class="reference internal" href="#settings_explanation.md"><span class="xref myst">setting explanation page</span></a>, where each parameter is described with more detail.</p>
+<p>If you enter <code class="docutils literal notranslate"><span class="pre">n</span></code>, you will be instructed to use the following command to specify a path (to your <code class="docutils literal notranslate"><span class="pre">target</span> <span class="pre">directory</span></code>) where a copy of the config file (<code class="docutils literal notranslate"><span class="pre">setting.ini</span></code>) will be created:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    get-megqc-config --target_directory &lt;path/to/your/target/directory&gt;
+</pre></div>
+</div>
+<p>For example, if you want to analyze only a specific subject’s dataset instead of the entire dataset, create a copy of <code class="docutils literal notranslate"><span class="pre">settings.ini</span></code>, and modify the <strong>subjects</strong> variable by replacing <code class="docutils literal notranslate"><span class="pre">'all'</span></code> with a string containing the subject ID(s), for example, <code class="docutils literal notranslate"><span class="pre">009</span></code>.</p>
 <!--
+OLD VERSION
 
 ## Setting File Paths
 
@@ -427,16 +450,6 @@ Next open the file **setttings.ini** to edit the data directory path and specify
 The file **setttings.ini** also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. [In the next section you can find  more details about these parameters](settings_explanations.md).
 
 -->
-<section id="id1">
-<h2>Running the calculation module<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p>Now, we’re ready to run <em>rung_megqc.py</em>! But first, ensure that you activate your virtual environment:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    source /path/to/environment/bin/activate
-</pre></div>
-</div>
-<p>Once the environment is active, execute the script from the <strong>terminal</strong> (<em>not</em>* from the command panel). The command might look somehting like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    python3 /path/to/MEGqc/docker/run_megqc.py
-</pre></div>
-</div>
 </section>
 </section>
 
@@ -480,11 +493,11 @@ The file **setttings.ini** also contains an extensive amount of customizable par
       </div>
     </a>
     <a class="right-next"
-       href="../settings_explanation.html"
+       href="run_plotting.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Settings description</p>
+        <p class="prev-next-title">Running the plotting module</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -505,7 +518,8 @@ The file **setttings.ini** also contains an extensive amount of customizable par
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Running the calculation module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-calculation-module">Running the calculation module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a></li>
 </ul>
   </nav></div>
 

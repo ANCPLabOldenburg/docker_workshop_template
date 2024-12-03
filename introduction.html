@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="MEGqc report overview" href="metrics.html" />
+    <link rel="next" title="Some more details" href="introduction/details.html" />
     <link rel="prev" title="Welcome!" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -170,15 +170,16 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Introduction to MEGqc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Introduction to MEGqc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/details.html">Some more details</a></li>
+
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGqc report overview</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="guide.html">Practical Guide to MEGqc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="guide/installation.html">Installation of MEGqc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide/dataset.html">How to download a dataset from OpenNeuro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/run_calculation.html">Running the calculation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="settings_explanation.html">Settings description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/run_calculation.html">Running MEGqc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide/run_plotting.html">Running the plotting module</a></li>
 </ul>
 </details></li>
@@ -424,6 +425,7 @@ However, the visual detection and annotation of artifacts in MEG data requires e
 <li><p>Vulnerable to biases</p></li>
 <li><p>Not standardized</p></li>
 </ul>
+<p><img alt="maths" src="https://media1.tenor.com/m/DCycRQnBpOYAAAAd/math-hmm.gif" /></p>
 <p>To address this issue, the ANCP lab developed the MEGqc, a software tool for automated and standardized quality control of MEG recordings. By providing a standardized workflow, it helps minimize human bias and facilitates comparisosn between datasets.</p>
 <p><em>(disclaimer: fragment adapted from MEGQc github)</em></p>
 </section>
@@ -437,7 +439,7 @@ However, the visual detection and annotation of artifacts in MEG data requires e
 </ul>
 <section id="metrics-in-meg-qc">
 <h3>Metrics in MEG QC<a class="headerlink" href="#metrics-in-meg-qc" title="Link to this heading">#</a></h3>
-<p>The different  calculation modules within MEGqc are called <em><strong>metrics</strong></em> and they are used to evaluate specific types of artifacts or aspects of data quality. There are six independent metrics:</p>
+<p>The different  calculation modules within MEGqc are called <code class="docutils literal notranslate"><span class="pre">metrics</span></code> and they are used to evaluate specific types of artifacts or aspects of data quality. There are six independent metrics:</p>
 <ul class="simple">
 <li><p><strong>Standard Deviation calculation</strong></p></li>
 <li><p><strong>Power Spectral Density calculation</strong></p></li>
@@ -451,12 +453,12 @@ However, the visual detection and annotation of artifacts in MEG data requires e
 <li><p><strong>Peak-to-Peak automatic calculation:</strong> This module, which relies on MNE library functions, is not used in the final version of the pipeline. Instead, the manual “Peak-to-Peak manual” is recommended.</p></li>
 <li><p><strong>Head movement calculation:</strong> This module functions, but requires extensive head position data.</p></li>
 </ul>
-<p>To ensure standardization of the pipeline, MEGqc software is tailored to the <strong>BIDS standards</strong>.</p>
+<p>To ensure standardization of the pipeline, MEGqc software is tailored to the <a class="reference internal" href="introduction/details.html"><span class="std std-doc"><strong>BIDS standards</strong></span></a>.</p>
 </section>
 </section>
 <section id="megqc-derivatives">
 <h2>MEGqc derivatives<a class="headerlink" href="#megqc-derivatives" title="Link to this heading">#</a></h2>
-<p>MEGqc produces two types of machine-readable outputs:</p>
+<p>MEGqc produces two types of <a class="reference internal" href="#(introduction/details.md)"><span class="xref myst">machine-readable outputs</span></a>:</p>
 <ul class="simple">
 <li><p><strong>JSON files</strong>* with the key information for each of the quality metrics.</p></li>
 <li><p><strong>TSV files</strong>** with more detailed results for some of the metrics.</p></li>
@@ -465,7 +467,7 @@ However, the visual detection and annotation of artifacts in MEG data requires e
 <section id="next-section">
 <h3>Next section<a class="headerlink" href="#next-section" title="Link to this heading">#</a></h3>
 <p>In the next section, we’ll walk through the content of the HTML reports.</p>
-<p>If you want to learn more about BIDS, the derivatives or MEGqc core functionaility, <a class="reference internal" href="introduction/details.html"><span class="std std-doc">check the details page</span></a>.</p>
+<p>Also, if you want to learn more about BIDS, the derivatives or MEGqc core functionaility, <a class="reference internal" href="introduction/details.html"><span class="std std-doc">check the details page</span></a>.</p>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -512,11 +514,11 @@ However, the visual detection and annotation of artifacts in MEG data requires e
       </div>
     </a>
     <a class="right-next"
-       href="metrics.html"
+       href="introduction/details.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">MEGqc report overview</p>
+        <p class="prev-next-title">Some more details</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
