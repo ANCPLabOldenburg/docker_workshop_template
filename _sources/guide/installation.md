@@ -34,6 +34,7 @@ MEG QC has compatiblity issues with older Python versions (prior to 3.9), theref
 Once your environment is activated, you can install Python packages with `pip`, and these installations will only apply to your virtual environment. To install MEGqc core functionality, run the following command in the terminal:
  
         pip install  meg_qc
+
 <br>
 
 
@@ -48,4 +49,4 @@ Next, you will need to clone the [Github Repository](https://github.com/ANCPLabO
 
 ## Install depencies?
 Thanks to the last update, it's not necessary to manually pip install the different dependencies anymore. All of them are installed automatically along with the MEGqc package.
-If you want to know more about them and their functionalitiy, please [visit the pipeline basics page](details.md).
+If you want to know more about them and their functionalitiy, please [visit the pipeline basics page](~/details.md).

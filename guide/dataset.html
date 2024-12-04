@@ -407,35 +407,39 @@ In this tutorial, we’ll work with the data from one subject of one dataset tha
 <li><p>Download from S3</p></li>
 <li><p>Download with Node.js</p></li>
 <li><p>Download with DataLad</p></li>
-<li><p>Download with a shell script.
-Given the dataset’s size (21 participants, 24.48 GB), dowloading the full dataset may be unnecessary. To save time and storage, we’ll dowload only one subject’s folder using <strong>Datalad</strong>.</p></li>
+<li><p>Download with a shell script.</p></li>
 </ul>
 </li>
 </ol>
+<p>Given the dataset’s size (21 participants, 24.48 GB), dowloading the full dataset may be unnecessary. To save time and storage, we’ll dowload only one subject’s folder using <strong>Datalad</strong>.</p>
 <section id="getting-started-with-datalad">
 <h2>Getting started with DataLad<a class="headerlink" href="#getting-started-with-datalad" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="#github.com/datalad"><span class="xref myst">DataLad</span></a>is a free and open source data tool for management of large datasets. It can be used to download a single subject folder from a dataset.</p>
 <ol class="arabic" start="0">
 <li><p><strong>Ensure <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is properly installed on your environment:</strong> DataLad requires <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8.20200309 (or higher). Verify your installation and, if needed, update <code class="docutils literal notranslate"><span class="pre">git-annex</span></code>.</p>
-<p>git annex version
-<br></p>
-</li>
-<li><p><strong>Install datalad within your environment:</strong></p>
-<p>pip install datalad
-<br></p>
-</li>
-<li><p><strong>Clone the dataset repository:</strong> It copies the entire dataset’s structure, but only lightweight metada (such as .json), the actual data files (.fif in this case) are not downloaded, even thought they <em>“broken links”</em> placeholders will be created. Be sure you are working in your desired directory (with <code class="docutils literal notranslate"><span class="pre">cd</span></code>), then run:</p>
-<p>datalad install <a class="github reference external" href="https://github.com/OpenNeuroDatasets/ds003483.git">OpenNeuroDatasets/ds003483.git</a>
-<br></p>
+<p>git annex version</p>
 </li>
 </ol>
+<br>
+<ol class="arabic">
+<li><p><strong>Install datalad within your environment:</strong></p>
+<p>pip install datalad</p>
+</li>
+</ol>
+<br>
+<ol class="arabic" start="2">
+<li><p><strong>Clone the dataset repository:</strong> It copies the entire dataset’s structure, but only lightweight metada (such as .json), the actual data files (.fif in this case) are not downloaded, even thought they <em>“broken links”</em> placeholders will be created. Be sure you are working in your desired directory (with <code class="docutils literal notranslate"><span class="pre">cd</span></code>), then run:</p>
+<p>datalad install <a class="github reference external" href="https://github.com/OpenNeuroDatasets/ds003483.git">OpenNeuroDatasets/ds003483.git</a></p>
+</li>
+</ol>
+<br>
 <p><img alt="placeholder" src="../_images/placeholder.png" /></p>
 <ol class="arabic" start="3">
 <li><p><strong>Download only the sub-009 folder:</strong> use the <code class="docutils literal notranslate"><span class="pre">get</span></code> command to download only the data for subject 009.</p>
-<p>datalad get ds003483/sub-009/
-<br></p>
+<p>datalad get ds003483/sub-009/</p>
 </li>
 </ol>
+<br>
 </section>
 </section>
 

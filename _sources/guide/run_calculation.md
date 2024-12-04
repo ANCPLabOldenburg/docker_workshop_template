@@ -3,7 +3,7 @@
 ## Running the calculation module
 Now, we're ready to run MEGqc! First, ensure that your environment is activated by checking the terminal prompt. It should look like this:
 
-        (<your_environment_name>) **user_name:** ~$
+        (<your_environment_name>) user_name: ~$
 
 
 
@@ -13,14 +13,25 @@ Once the environment is actived, execute the script from the **terminal** and no
 
 
 ## Settings
+
+### Default settings
 When you enter the command, a terminal-based GUI will prompt you with the question: `Do you want to proceed with the default settings? (y/n)`.
 If you enter `y`, the program will use the default values for the parameters of each **metric**. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad amount of datasets. A hyperlink in the terminal will direct you to the [setting explanation page](settings_explanation.md), where each parameter is described with more detail.
 
+### Customized settings
 If you enter `n`, you will be instructed to use the following command to specify a path (to your `target directory`) where a copy of the config file (`setting.ini`) will be created: 
         
         get-megqc-config --target_directory <path/to/your/target/directory>
 
-For example, if you want to analyze only a specific subject's dataset instead of the entire dataset, create a copy of `settings.ini`, and modify the **subjects** variable by replacing `'all'` with a string containing the subject ID(s), for example, `009`.
+For example, if you want to analyze only a specific subject's dataset instead of the entire dataset, you can open your copy of `settings.ini` and modify the **subjects** variable by replacing `all` with a string containing the subject ID(s), for example, `009`.
+
+Then you can run MEGqc again, but including the path to your customized config file in the command:
+
+        run-megqc --inputdata /path/to/your/dataset/ --config /path/to/your/config/file/setting.ini
+
+### Already used settings
+If you have already processed the dataset, MEGc
+ 
 
 
 

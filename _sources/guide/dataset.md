@@ -10,6 +10,7 @@ In this tutorial, we'll work with the data from one subject of one dataset that 
     * Download with Node.js
     * Download with DataLad
     * Download with a shell script. 
+    
 Given the dataset's size (21 participants, 24.48 GB), dowloading the full dataset may be unnecessary. To save time and storage, we'll dowload only one subject's folder using **Datalad**.
 
 ## Getting started with DataLad
@@ -18,16 +19,19 @@ Given the dataset's size (21 participants, 24.48 GB), dowloading the full datase
 0. **Ensure `git-annex` is properly installed on your environment:** DataLad requires `git-annex` version 8.20200309 (or higher). Verify your installation and, if needed, update `git-annex`.
 
     git annex version
+
 <br>
 
 1. **Install datalad within your environment:** 
 
     pip install datalad
+
 <br>
 
 2. **Clone the dataset repository:** It copies the entire dataset's structure, but only lightweight metada (such as .json), the actual data files (.fif in this case) are not downloaded, even thought they _"broken links"_ placeholders will be created. Be sure you are working in your desired directory (with `cd`), then run:
 
     datalad install https://github.com/OpenNeuroDatasets/ds003483.git
+
 <br>
 
 ![placeholder](../static/placeholder.png)
@@ -36,6 +40,7 @@ Given the dataset's size (21 participants, 24.48 GB), dowloading the full datase
 3. **Download only the sub-009 folder:** use the `get` command to download only the data for subject 009.
 
     datalad get ds003483/sub-009/
+
 <br>
 
 
