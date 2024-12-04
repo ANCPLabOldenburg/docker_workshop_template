@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Some more details &#8212; MEGqc tutorial</title>
+    <title>Pipeline basics &#8212; MEGqc tutorial</title>
   
   
   
@@ -27,45 +27,43 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/details';</script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MEGqc report overview" href="../metrics.html" />
-    <link rel="prev" title="Introduction to MEGqc" href="../introduction.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'details';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -87,7 +85,7 @@
   <dialog id="pst-search-dialog">
     
 <form class="bd-search d-flex align-items-center"
-      action="../search.html"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -117,6 +115,8 @@
       
       
       
+        
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -136,7 +136,7 @@
     
   
 
-<a class="navbar-brand logo" href="../index.html">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -147,8 +147,8 @@
       
     
     
-    <img src="../_static/MEGqc.png" class="logo__image only-light" alt="MEGqc tutorial - Home"/>
-    <img src="../_static/MEGqc.png" class="logo__image only-dark pst-js-only" alt="MEGqc tutorial - Home"/>
+    <img src="_static/MEGqc.png" class="logo__image only-light" alt="MEGqc tutorial - Home"/>
+    <img src="_static/MEGqc.png" class="logo__image only-dark pst-js-only" alt="MEGqc tutorial - Home"/>
   
   
 </a></div>
@@ -164,23 +164,19 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
+                <a class="reference internal" href="index.html">
                     Welcome!
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../introduction.html">Introduction to MEGqc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Some more details</a></li>
-
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../metrics.html">MEGqc report overview</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../guide.html">Practical Guide to MEGqc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../guide/installation.html">Installation of MEGqc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/dataset.html">How to download a dataset from OpenNeuro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/run_calculation.html">Running MEGqc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/run_plotting.html">Running the plotting module</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MEGqc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">MEGqc report overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="guide.html">Practical Guide to MEGqc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/installation.html">Installation of MEGqc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/dataset.html">How to download a dataset from OpenNeuro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/run_calculation.html">Running MEGqc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/run_plotting.html">Running the plotting module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -254,7 +250,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/introduction/details.md" target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/edit/main/workshop/details.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -271,7 +267,7 @@
       
       
       
-      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Fintroduction/details.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AaronReer/docker_workshop_setup/issues/new?title=Issue%20on%20page%20%2Fdetails.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -301,7 +297,7 @@
       
       
       
-      <li><a href="../_sources/introduction/details.md" target="_blank"
+      <li><a href="_sources/details.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -377,7 +373,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Some more details</h1>
+    <h1>Pipeline basics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -387,10 +383,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Some more details</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pipeline basics</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-pipeline-structure">General Pipeline Structure</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-metadata">Derivatives Metadata</a></li>
 </ul>
 </li>
 </ul>
@@ -405,28 +404,13 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="some-more-details">
-<h1>Some more details<a class="headerlink" href="#some-more-details" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="pipeline-basics">
+<h1>Pipeline basics<a class="headerlink" href="#pipeline-basics" title="Link to this heading">#</a></h1>
 <p>In case you are curious about some functionalities of MEGqc, this section provides with a short overview of some key aspects:</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="what-is-bids">
-<h1>What is BIDS?<a class="headerlink" href="#what-is-bids" title="Link to this heading">#</a></h1>
-<p>Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus on how to organize and share data obtained in neuroimaging experiments. <strong>Brain Imaging Data Structure (BIDS)</strong>, describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort.  <em>(fragment adapted from BIDS official website).</em></p>
-<p><img alt="bids-logo" src="introduction/static/bids.jpg" /></p>
-<p>BIDS describes the structure of the data, directories and sub-directories, name-structure, file-naming and file formats. MEGqc uses <strong>ancpBIDS</strong>, a Python library which facilitates working with BIDS, both for identifiying the files and also for writting the results according to BIDS.</p>
-<p>Gapontseva (2023) evaluated the MEGqc software thanks to 21  MEG datasets obtained from the OpenNeuro data library. <a class="reference external" href="https://openneuro.org/">OpenNeuro</a> is a free and open platform with more than 50 thousand participants and more than one thousand public BIDS compliant MRI, PET, MEG, EEG and iEEG datasets.</p>
-<section id="metadata">
-<h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">#</a></h2>
-<p>BIDS suggest that the Metadata should be stored in .json and .tsv files, because both machine-readable type of file easily accesible by Python, Matlab, Excel or R.</p>
-<ul class="simple">
-<li><p>json file: A JSON (JavaScript Object Notation) file is a lightweight data format that stores structured data in a readable, text-based format using key-value pairs, arrays, and nested objects.</p></li>
-<li><p>tsv file: A TSV (Tab-Separated Values) file is a simple text file that stores tabular data, with each line representing a row and each value in the row separated by tab characters.</p></li>
-</ul>
-</section>
 <section id="general-pipeline-structure">
 <h2>General Pipeline Structure<a class="headerlink" href="#general-pipeline-structure" title="Link to this heading">#</a></h2>
 <p>The following figure (Gaponsetva, 2023) describes the general process of the pipeline. It might look  a bit overwhelming, but we won’t go too much into detail:</p>
-<p><img alt="Pipeline" src="introduction/static/pipeline.png" /></p>
+<p><img alt="Pipeline" src="_images/pipeline.png" /></p>
 <p>The time is on the Y axis, from top to bottom:</p>
 <ul class="simple">
 <li><p>The <strong>configuration</strong> file contains the data directory path and the parameters for the selected metrics. Default values for all metrics are preset, but they can be modified as needed.</p></li>
@@ -436,10 +420,31 @@
 <li><p>ancpBIDS writes the <strong>derivatives</strong> to the dataset directory, maintaining BIDS naming convention.</p></li>
 </ul>
 <br>   
-<hr class="docutils" />
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dependencies">
+<h1>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h1>
+<p>It’s not necessary to manually pip install the different dependencies anymore.
+We’ll briefly introduce them here the main ones and their functiionality:</p>
 <ul class="simple">
-<li><p><em>json file: A JSON (JavaScript Object Notation) file is a lightweight data format that stores structured data in a readable, text-based format using key-value pairs, arrays, and nested objects.</em></p></li>
-<li><p>*<em>tsv file: A TSV (Tab-Separated Values) file is a simple text file that stores tabular data, with each line representing a row and each value in the row separated by tab characters.</em></p></li>
+<li><p><strong><a class="reference external" href="https://mne.tools/stable/index.html">mne (Magnetic and Electric Neuroimaging)</a>:</strong> “MNE is an open-source package for exploring, visualizing and analyzing human neuropshysiological data (…). This package is also the basis for the MEGqc pipeline” (Gapontseva, 2023). It has been extensively documented and constantly updated by an active community support.</p></li>
+<li><p><strong><a class="reference external" href="https://ancpbids.readthedocs.io/en/latest/userDocCombined.html">ancpBIDS</a>:</strong> This library, developed in the ANCP lab, is used to read and query BIDS datasets as well as write the derivatives back.</p></li>
+<li><p><strong><a class="reference external" href="https://numpy.org/doc/">Numpy (Numerical Python)</a></strong> and <strong><a class="reference external" href="https://pandas.pydata.org/docs/">pandas</a>:</strong> Both libraries are necessary for scientific computing and data manipulation in Python, particulary for working with multidimensional arrays and large matrices.</p></li>
+<li><p><strong><a class="reference external" href="https://plotly.com/python-api-reference/">plotly</a></strong>: This library is used to create the interactive plots and visualize results. Plotly also supports exporting the figures in HTML format.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="what-is-bids">
+<h1>What is BIDS?<a class="headerlink" href="#what-is-bids" title="Link to this heading">#</a></h1>
+<p>Neuroimaging experiments result in complex data that can be arranged in many different ways, and for a long time, there was no consensus on how to organize and share data obtained in neuroimaging experiments. <strong>Brain Imaging Data Structure (BIDS)</strong>, describes a simple and easy to adopt way of organizing neuroimaging and behavioral data (Gorgolewski et al., 2016; Niso et al., 2018) facilitating collaboration between researches and saving time and effort.  <em>(fragment adapted from BIDS official website).</em></p>
+<p><img alt="bids-logo" src="_images/bids.jpg" /></p>
+<p>BIDS describes the structure of the data, directories and sub-directories, name-structure, file-naming and file formats. MEGqc uses <strong>ancpBIDS</strong>, a Python library which facilitates working with BIDS, both for identifiying the files and also for writting the results according to BIDS.</p>
+<p>Gapontseva (2023) evaluated the MEGqc software thanks to 21  MEG datasets obtained from the OpenNeuro data library. <a class="reference external" href="https://openneuro.org/">OpenNeuro</a> is a free and open platform with more than 50 thousand participants and more than one thousand public BIDS compliant MRI, PET, MEG, EEG and iEEG datasets.</p>
+<section id="derivatives-metadata">
+<h2>Derivatives Metadata<a class="headerlink" href="#derivatives-metadata" title="Link to this heading">#</a></h2>
+<p>BIDS suggest that the Metadata should be stored in .json and .tsv files, because both machine-readable type of file easily accesible by Python, Matlab, Excel or R.</p>
+<ul class="simple">
+<li><p>json file: A JSON (JavaScript Object Notation) file is a lightweight data format that stores structured data in a readable, text-based format using key-value pairs, arrays, and nested objects.</p></li>
+<li><p>tsv file: A TSV (Tab-Separated Values) file is a simple text file that stores tabular data, with each line representing a row and each value in the row separated by tab characters.</p></li>
 </ul>
 </section>
 </section>
@@ -457,7 +462,7 @@
         },
         kernelOptions: {
             name: "python3",
-            path: "./introduction"
+            path: "./."
         },
         predefinedOutput: true
     }
@@ -474,24 +479,6 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../introduction.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to MEGqc</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../metrics.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">MEGqc report overview</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -509,10 +496,13 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Some more details</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pipeline basics</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-pipeline-structure">General Pipeline Structure</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bids">What is BIDS?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-metadata">Derivatives Metadata</a></li>
 </ul>
 </li>
 </ul>
@@ -564,8 +554,8 @@ By Alexis Olguin Baxman, Aaron Reer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

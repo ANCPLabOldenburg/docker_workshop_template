@@ -8,7 +8,7 @@ Virtual environments create isolated and sel-contained workspaces, allowing us t
 - **Avoid dependency conflicts:** prevents interferences between project-specific and system-wide dependenciesm, such as common erors related to version mismatches.
 - **Transparency and Open Science:** Ensures that others can replicate your results and reproduce your analysis reliably.
 
-![environments](static/environment.jpg)
+![environments](../static/environment.jpg)
 
 To create and activate your virtual environment, follow these steps:
 1. Navigate to the directory where you want to create the environment using the `cd` command in the terminal.
@@ -48,12 +48,4 @@ Next, you will need to clone the [Github Repository](https://github.com/ANCPLabO
 
 ## Install depencies?
 Thanks to the last update, it's not necessary to manually pip install the different dependencies anymore. All of them are installed automatically along with the MEGqc package.
-We'll briefly introduce them here the main ones and their functiionality:
-
-- **[mne (Magnetic and Electric Neuroimaging)](https://mne.tools/stable/index.html):** "MNE is an open-source package for exploring, visualizing and analyzing human neuropshysiological data (...). This package is also the basis for the MEGqc pipeline" (Gapontseva, 2023). It has been extensively documented and constantly updated by an active community support. 
-
-- **[ancpBIDS](https://ancpbids.readthedocs.io/en/latest/userDocCombined.html):** This library, developed in the ANCP lab, is used to read and query BIDS datasets as well as write the derivatives back. 
-
-- **[Numpy (Numerical Python)](https://numpy.org/doc/)** and **[pandas](https://pandas.pydata.org/docs/):** Both libraries are necessary for scientific computing and data manipulation in Python, particulary for working with multidimensional arrays and large matrices. 
-
-- **[plotly](https://plotly.com/python-api-reference/)**: This library is used to create the interactive plots and visualize results. Plotly also supports exporting the figures in HTML format.
+If you want to know more about them and their functionalitiy, please [visit the pipeline basics page](details.md).
