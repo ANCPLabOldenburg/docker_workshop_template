@@ -49,11 +49,11 @@ For a deeper understanding of MEGqc's core functionality, [visit the pipeline ba
 
 
 ## MEGqc derivatives  
-MEGqc produces two types of [machine-readable outputs](details.md)):
+MEGqc produces two types of [machine-readable outputs](details.md):
 - **JSON files*** with the key information for each of the quality metrics.
 - **TSV files**** with more detailed results for some of the metrics.
 
-To ensure the clarity of the results, the pipeline includes a **plotting module** that generates visual HTML reports based on the TSV files. For each metric, an html report is created (6 in total). The next section will delve in the kind of information included within each report. The output also maintains the **BIDS standards.**
+To ensure the clarity of the results, the pipeline includes a **plotting module** that generates visual HTML reports based on the TSV files. For each metric, an html report is created (6 in total). The next section will delve in the kind of information included within each report. These outputs also maintain the **BIDS standards.**
 
 
 ### Next section

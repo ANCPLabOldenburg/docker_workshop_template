@@ -382,6 +382,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic">Automatic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Running the plotting module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>
@@ -400,11 +401,15 @@
   <section class="tex2jax_ignore mathjax_ignore" id="running-the-plotting-module">
 <h1>Running the plotting module<a class="headerlink" href="#running-the-plotting-module" title="Link to this heading">#</a></h1>
 <p>Once the calculation module has completed the analysis, it generates JSON and TSV files that are saved in the <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> folder within the dataset folder. The path to your <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> might look something like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/dataset/ds003483/derivatives/Meg_QC/calculation/sub-009/
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/dataset/derivatives/Meg_QC/calculation/subjects/
 </pre></div>
 </div>
 <p>As you can see, the calculation module generates numerous metadata files. But what if we want the data to be neatly organized and presented in a visual and interactive way?
-Luckily MEGqc also contains the plotting module, which generates the HTML reports we saw earlier. Let’s see how can we produce them:</p>
+Luckily MEGqc will automatically ask you wether `Do</p>
+<p>Luckily MEGqc also contains the plotting module, which generates the HTML reports we saw earlier. Let’s see how can we produce them:</p>
+<section id="automatic">
+<h2>Automatic<a class="headerlink" href="#automatic" title="Link to this heading">#</a></h2>
+</section>
 <section id="setting-file-paths">
 <h2>Setting File Paths<a class="headerlink" href="#setting-file-paths" title="Link to this heading">#</a></h2>
 <p>First, locate the script <em>meg_qc_plots.py</em> within the <code class="docutils literal notranslate"><span class="pre">plotting</span></code>folder in the <code class="docutils literal notranslate"><span class="pre">meg_qc</span></code> package, which is located in the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your environment. The path might look like this:</p>
@@ -498,6 +503,7 @@ Luckily MEGqc also contains the plotting module, which generates the HTML report
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic">Automatic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-file-paths">Setting File Paths</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Running the plotting module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI</a></li>

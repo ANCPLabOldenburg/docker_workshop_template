@@ -387,9 +387,10 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-settings">Default settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customized-settings">Customized settings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#already-used-settings">Already used settings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#already-used-config-files">Already used config files?</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next section</a></li>
 </ul>
             </nav>
         </div>
@@ -409,8 +410,8 @@
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    (&lt;your_environment_name&gt;) user_name: ~$
 </pre></div>
 </div>
-<p>Once the environment is actived, execute the script from the <strong>terminal</strong> and not from the command panel. The command might look somehting like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    run-megqc --inputdata /path/to/your/dataset/
+<p>Once the environment is activated, execute the script from the <strong>terminal</strong> and not from the command panel. The command might look something like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    run-megqc --inputdata &lt;/path/to/your/dataset/&gt;
 </pre></div>
 </div>
 </section>
@@ -419,7 +420,7 @@
 <section id="default-settings">
 <h3>Default settings<a class="headerlink" href="#default-settings" title="Link to this heading">#</a></h3>
 <p>When you enter the command, a terminal-based GUI will prompt you with the question: <code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">proceed</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">default</span> <span class="pre">settings?</span> <span class="pre">(y/n)</span></code>.
-If you enter <code class="docutils literal notranslate"><span class="pre">y</span></code>, the program will use the default values for the parameters of each <strong>metric</strong>. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad amount of datasets. A hyperlink in the terminal will direct you to the <a class="reference internal" href="#settings_explanation.md"><span class="xref myst">setting explanation page</span></a>, where each parameter is described with more detail.</p>
+If you enter <code class="docutils literal notranslate"><span class="pre">y</span></code>, the program will use the default values for the parameters of each <strong>metric</strong>. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad variety of datasets. A hyperlink in the terminal will direct you to the <a class="reference internal" href="#settings_explanation.md"><span class="xref myst">setting explanation page</span></a>, where each parameter is described with more detail.</p>
 </section>
 <section id="customized-settings">
 <h3>Customized settings<a class="headerlink" href="#customized-settings" title="Link to this heading">#</a></h3>
@@ -429,13 +430,20 @@ If you enter <code class="docutils literal notranslate"><span class="pre">y</spa
 </div>
 <p>For example, if you want to analyze only a specific subject’s dataset instead of the entire dataset, you can open your copy of <code class="docutils literal notranslate"><span class="pre">settings.ini</span></code> and modify the <strong>subjects</strong> variable by replacing <code class="docutils literal notranslate"><span class="pre">all</span></code> with a string containing the subject ID(s), for example, <code class="docutils literal notranslate"><span class="pre">009</span></code>.</p>
 <p>Then you can run MEGqc again, but including the path to your customized config file in the command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    run-megqc --inputdata /path/to/your/dataset/ --config /path/to/your/config/file/setting.ini
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    run-megqc --inputdata &lt;/path/to/your/dataset/&gt; --config &lt;/path/to/your/config/file/setting.ini&gt;
 </pre></div>
 </div>
 </section>
-<section id="already-used-settings">
-<h3>Already used settings<a class="headerlink" href="#already-used-settings" title="Link to this heading">#</a></h3>
-<p>If you have already processed the dataset, MEGc</p>
+<section id="already-used-config-files">
+<h3>Already used config files?<a class="headerlink" href="#already-used-config-files" title="Link to this heading">#</a></h3>
+<p>If you have already processed the dataset, MEGqc will be able to find the already used config file(s) and will prompt you if <code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">use</span> <span class="pre">any</span> <span class="pre">of</span> <span class="pre">them</span> <span class="pre">again?</span></code>.
+A numbered list of conifg files path will be displayed in ther terminal. Then it will ask you to <code class="docutils literal notranslate"><span class="pre">Enter</span> <span class="pre">the</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">config</span> <span class="pre">file</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">use,</span> <span class="pre">or</span> <span class="pre">press</span> <span class="pre">Enter</span> <span class="pre">to</span> <span class="pre">use</span> <span class="pre">the</span> <span class="pre">default</span> <span class="pre">one</span></code>.
+ENter the corresponding number of the config file path you want to reuse, or press Enter to continue with your new customized setting or default setting (depending on your previous decisions).</p>
+</section>
+</section>
+<section id="next-section">
+<h2>Next section<a class="headerlink" href="#next-section" title="Link to this heading">#</a></h2>
+<p>With the calculation module successfully executed, let’s explore how to generate the HTML report!</p>
 <!--
 OLD VERSION
 
@@ -464,7 +472,6 @@ Next open the file **setttings.ini** to edit the data directory path and specify
 The file **setttings.ini** also contains an extensive amount of customizable parameters. However, the default values are optimized to to work with the majority of datasets. [In the next section you can find  more details about these parameters](settings_explanations.md).
 
 -->
-</section>
 </section>
 </section>
 
@@ -537,9 +544,10 @@ The file **setttings.ini** also contains an extensive amount of customizable par
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-settings">Default settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customized-settings">Customized settings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#already-used-settings">Already used settings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#already-used-config-files">Already used config files?</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next section</a></li>
 </ul>
   </nav></div>
 

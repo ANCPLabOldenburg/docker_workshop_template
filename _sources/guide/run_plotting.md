@@ -2,10 +2,14 @@
 
 Once the calculation module has completed the analysis, it generates JSON and TSV files that are saved in the `derivatives` folder within the dataset folder. The path to your `derivatives` might look something like this:
 
-        /path/to/dataset/ds003483/derivatives/Meg_QC/calculation/sub-009/
+        /path/to/dataset/derivatives/Meg_QC/calculation/subjects/
         
 As you can see, the calculation module generates numerous metadata files. But what if we want the data to be neatly organized and presented in a visual and interactive way?
+Luckily MEGqc will automatically ask you wether `Do
+
 Luckily MEGqc also contains the plotting module, which generates the HTML reports we saw earlier. Let's see how can we produce them:
+
+## Automatic
 
 
 ## Setting File Paths
