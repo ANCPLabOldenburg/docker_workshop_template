@@ -16,7 +16,7 @@ Once the environment is activated, execute the script from the **terminal** and 
 
 ### Default settings
 When you enter the command, a terminal-based GUI will prompt you with the question: `Do you want to proceed with the default settings? (y/n)`.
-If you enter **y**, the program will use the default values for the parameters of each **metric**. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad variety of datasets. A hyperlink in the terminal will direct you to the [setting explanation page](settings_explanation.md), where each parameter is described with more detail.
+If you enter **y**, the program will use the default values for the parameters of each **metric**. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad variety of datasets. A hyperlink in the terminal will direct you to the [setting explanation page](../settings_explanation.md), where each parameter is described with more detail.
 
 ### Customized settings
 If you enter `n`, you will be instructed to use the following command to specify a path (to your `target directory`) where a copy of the config file (`setting.ini`) will be created: 

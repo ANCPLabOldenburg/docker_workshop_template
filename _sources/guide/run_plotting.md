@@ -23,7 +23,7 @@ After a short wait, the terminal will ask you several questions about specific p
 - Metrics: ALL or a specific one
 - Sensors: ALL, or only magnetometers or gradiometers
 
-![gui interface]( ~/static/gui.png)
+![gui interface]( ../static/gui.png)
 
 ## Congratulations!
 You're done'! The HTML reports are now available in the `derivatives` folder of your dataset:
