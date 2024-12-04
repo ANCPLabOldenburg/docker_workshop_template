@@ -1,15 +1,45 @@
 # Running the plotting module
+After completing the analysis with the calculation module, the next step is to generate the visual reports. Below are the methods to run the plotting module.
 
-Once the calculation module has completed the analysis, it generates JSON and TSV files that are saved in the `derivatives` folder within the dataset folder. The path to your `derivatives` might look something like this:
+## Automatic Mode
+Once the calculation module has completed the analysis, the terminal will display where can you find your `derivatives` folder. 
 
-        /path/to/dataset/derivatives/Meg_QC/calculation/subjects/
+        /path/to/your/dataset/derivatives/Meg_QC/calculation
+
+Then in the terminal will ask you if `Do you want to run the MEGqc plotting module on the MEGqc results? (y/n)`. Entering **y** will automatically start the plotting module.
+        _(disclaimer 12/2024: the automatic plotting module is not currently working)_
+
+## Manual Mode
+To run the plotting module manually, use the following command in your terminal:
+
+        run-megqc-plotting --inputdata </path/to/your/dataset/>
+
+## Interactive GUI
+After a short wait, the terminal will ask you several questions about specific parameters. The available options depend on the metadata in your dataset:
+- Subjects: ALL or a specific one
+- Sessions: ALL or a specific one
+- Tasks: ALL or a specific one
+- Runs: ALL or a specific one
+- Metrics: ALL or a specific one
+- Sensors: ALL, or only magnetometers or gradiometers
+
+![gui interface]( ~/static/gui.png)
+
+## Congratulations!
+You're done'! The HTML reports are now available in the `derivatives` folder of your dataset:
+
+
+        /path/to/your/dataset/derivatives/Meg_QC/reports/subject
         
+Open these reports in Chrome or Firefox to explore the interactive plots and visualize of the quality control analysis of your dataset!
+
+<!--
+
+OLD VERSION
 As you can see, the calculation module generates numerous metadata files. But what if we want the data to be neatly organized and presented in a visual and interactive way?
-Luckily MEGqc will automatically ask you wether `Do
 
 Luckily MEGqc also contains the plotting module, which generates the HTML reports we saw earlier. Let's see how can we produce them:
 
-## Automatic
 
 
 ## Setting File Paths
@@ -29,20 +59,6 @@ Ensure that you are working within your environment and then run the script from
 
         python3 /path/to/environment/lib/python3.9/site-packages/meg_qc/plotting/meg_qc_plots.py
 
-## GUI
-After running the plotting command, a text-based GUI will appear in the terminal, asking you several questions about specific parameters. The available options are based on the metadata MEGqc finds in your dataset.:
-- Subjects: ALL or a specific one
-- Sessions: ALL or a specific one
-- Tasks: ALL or a specific one
-- Runs: ALL or a specific one
-- Metrics: ALL or a specific one
-- Sensors: ALL, or only magnetometers or gradiometers
-
-![gui](static/gui.png)
-
-## Congrats!
-
-You did it! Now you have the HTML reports within the `derivatives` folder of your dataset. You can open them with Chrome or Firefox to view the interactive plots of the quality control analysis of your dataset!
 
 
 
