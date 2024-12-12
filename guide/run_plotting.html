@@ -410,12 +410,11 @@
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    /path/to/your/dataset/derivatives/Meg_QC/calculation
 </pre></div>
 </div>
-<p>Then in the terminal will ask you if <code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">run</span> <span class="pre">the</span> <span class="pre">MEGqc</span> <span class="pre">plotting</span> <span class="pre">module</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">MEGqc</span> <span class="pre">results?</span> <span class="pre">(y/n)</span></code>. Entering <strong>y</strong> will automatically start the plotting module.
-<em>(disclaimer 12/2024: the automatic plotting module is not currently working)</em></p>
+<p>Then in the terminal will ask you if <code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">run</span> <span class="pre">the</span> <span class="pre">MEGqc</span> <span class="pre">plotting</span> <span class="pre">module</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">MEGqc</span> <span class="pre">results?</span> <span class="pre">(y/n)</span></code>. Entering <strong>y</strong> will automatically start the plotting module.</p>
 </section>
 <section id="manual-mode">
 <h2>Manual Mode<a class="headerlink" href="#manual-mode" title="Link to this heading">#</a></h2>
-<p>To run the plotting module manually, use the following command in your terminal:</p>
+<p>To run the plotting module manually, use the following command in your terminal including a filepath to your root dataset folder, MEGqc will find the derivatives folder within the dataset.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    run-megqc-plotting --inputdata &lt;/path/to/your/dataset/&gt;
 </pre></div>
 </div>

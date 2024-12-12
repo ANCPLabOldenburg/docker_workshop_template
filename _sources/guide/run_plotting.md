@@ -7,10 +7,10 @@ Once the calculation module has completed the analysis, the terminal will displa
         /path/to/your/dataset/derivatives/Meg_QC/calculation
 
 Then in the terminal will ask you if `Do you want to run the MEGqc plotting module on the MEGqc results? (y/n)`. Entering **y** will automatically start the plotting module.
-        _(disclaimer 12/2024: the automatic plotting module is not currently working)_
+
 
 ## Manual Mode
-To run the plotting module manually, use the following command in your terminal:
+To run the plotting module manually, use the following command in your terminal including a filepath to your root dataset folder, MEGqc will find the derivatives folder within the dataset.
 
         run-megqc-plotting --inputdata </path/to/your/dataset/>
 

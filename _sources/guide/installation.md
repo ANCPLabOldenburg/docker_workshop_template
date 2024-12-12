@@ -50,3 +50,7 @@ Next, you will need to clone the [Github Repository](https://github.com/ANCPLabO
 ## Install depencies?
 Thanks to the last update, it's not necessary to manually pip install the different dependencies anymore. All of them are installed automatically along with the MEGqc package.
 If you want to know more about them and their functionalitiy, please [visit the pipeline basics page](~/details.md).
+
+Still, if your python version is older than 3.9, it might be necessary to upgrade pandas to 2.2.3 version:
+
+        pip install --upgrade pandas.

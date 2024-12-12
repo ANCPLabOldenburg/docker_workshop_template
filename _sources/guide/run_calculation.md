@@ -7,32 +7,46 @@ Now, we're ready to run MEGqc! First, ensure that your environment is activated 
 
 
 
-Once the environment is activated, execute the script from the **terminal** and not from the command panel. The command might look something like this:
+Once the environment is activated, execute the script from the **terminal** and not from the command panel. The command requires 2 inputs:
+1. **inputdata:** path to the root of your BIDS MEG dataset.
+2. **subs:** ID code to the subject you want to analyze:
+        - If you want more than one subject, the ID codes should be separated by a space.
+        - If you want to analyze all the subjects of your dataset, you may write `all`.
 
-        run-megqc --inputdata </path/to/your/dataset/>
+YOur command line might look something like this:
+
+        run-megqc --inputdata </path/to/your/dataset/> --subs <ID>
+
+For example, if you want to analyze only subject `009` of the dataset `ds003483`, the command line might look like:
+
+        run-megqc --inputdata /path/to/ds003483/ --subs 009
+
 
 
 ## Settings
 
 ### Default settings
-When you enter the command, a terminal-based GUI will prompt you with the question: `Do you want to proceed with the default settings? (y/n)`.
-If you enter **y**, the program will use the default values for the parameters of each **metric**. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad variety of datasets. A hyperlink in the terminal will direct you to the [setting explanation page](../settings_explanation.md), where each parameter is described with more detail.
+When you enter the command, a terminal-based GUI will prompt you with the question: `Do you want to proceed with the default settings? (y/n)`. A hyperlink in the terminal will direct you to the [setting explanation page](../settings_explanation.md), where each parameter is described with more detail.
 
-### Customized settings
-If you enter `n`, you will be instructed to use the following command to specify a path (to your `target directory`) where a copy of the config file (`setting.ini`) will be created: 
+If you enter **y**, the program will use the default values for the parameters of each **metric**. The default settings, as calculated by Gaponsetva (2023), are designed to be compatible with a broad variety of datasets. 
+
+### Customized Settings
+If you enter `n`, you will be instructed to use the following command LINE to specify a path to your `target directory` where a copy of the config file (`setting.ini`) will be created: 
         
         get-megqc-config --target_directory <path/to/your/target/directory>
 
-For example, if you want to analyze only a specific subject's dataset instead of the entire dataset, you can open your copy of `settings.ini` and modify the **subjects** variable by replacing `all` with a string containing the subject ID(s), for example, `009`.
+Then you can open your copy of `settings.ini` and adjust the settings. 
+- For instance, if you want to skip a specific metric, locate the section `For which metrics to run the pipleline?` at the  begining of the file and change the value from `True` to `False`.
 
-Then you can run MEGqc again, but including the path to your customized config file in the command:
+Once your config file is customized, you can run MEGqc including the option --config and the path to your customized **config file**. Make sure to include _"settings.ini"_ in the command line:
 
-        run-megqc --inputdata </path/to/your/dataset/> --config </path/to/your/config/file/setting.ini>
+        run-megqc --inputdata </path/to/your/dataset/> --subs 009 --config </path/to/your/config/file/setting.ini>
 
 ### Already used config files?
 If you have already processed the dataset, MEGqc will be able to find the already used config file(s) and will prompt you if `Do you want to use any of them again?`.
-A numbered list of conifg files path will be displayed in ther terminal. Then it will ask you to `Enter the number of the config file you want to use, or press Enter to use the default one`.
-ENter the corresponding number of the config file path you want to reuse, or press Enter to continue with your new customized setting or default setting (depending on your previous decisions).
+A **numbered list** of paths to previous config file will be displayed in ther terminal.
+Then it will ask you to `Enter the number of the config file you want to use, or press Enter to use the default one`. Enter the corresponding **number** of the config file path you want to reuse.
+If you don't want to use any previous config file, just press Enter to continue with your default setting or customized config file.
 
 ## Next section
 With the calculation module successfully executed, let's explore how to generate the HTML report! 
