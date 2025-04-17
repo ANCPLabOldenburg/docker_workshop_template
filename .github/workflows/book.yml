@@ -15,6 +15,8 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
+    environment: 
+      name: environment.yml
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
